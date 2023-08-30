@@ -1,0 +1,21 @@
+@import url("./reset.css");
+
+:root {
+	--main-text-clr: #111111;
+	--dark-theme-clr: #202024;
+	--lightgray-clr: #b4afaf;
+	--accent-violet-clr: #4f2ee8;
+	--accent-yellow-clr: #eac645;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: "DM Sans", sans-serif;
+	color: var(--main-text-clr);
+	overflow-x: hidden;
+}
