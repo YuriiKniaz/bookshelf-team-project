@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bookshelf</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <include src="./partials/header.html"></include>
-    <main>
-      <include src="./partials/category-list.html"></include>
-      <include src="./partials/book-list.html"></include>
-      <include src="./partials/charitable-foundation.html"></include>
-      <include src="./partials/best-sellers.html"></include>
-    </main>
 
-    <include src="./partials/modal-window.html"></include>
-    <include src="./partials/menu.html"></include>
-    <include src="./partials/registration.html"></include>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookshelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
 
-    <script type="module" src="./index.js"></script>
-  </body>
+<body>
+  <include src="./partials/header.html"></include>
+  <main>
+    <include src="./partials/category-list.html"></include>
+    <include src="./partials/book-list.html"></include>
+    <include src="./partials/home.html"></include>
+    <include src="./partials/charitable-foundation.html"></include>
+    <include src="./partials/best-sellers.html"></include>
+  </main>
+
+  <include src="./partials/modal-window.html"></include>
+  <include src="./partials/menu.html"></include>
+  <include src="./partials/registration.html"></include>
+
+  <script type="module" src="./index.js"></script>
+</body>
+
 </html>
