@@ -10,8 +10,8 @@
 > Nataliia Valko — `Ментор`.
 
 - **Yurii Kniaz** — `Team Lead`.
+- **Ivan Barei** — `Tech Lead`.
 - **Kristina Abobutsoae** — `Scrum Master`.
-- **Ivan Barei** — `?хто я?`😅.
 - **InnaUsenko** — `Розробник`.
 - **Olha Izbash** — `Розробник`.
 - **Сергій** — `Розробник`.

@@ -1,4 +1,13 @@
 @import url("./reset.css");
+@import url("./best-sellers.css");
+@import url("./book-list.css");
+@import url("./category-list.css");
+@import url("./charitable-foundation.css");
+@import url("./header.css");
+@import url("./list-book.css");
+@import url("./menu.css");
+@import url("./modal-window.css");
+@import url("./registration.css");
 
 :root {
 	--main-text-clr: #111111;
