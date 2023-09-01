@@ -5,62 +5,63 @@ h4,
 h5,
 h6,
 p {
-	margin: 0;
+  margin: 0;
 }
 
 ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a {
-	color: currentColor;
-	text-decoration: none;
+  color: currentColor;
+  text-decoration: none;
 }
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 img {
-	display: block;
-	max-width: 100%;
-	height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 input,
 textarea,
 button,
 label {
-	display: block;
-	padding: 0;
-	margin: 0;
-	font-weight: inherit;
-	letter-spacing: 0.04em;
-	font-size: 12px;
-	line-height: 1.5;
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-weight: inherit;
+  letter-spacing: 0.04em;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .container {
-	min-width: 320px;
-	max-width: 375px;
-	margin: 0 auto;
-	padding: 0 20px;
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 .section {
-	padding: 40px 0;
+  padding: 40px 0;
 }
 
 @media (min-width: 768px) {
-	.container {
-		padding: 0 32px;
-		min-width: 768px;
-	}
+  .container {
+    padding: 0 32px;
+    min-width: 768px;
+  }
 }
 
-@media (min-width: 1280px) {
-	.container {
-		max-width: 1280px;
-	}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 24px;
+  }
 }
