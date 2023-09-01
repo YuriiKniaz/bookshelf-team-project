@@ -15,3 +15,14 @@
 .category-name-accent {
   color: (--accent-violet-clr);
 }
+.book-name {
+  line-height: 1.125;
+  color: #111111;
+  font-size: 16px;
+  font-weight: 700;
+}
+.book-author {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.16;
+}
