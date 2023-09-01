@@ -10,7 +10,9 @@
   position: fixed;
   backdrop-filter: blur(6px);
   transition-property: visibility, opacity, pointer-events;
-  opacity: 0;
+
+  /* opacity: 0; */
+
 }
 @media only screen and (min-width: 768px) {
   .backdrop-window {
@@ -34,7 +36,7 @@
   background-color: #ffffff;
   background-repeat: no-repeat;
   border: solid #000;
-  padding: 40px;
+
 }
 
 .btn-close:hover {
