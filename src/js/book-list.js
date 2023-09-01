@@ -1,23 +1,25 @@
 import axios from 'axios';
 
 const URL = 'https://books-backend.p.goit.global/books/category';
-const refs = {
-  booksEl: document.querySelector('.book-list'),
-  buttonEl: document.querySelector('.btn'),
-  categoryEl: document.querySelector('h1.category-name'),
-};
+const booksEl = document.querySelector('.book-list-container');
+const categoryEl = document.querySelector('h1.category-name');
+const tmpMenu = document.querySelector('.tmp-menu');
 
-refs.buttonEl.addEventListener('click', onClick);
-async function onClick() {
-  refs.categoryEl.innerHTML = `Paperback <span class="category-name-accent">Nonfiction</span>`;
-  fetchBooksByCategory('Paperback Nonfiction').then(el => {
+tmpMenu.addEventListener('click', event => {
+  const cat = event.target.dataset.category;
+  let lastIndex = cat.lastIndexOf(' ');
+
+  let str1 = cat.substring(0, lastIndex);
+  let str2 = cat.substring(lastIndex);
+  categoryEl.innerHTML = `${str1} <span class="category-name-accent">${str2}</span>`;
+  fetchBooksByCategory(event.target.dataset.category).then(el => {
     const elements = createBookList(el);
-    refs.booksEl.innerHTML = elements;
+    booksEl.innerHTML = elements;
   });
-}
+});
 
 function createBookList(dataList) {
-  return dataList
+  let li = dataList
     .map(book => {
       return `<div class="photo-card">
       <li class="book-content" data-id="">
@@ -34,6 +36,7 @@ function createBookList(dataList) {
     </div>`;
     })
     .join('');
+  return ' "<ul class="book-list list">' + li + '</ul>"';
 }
 export async function fetchBooksByCategory(category) {
   try {
@@ -43,8 +46,6 @@ export async function fetchBooksByCategory(category) {
       },
     });
     const dataPromise = response.data;
-
-    // return it
     return dataPromise;
   } catch (err) {
     console.log('FETCH ERROR: ' + err);
