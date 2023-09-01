@@ -29,10 +29,10 @@ window.addEventListener('click', function (event) {
 });
 // Додавання книги
 addBookBtn.addEventListener('click', function () {
-  alert('Додано книгу');
+  alert('');
 });
 
 // Видалення книги
 removeBookBtn.addEventListener('click', function () {
-  alert('Видалено книгу');
+  alert('');
 });
