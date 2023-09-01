@@ -15,9 +15,7 @@
 .category-name-accent {
   color: var(--accent-violet-clr);
 }
-.book-img-wrapper {
-  height: 485px;
-}
+
 .book-name {
   line-height: 1.125;
   color: #111111;
@@ -45,16 +43,12 @@
   max-width: 335px;
   margin-bottom: 40px;
 }
+.book-image {
+  width: 335px;
+  height: 485px;
+}
 
 @media screen and (min-width: 768px) {
-  .book-list-container {
-    margin-top: 98px;
-    margin-left: 32px;
-    margin-right: 32px;
-  }
-  .book-img-wrapper {
-    height: 316px;
-  }
   .category-name {
     font-size: 48px;
     line-height: 1.08;
@@ -66,8 +60,12 @@
   .book-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
+    column-gap: 25px;
     row-gap: 40px;
+  }
+  .book-image {
+    width: 218px;
+    height: 316px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -77,14 +75,15 @@
     margin-right: 25px;
     margin-bottom: 100px;
   }
-  .book-img-wrapper {
-    height: 256px;
-  }
 
   .book-wrapper {
     max-width: 180px;
   }
   .book-list {
     column-gap: 24px;
+  }
+  .book-image {
+    height: 256px;
+    width: 180px;
   }
 }
