@@ -1,6 +1,12 @@
 .list {
   list-style: none;
 }
+.book-list-container {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 24px;
+  margin-bottom: 100px;
+}
 .book-list {
   display: flex;
   flex-wrap: wrap;
@@ -8,10 +14,34 @@
   row-gap: 40px;
 }
 .category-name {
-  margin-top: 40px;
   margin-bottom: 40px;
   font-weight: 700;
 }
 .category-name-accent {
-  color: (--accent-violet-clr);
+  color: var(--accent-violet-clr);
+}
+.book-name {
+  line-height: 1.125;
+  color: #111111;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.book-author {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  font-style: italic;
+  color: #b4afaf;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.book-wrapper {
+  border-top: none;
+  padding-top: 14px;
+  max-width: 180px;
 }
