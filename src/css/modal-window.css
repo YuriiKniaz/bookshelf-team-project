@@ -28,7 +28,6 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
   border-radius: 18px;
   background-color: #FFFFFF;
   background-repeat: no-repeat;
@@ -59,12 +58,12 @@
 
 .modal-title {
   margin-top: 20px;
-  margin-left: 236px;
+
 
 }
 
 .modal-prgtho {
-  margin-left: 236px;
+
   margin-top: 30px;
 
 
@@ -72,11 +71,11 @@
 
 .modal-prg {
   margin-top: 12px;
-  margin-left: 236px;
+
   color: #B4AFAF;
 }
 
 .modal-book {
-  margin-left: 20px;
-  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }
