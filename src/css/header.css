@@ -1,0 +1,88 @@
+.header {
+  border-radius: 0px 0px 8px 8px;
+  border: 1.5px solid #111;
+}
+.header .container,
+.right-col,
+.left-col,
+.avatar {
+  display: flex;
+}
+.header .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo,
+.menu-item {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: none;
+}
+
+.menu-link {
+  color: #111;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+  padding: 27px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.menu-link.active {
+  padding: 8px 16px;
+  border-radius: 36px;
+  background: #eac645;
+}
+
+.box-toggle {
+}
+.circle {
+}
+.avatar {
+  border-radius: 36px;
+  background: #4f2ee8;
+  padding: 8px 12px;
+  align-items: center;
+}
+.avatar-box-img {
+  margin-right: 9px;
+}
+.avatar-title {
+  color: #fff;
+  font-family: DM Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.44px;
+  margin-right: 4px;
+}
+
+.icon {
+  fill: #fff;
+}
+@media screen and (min-width: 768px) {
+  .left-col {
+    gap: 40px;
+  }
+  .menu {
+    display: flex;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .left-col {
+    gap: 76px;
+  }
+  .menu {
+    gap: 24px;
+  }
+}
