@@ -1,4 +1,5 @@
 .backdrop {
+
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -9,6 +10,7 @@
 	backdrop-filter: blur(6px);
 	transition-property: visibility, opacity, pointer-events;
 	opacity: 0;
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -22,6 +24,7 @@
 }
 
 .backdrop-window {
+
 	position: absolute;
 	width: 579px;
 	height: 465px;
@@ -32,6 +35,7 @@
 	border-radius: 18px;
 	background-color: #b4afaf;
 	background-repeat: no-repeat;
+
 }
 
 .btn-close:hover {
@@ -58,15 +62,21 @@
 	cursor: pointer;
 }
 
-/* .modal-title {
-  font-weight: 700;
-  margin-top: 40px;
-  padding-left: 192px;
+.modal-title {
+  margin-top: 20px;
+  margin-left: 236px;
 
-} */
+}
 
-.modal-prgtho {
+
+
+.modal-prg {
+  margin-top: 12px;
+
+  color: #B4AFAF;
+
 	margin-left: 256px;
+
 }
 
 .modal-book {
