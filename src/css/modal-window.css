@@ -7,7 +7,7 @@
   position: fixed;
   backdrop-filter: blur(6px);
   transition-property: visibility, opacity, pointer-events;
-  /* opacity: 0; */
+  opacity: 0;
 
 }
 
