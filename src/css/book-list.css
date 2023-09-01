@@ -7,12 +7,7 @@
   margin-right: 24px;
   margin-bottom: 100px;
 }
-.book-list {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 40px;
-}
+
 .category-name {
   margin-bottom: 40px;
   font-weight: 700;
@@ -43,5 +38,27 @@
 .book-wrapper {
   border-top: none;
   padding-top: 14px;
-  max-width: 180px;
+  max-width: 335px;
+}
+
+@media screen and (min-width: 768px) {
+  .book-list-container {
+    margin-top: 98px;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .book-wrapper {
+    max-width: 218px;
+  }
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .book-wrapper {
+    max-width: 180px;
+  }
 }
