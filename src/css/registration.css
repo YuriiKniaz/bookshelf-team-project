@@ -1,0 +1,114 @@
+.registration {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: #4f2ee8;
+	z-index: 11;
+}
+.registration::before {
+	position: absolute;
+	content: "";
+	border-radius: 1421px;
+	background: rgba(204, 236, 231, 0.5);
+	filter: blur(539.7910766601562px);
+	width: 1421px;
+	height: 1421px;
+	top: -918px;
+	left: -846px;
+}
+.registration-window {
+	position: absolute;
+	width: 579px;
+	height: 516px;
+	background: #f6f6f6;
+	border: 2px solid var(--main-text-clr);
+	border-radius: 18px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.close-btn {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	width: 28px;
+	height: 28px;
+	outline: 0;
+	border: 0;
+	background: 0 0;
+}
+.form {
+	width: 500px;
+	margin: auto;
+	padding-top: 80px;
+	margin-bottom: 20px;
+}
+.form-input-list {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+	margin-bottom: 40px;
+}
+.input-container {
+	position: relative;
+}
+.form-input {
+	width: 100%;
+	height: 64px;
+	font-size: 18px;
+	padding: 20px 40px;
+	font-weight: 700;
+	border: 2px solid var(--main-text-clr);
+	border-radius: 40px;
+}
+.form-input::placeholder {
+	color: var(--main-text-clr);
+	position: absolute;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.33;
+	letter-spacing: -0.18px;
+	text-transform: uppercase;
+}
+.form-icon {
+	position: absolute;
+	top: 20px;
+	right: 32px;
+}
+.form-btn {
+	color: #f3f3f3;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.33;
+	letter-spacing: -0.18px;
+	text-transform: uppercase;
+	border-radius: 40px;
+	background: var(--main-text-clr);
+	padding: 20px 173px;
+	width: 100%;
+	border: none;
+}
+.form-btns {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+.btn {
+	outline: 0;
+	border: 0;
+	background: 0 0;
+
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.33;
+	letter-spacing: -0.18px;
+	text-transform: uppercase;
+}
+.sign-up {
+	text-decoration-line: underline;
+	color: #4f2ee8;
+}
+.sign-in {
+	color: rgba(17, 17, 17, 0.5);
+}
