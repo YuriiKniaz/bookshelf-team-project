@@ -8,19 +8,17 @@
   position: fixed;
   backdrop-filter: blur(6px);
   transition-property: visibility, opacity, pointer-events;
-
+  opacity: 0;
 }
-
 @media only screen and (min-width: 768px) {
   .backdrop-window {
     width: 579px;
     height: auto;
     overflow-y: hidden;
     padding: 40px;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
   }
 }
-
 .backdrop-window {
   position: absolute;
   width: 579px;
@@ -28,19 +26,17 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
   border-radius: 18px;
+
   background-color: #FFFFFF;
+
   background-repeat: no-repeat;
+  padding: 40px;
 }
-
-
 .btn-close:hover {
   border: none;
   box-shadow: 0 1px 6px #2e2f4214, 0 1px 1px #2e2f4229, 0 2px 1px #2e2f4214;
-
 }
-
 .btn-close {
   position: absolute;
   top: 24px;
@@ -52,19 +48,58 @@
   height: 28px;
   padding: 0;
   border-radius: 2px;
-  border: 3px solid #FFFFFF;
-  background: #FFFFFF;
+  border: 3px solid #ffffff;
+  background: #ffffff;
   cursor: pointer;
 }
+.modal-title {
+  margin-top: 20px;
+}
+.modal-prgtho {
+  margin-top: 30px;
+}
+.modal-prg {
+  margin-top: 12px;
+  color: #b4afaf;
+}
+.modal-book {
+  display: flex;
+  justify-content: center;
+}
+
+
+.btn-modal-submit {
+  display: flex;
+  width: 499px;
+  height: 64px;
+  background-color: #ffffff;
+
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2.4;
+  gap: 10px;
+
+  letter-spacing: 0.1em;
+
+  margin: auto;
+  text-transform: capitalize;
+  color: var(--text-color);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
 
 .modal-title {
   margin-top: 20px;
-  margin-left: 236px;
+
 
 }
 
 .modal-prgtho {
-  margin-left: 236px;
+ 
   margin-top: 30px;
 
 
@@ -72,11 +107,35 @@
 
 .modal-prg {
   margin-top: 12px;
-  margin-left: 236px;
+
   color: #B4AFAF;
 }
 
-.modal-book {
-  margin-left: 20px;
-  padding-bottom: 40px;
+.btn-remove-submit {
+  display: flex;
+  width: 499px;
+  height: 64px;
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2.4;
+  gap: 10px;
+  letter-spacing: -.1em;
+  margin: auto;
+  text-transform: capitalize;
+  color: var(--text-color);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
 }
+
+}
+
+.links-list {
+  display: flex;
+  align-items: center;
+
+}
+
