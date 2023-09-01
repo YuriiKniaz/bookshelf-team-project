@@ -4,11 +4,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
   position: fixed;
   backdrop-filter: blur(6px);
   transition-property: visibility, opacity, pointer-events;
-  opacity: 0;
+  /* opacity: 0; */
 
 }
 
@@ -29,19 +28,9 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 18px;
-  background-color: #FFFFFF;
-  background-repeat: no-repeat;
-
-  position: absolute;
-  width: 579px;
-  height: 465px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   padding: 20px;
   border-radius: 18px;
-  background-color: #b4afaf;
+  background-color: #FFFFFF;
   background-repeat: no-repeat;
 
 }
@@ -49,9 +38,9 @@
 .btn-close:hover {
   border: none;
   box-shadow:
-    0 1px 6px #2e2f4214,
-    0 1px 1px #2e2f4229,
-    0 2px 1px #2e2f4214;
+    0 1px 6px #c61cf514,
+    0 1px 1px #fd2cdd29,
+    0 2px 1px #f817c314
 }
 
 .btn-close {
@@ -93,6 +82,8 @@
 .modal-book {
   display: flex;
   justify-content: center;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 .btn-add-submit {
