@@ -27,7 +27,9 @@
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 18px;
-  background-color: #ffffff;
+
+  background-color: #FFFFFF;
+
   background-repeat: no-repeat;
   padding: 40px;
 }
@@ -89,6 +91,26 @@
   text-transform: uppercase;
 }
 
+
+.modal-title {
+  margin-top: 20px;
+
+
+}
+
+.modal-prgtho {
+ 
+  margin-top: 30px;
+
+
+}
+
+.modal-prg {
+  margin-top: 12px;
+
+  color: #B4AFAF;
+}
+
 .btn-remove-submit {
   display: flex;
   width: 499px;
@@ -114,5 +136,6 @@
 .links-list {
   display: flex;
   align-items: center;
+
 }
 
