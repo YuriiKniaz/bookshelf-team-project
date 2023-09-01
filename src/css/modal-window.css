@@ -65,26 +65,54 @@
   justify-content: center;
 }
 
+
 .btn-modal-submit {
   display: flex;
   width: 499px;
   height: 64px;
   background-color: #ffffff;
+
   border-radius: 40px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2.4;
   gap: 10px;
-  letter-spacing: -0.1em;
+
+  letter-spacing: 0.1em;
+
   margin: auto;
   text-transform: capitalize;
   color: var(--text-color);
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  text-transform: uppercase;
+}
+
+.btn-remove-submit {
+  display: flex;
+  width: 499px;
+  height: 64px;
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2.4;
+  gap: 10px;
+  letter-spacing: -.1em;
+  margin: auto;
+  text-transform: capitalize;
+  color: var(--text-color);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
 }
 
 .links-list {
   display: flex;
   align-items: center;
 }
+
