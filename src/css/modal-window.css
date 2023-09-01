@@ -3,8 +3,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+
   background-color: #ffffff;
   z-index: 10000;
+
   position: fixed;
   backdrop-filter: blur(6px);
   transition-property: visibility, opacity, pointer-events;
@@ -22,7 +24,7 @@
 .backdrop-window {
   position: absolute;
   width: 579px;
-  height: 465px;
+  /* height: 465px; */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -32,10 +34,16 @@
 
   background-repeat: no-repeat;
   padding: 40px;
+
 }
 .btn-close:hover {
   border: none;
-  box-shadow: 0 1px 6px #2e2f4214, 0 1px 1px #2e2f4229, 0 2px 1px #2e2f4214;
+
+  box-shadow:
+    0 1px 6px #c61cf514,
+    0 1px 1px #fd2cdd29,
+    0 2px 1px #f817c314
+
 }
 .btn-close {
   position: absolute;
@@ -53,18 +61,49 @@
   cursor: pointer;
 }
 .modal-title {
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.8;
+  letter-spacing: -0.4;
+
   margin-top: 20px;
+
 }
 .modal-prgtho {
-  margin-top: 30px;
+
+  margin-top: 20px;
+  font-family: DM Sans;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: -0.4;
+  font-weight: 400;
+  color: black;
+
 }
 .modal-prg {
+
+  /* margin-top: 10px; */
+  font-style: italic;
+  color: #B4AFAF;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: -0.4;
+}
+
+.section-one {
+  padding-left: 24px;
+
   margin-top: 12px;
   color: #b4afaf;
+
 }
 .modal-book {
   display: flex;
   justify-content: center;
+  /* padding-top: 20px; */
+
 }
 
 .btn-modal-submit {
@@ -88,7 +127,15 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  border-color: #4F2EE8;
 }
+
+.button-submit {
+  padding-top: 40px;
+}
+
+
+/* .btn-remove-submit {
 
 .modal-title {
   margin-top: 20px;
@@ -105,6 +152,7 @@
 }
 
 .btn-remove-submit {
+
   display: flex;
   width: 499px;
   height: 64px;
@@ -122,13 +170,41 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+
+  opacity: 0;
+} */
+
+.modal-links {
+  padding-top: 10px;
+
 }
 
 .links-list {
   display: flex;
   align-items: center;
+
+  justify-content: flex-start;
+  
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.prg-final {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: -0.4;
+  align-items: center;
+  color: #11111180;
+  width: 324px;
+  padding-top: 10px;
+  margin: auto;
+
+}
+
 }
 
 .is-hidden {
   display: none;
 }
+
