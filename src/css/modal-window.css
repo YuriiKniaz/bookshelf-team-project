@@ -1,0 +1,74 @@
+.backdrop {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background-color: #FFFFFF;
+  position: fixed;
+  backdrop-filter: blur(6px);
+  transition-property: visibility, opacity, pointer-events;
+
+}
+
+@media only screen and (min-width: 768px) {
+  .backdrop-window {
+    width: 579px;
+    height: auto;
+    overflow-y: hidden;
+    padding: 40px;
+    background-repeat: no-repeat
+  }
+}
+
+.backdrop-window {
+  position: absolute;
+  width: 579px;
+  height: 465px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 18px;
+  background-color: #B4AFAF;
+  background-repeat: no-repeat;
+}
+
+
+.btn-close:hover {
+  border: none;
+  box-shadow: 0 1px 6px #2e2f4214, 0 1px 1px #2e2f4229, 0 2px 1px #2e2f4214;
+
+}
+
+.btn-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 2px;
+  border: 3px solid #FFFFFF;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+/* .modal-title {
+  font-weight: 700;
+  margin-top: 40px;
+  padding-left: 192px;
+
+} */
+
+.modal-prgtho {
+  margin-left: 256px;
+}
+
+.modal-book {
+  margin-left: 20px;
+  padding-bottom: 40px;
+}
