@@ -1,5 +1,4 @@
 .backdrop {
-
   top: 0;
   left: 0;
   width: 100%;
@@ -7,7 +6,7 @@
   position: fixed;
   backdrop-filter: blur(6px);
   transition-property: visibility, opacity, pointer-events;
-  opacity: 0;
+  /* opacity: 0; */
 
 }
 
@@ -33,7 +32,6 @@
   background-color: #FFFFFF;
   background-repeat: no-repeat;
   border: solid #000;
-
 }
 
 
