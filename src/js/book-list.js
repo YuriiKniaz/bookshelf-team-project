@@ -2,15 +2,17 @@ import axios from 'axios';
 
 const URL = 'https://books-backend.p.goit.global/books/category';
 const refs = {
-  bestsellersEl: document.querySelector('.bestsellers'),
+  booksEl: document.querySelector('.book-list'),
   buttonEl: document.querySelector('.btn'),
+  categoryEl: document.querySelector('h1.category-name'),
 };
 
 refs.buttonEl.addEventListener('click', onClick);
 async function onClick() {
+  refs.categoryEl.innerHTML = `Paperback <span class="category-name-accent">Nonfiction</span>`;
   fetchBooksByCategory('Paperback Nonfiction').then(el => {
     const elements = createBookList(el);
-    refs.bestsellersEl.innerHTML = elements;
+    refs.booksEl.innerHTML = elements;
   });
 }
 
@@ -18,15 +20,17 @@ function createBookList(dataList) {
   return dataList
     .map(book => {
       return `<div class="photo-card">
-      <div class="pict">
-        <a href=${book.book_image} class='gallery__link'>
-        <img src="${book.book_image}" alt="${book.description}" loading="lazy" class="gallery__img"/>
+      <li class="book-content" data-id="">
+        <a href=${book.book_image} class='book-link link'>
+        <div class="book-img-wrapper">
+            <img src="${book.book_image}" alt="${book.description}" loading="lazy" class="gallery__img" width="180"/>
+        </div>
+        <div class="book-wrapper">
+          <h2 class="book-name">${book.title}</h2>
+          <p class="book-author">${book.author}</p>
+        </div>
         </a>
-      </div>
-   
-    <div class="info">
-    </div>
-    
+      </li>
     </div>`;
     })
     .join('');
