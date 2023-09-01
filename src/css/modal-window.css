@@ -95,3 +95,43 @@
   display: flex;
   justify-content: center;
 }
+
+.btn-add-submit {
+  display: flex;
+  width: 499px;
+  height: 64px;
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2.4;
+  gap: 10px;
+  letter-spacing: -.1em;
+  margin: auto;
+  text-transform: capitalize;
+  color: var(--text-color);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.btn-remove-submit {
+  display: flex;
+  width: 499px;
+  height: 64px;
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2.4;
+  gap: 10px;
+  letter-spacing: -.1em;
+  margin: auto;
+  text-transform: capitalize;
+  color: var(--text-color);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
