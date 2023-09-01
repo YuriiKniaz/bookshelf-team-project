@@ -34,16 +34,11 @@
 
   background-repeat: no-repeat;
   padding: 40px;
-
 }
 .btn-close:hover {
   border: none;
 
-  box-shadow:
-    0 1px 6px #c61cf514,
-    0 1px 1px #fd2cdd29,
-    0 2px 1px #f817c314
-
+  box-shadow: 0 1px 6px #c61cf514, 0 1px 1px #fd2cdd29, 0 2px 1px #f817c314;
 }
 .btn-close {
   position: absolute;
@@ -61,17 +56,14 @@
   cursor: pointer;
 }
 .modal-title {
-
   font-weight: 700;
   font-size: 24px;
   line-height: 1.8;
   letter-spacing: -0.4;
 
   margin-top: 20px;
-
 }
 .modal-prgtho {
-
   margin-top: 20px;
   font-family: DM Sans;
   font-size: 14px;
@@ -79,13 +71,11 @@
   letter-spacing: -0.4;
   font-weight: 400;
   color: black;
-
 }
 .modal-prg {
-
   /* margin-top: 10px; */
   font-style: italic;
-  color: #B4AFAF;
+  color: #b4afaf;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.8;
@@ -97,13 +87,11 @@
 
   margin-top: 12px;
   color: #b4afaf;
-
 }
 .modal-book {
   display: flex;
   justify-content: center;
   /* padding-top: 20px; */
-
 }
 
 .btn-modal-submit {
@@ -127,13 +115,12 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  border-color: #4F2EE8;
+  border-color: #4f2ee8;
 }
 
 .button-submit {
   padding-top: 40px;
 }
-
 
 /* .btn-remove-submit {
 
@@ -176,7 +163,6 @@
 
 .modal-links {
   padding-top: 10px;
-
 }
 
 .links-list {
@@ -184,7 +170,7 @@
   align-items: center;
 
   justify-content: flex-start;
-  
+
   flex-wrap: nowrap;
   gap: 20px;
 }
@@ -199,12 +185,8 @@
   width: 324px;
   padding-top: 10px;
   margin: auto;
-
-}
-
 }
 
 .is-hidden {
   display: none;
 }
-
