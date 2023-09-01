@@ -57,6 +57,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.is-hidden {
+  display: none;
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   color: var(--main-text-clr);
