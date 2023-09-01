@@ -128,3 +128,7 @@
   display: flex;
   align-items: center;
 }
+
+.is-hidden {
+  display: none;
+}
