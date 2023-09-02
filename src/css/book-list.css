@@ -11,6 +11,7 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 1.19;
+  letter-spacing: -0.04em;
 }
 .category-name-accent {
   color: var(--accent-violet-clr);
@@ -21,6 +22,7 @@
   color: #111111;
   font-size: 16px;
   font-weight: 700;
+  letter-spacing: -0.04em;
   margin-bottom: 4px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -32,6 +34,7 @@
   line-height: 1.16;
   font-style: italic;
   color: #b4afaf;
+  letter-spacing: -0.04em;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
