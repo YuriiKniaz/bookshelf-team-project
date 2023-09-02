@@ -27,6 +27,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+
 }
 
 input,
@@ -48,6 +49,7 @@ label {
   margin: 0 auto;
   padding: 0 20px;
 }
+
 .section {
   padding: 40px 0;
 }
