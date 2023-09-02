@@ -1,5 +1,6 @@
 .registration {
-	position: relative;
+	position: fixed;
+	top: 0;
 	width: 100vw;
 	height: 100vh;
 	background-color: #4f2ee8;
@@ -44,7 +45,7 @@
 	padding-top: 80px;
 	margin-bottom: 20px;
 }
-.form-input-list {
+.list {
 	display: flex;
 	flex-direction: column;
 	gap: 28px;
@@ -111,4 +112,7 @@
 }
 .sign-in {
 	color: rgba(17, 17, 17, 0.5);
+}
+.signin {
+	height: 415px;
 }
