@@ -108,6 +108,14 @@
     border: none;
     color: rgba(255, 255, 255, 1);
  }
+@media screen and (max-width: 374px) {
+.item-image{
+    max-width: 335px;
+}
+.wrapper-bestsellers{
+    max-width: 335px;
+}
+}
 
   @media screen and (max-width: 767px) {
     .mobile-h {
@@ -137,6 +145,8 @@
             height: 485px;
             width: 335px;
             background-image: url('/src/images/image-book-list/imageErrorMobile.png');
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     
         @media (min-device-pixel-ratio: 2),
@@ -170,6 +180,8 @@
     height: 316px;
     width: 218px;
     background-image: url('/src/images/image-book-list/imageErrorTablet.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -215,6 +227,8 @@
     width: 180px;
     height: 256px;
     background-image: url('/src/images/image-book-list/imageErrorDesktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media (min-device-pixel-ratio: 2),
