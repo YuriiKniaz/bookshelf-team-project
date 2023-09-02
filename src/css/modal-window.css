@@ -120,7 +120,7 @@
   padding-top: 40px;
 }
 
-/* .btn-remove-submit {
+.btn-remove-submit {
   display: flex;
   width: 499px;
   height: 64px;
@@ -138,8 +138,9 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  opacity: 0;
-} */
+  border-color: #4F2EE8;
+  /* opacity: 0; */
+}
 
 .modal-links {
   padding-top: 10px;
