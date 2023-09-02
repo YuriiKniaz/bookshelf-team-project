@@ -34,7 +34,12 @@
   border: solid #000;
 }
 
-
+.btn-close:hover {
+  border-width: initial;
+  border-style: solid;
+  border-color: rgb(139, 0, 255);
+  border-image: initial;
+}
 
 .btn-close:hover {
   border: none;
