@@ -9,35 +9,20 @@
 .title-span{
     color: var(--accent-violet-clr);
 }
-.wrapper{
-    border: 1px solid black;
-    width: 996px;
-}
-.bestsellers{
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-.category-list{
-    display: flex;
-    gap: 24px;
-}
-.book-card{
-    width: 180px;
-    min-height: 306px;
+.wrapper-bestsellers{
+    margin-bottom: 40px;
 }
 .category-list-title{
     font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
     letter-spacing: 0.03em;
     text-align: left;
-    color: rgba(180, 175, 175, 1);
+    color: var(--lightgray-clr);
     text-transform: uppercase;
 }
+
 .item-image{
     border-radius: 8px;
-    height: 256px;
 }
 .item-text{
     display: flex;
@@ -61,7 +46,7 @@
     line-height: 14px;
     letter-spacing: -0.04em;
     text-align: left;
-    color: rgba(180, 175, 175, 1);
+    color: var(--lightgray-clr);
 }
  .overlay-wrapper {
      position: relative;
@@ -88,7 +73,7 @@
     letter-spacing: -0.04em;
     text-align: center;
      color: var(--main-text-clr);
-     background:  rgba(234, 198, 69, 1);
+     background: var(--accent-yellow-clr);
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 8px;
@@ -114,4 +99,130 @@
     background: transparent;
     margin-left: auto;
     margin-right: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
+
+ .seemorebtn:hover,
+ .seemorebtn:focus {
+    background: var(--accent-violet-clr);
+    border: none;
+    color: rgba(255, 255, 255, 1);
+ }
+
+  @media screen and (max-width: 767px) {
+    .mobile-h {
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            border: 0;
+            padding: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            margin: -1px;
+        }
+    .wrapper-bestsellers {
+        width: 335px;
+    }
+    .category-list-title {
+        line-height: 18px;
+        margin-bottom: 18px;
+    }
+        .book-card {
+            width: 335px;
+            min-height: 545px;
+        }
+        .item-image {
+            height: 485px;
+            width: 335px;
+            background-image: url('/src/images/image-book-list/imageErrorMobile.png');
+        }
+    
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .item-image {
+                background-image: url('/src/images/image-book-list/imageErrorMobile@2x.png');
+            }
+        }
+  }
+   @media screen and (min-width: 768px) {
+    .wrapper-bestsellers {
+            width: 704px;
+            gap: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+    .category-list {
+        display: flex;
+        gap: 25px;
+    }
+    .category-list-title {
+        line-height: 24px;
+    }
+    .book-card {
+        width: 218px;
+        min-height: 336px;
+    }
+.item-image {
+    height: 316px;
+    width: 218px;
+    background-image: url('/src/images/image-book-list/imageErrorTablet.png');
+}
+
+@media (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .item-image {
+        background-image: url('/src/images/image-book-list/imageErrorTablet@2x.png');
+    }
+}
+   }
+  @media screen and (max-width: 1439px) {
+    .tablet-h {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+.wrapper-bestsellers {
+    width: 996px;
+    gap: 32px;
+}
+.category-list {
+    display: flex;
+    gap: 24px;
+}
+.book-card {
+    width: 180px;
+    min-height: 306px;
+}
+.category-list-title {
+    line-height: 24px;
+}
+.item-image {
+    width: 180px;
+    height: 256px;
+    background-image: url('/src/images/image-book-list/imageErrorDesktop.png');
+}
+
+@media (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .item-image {
+        background-image: url('/src/images/image-book-list/imageErrorDesktop@2x.png');
+    }
+}
+  }
