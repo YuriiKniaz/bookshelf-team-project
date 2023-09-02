@@ -8,6 +8,7 @@
 @import url('./menu.css');
 @import url('./modal-window.css');
 @import url('./registration.css');
+@import url('./arrow-top.css');
 
 @font-face {
   font-family: 'DM Sans';
@@ -55,6 +56,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.is-hidden {
+  display: none;
 }
 
 body {
