@@ -1,0 +1,84 @@
+<section class="section">
+  <div class="container">
+    <div class="categories-container">
+      <ul class="categories-list">
+        <li class="categories-item" data-category="all-categories">
+          <a href="" class="categories-btn current">All Categories</a>
+        </li>
+        <li
+          class="categories-item"
+          data-category="Combined Print and E-book Fiction"
+        >
+          <a href="" class="categories-btn current"
+            >Combined Print and E-book Fiction</a
+          >
+        </li>
+        <li class="categories-item" data-category="combined-nonfiction">
+          <a href="" class="categories-btn"
+            >Combined Print and E-Book Nonfiction</a
+          >
+        </li>
+        <li class="categories-item" data-category="advice-miscellaneous">
+          <a href="" class="categories-btn">Advice How-To and Miscellaneous</a>
+        </li>
+        <li class="categories-item" data-category="audio-nonfiction">
+          <a href="" class="categories-btn">Audio Nonfiction</a>
+        </li>
+        <li class="categories-item" data-category="paperback-nonfiction">
+          <a href="" class="categories-btn">Paperback Nonfiction</a>
+        </li>
+        <li class="categories-item" data-category="business-books">
+          <a href="" class="categories-btn">Business Books</a>
+        </li>
+        <li class="categories-item" data-category="middle-monthly">
+          <a href="" class="categories-btn">Middle Grade Paperback Monthly</a>
+        </li>
+        <li class="categories-item" data-category="hardcover-fiction">
+          <a href="" class="categories-btn">Hardcover Fiction</a>
+        </li>
+        <li class="categories-item" data-category="mass-market-monthly">
+          <a href="" class="categories-btn">Mass Market Monthly</a>
+        </li>
+        <li class="categories-item" data-category="">
+          <a href="" class="categories-btn">Childrens Middle Grade Hardcover</a>
+        </li>
+        <li class="categories-item" data-category="audio-fiction">
+          <a href="" class="categories-btn">Audio Fiction</a>
+        </li>
+        <li class="categories-item" data-category="young-adult-hardcover">
+          <a href="" class="categories-btn">Young Adult Hardcover</a>
+        </li>
+        <li class="categories-item" data-category="series-books">
+          <a href="" class="categories-btn">Series Books</a>
+        </li>
+        <li class="categories-item" data-category="trade-fiction-paperback">
+          <a href="" class="categories-btn">Trade Fiction Paperback</a>
+        </li>
+        <li class="categories-item" data-category="graphic-books-and-manga">
+          <a href="" class="categories-btn">Graphic Books and Manga</a>
+        </li>
+        <li class="categories-item" data-category="young-adult-monthly">
+          <a href="" class="categories-btn">Young Adult Paperback Monthly</a>
+        </li>
+        <li class="categories-item" data-category="hardcover-nonfiction">
+          <a href="" class="categories-btn">Hardcover Nonfiction</a>
+        </li>
+        <li class="categories-item" data-category="picture-books">
+          <a href="" class="categories-btn">Picture Books</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    const pages = document.querySelectorAll('.categories-item');
+
+    pages.forEach(page => {
+      page.addEventListener('click', event => {
+        event.preventDefault();
+
+        pages.forEach(p => p.classList.remove('categories-item-current'));
+        page.classList.add('categories-item-current');
+      });
+    });
+  </script>
+</section>
