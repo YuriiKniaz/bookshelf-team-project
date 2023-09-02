@@ -11,34 +11,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="/src/css/shopping-list.css" />
   </head>
 
   <body>
     <include src="./partials/header.html"></include>
     <main>
       <include src="./partials/charitable-foundation.html"></include>
-      <include src="./shopping-list.html"></include>
+      <include src="./partials/shopping-section.html"></include>
     </main>
     <include src="./partials/modal-window.html"></include>
-
-    <section class="shopping-list">
-      <div>
-        <h1 class="shop-title">
-          Shopping <span class="shop-title-white">List</span>
-        </h1>
-
-        <div class="shop-class-background js-shop-background">
-          <p class="shop-text-background">
-            This page is empty, add some books and proceed to order.
-          </p>
-          <div class="shop-img-backgr"></div>
-        </div>
-
-        <ul class="shop-list-books js-shop-list"></ul>
-      </div>
-    </section>
-    <!-- лінк на js файл -->
-    <script type="module" src="./index.js"></script>
   </body>
 </html>
