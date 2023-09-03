@@ -49,6 +49,11 @@
 .book-image {
   width: 335px;
   height: 485px;
+  border-radius: 8px;
+}
+.book-img-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
