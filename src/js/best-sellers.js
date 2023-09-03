@@ -21,6 +21,7 @@ const refs = {
   home: document.getElementById('bestsellers'),
   body: document.querySelector('body'),
   categoryName: document.querySelector('.category-name'),
+  seeMoreBtn: document.querySelector('.seemorebtn'),
 };
 
 refs.home.addEventListener('click', onHomeB);
@@ -41,8 +42,11 @@ async function onClickBestsellers() {
   refs.bestsellersEl.innerHTML = elements;
   refs.bestsellersEl.addEventListener('click', onBookClick);
 
-    function onBookClick(evt) {
-      evt.preventDefault();
+  function onBookClick(evt) {
+    evt.preventDefault();
+    if (evt.target.classList.contains('seemorebtn')) {
+      return
+    } else {
       const { id, list_name } = evt.target.closest('li').dataset; //
       const searchList = listEl.find(({ list_name: listName }) => listName === list_name);
       const currentBook = searchList.books.find(({ _id: bookId }) => bookId === id);// отримаємо ID 'li' по якому клікнули
@@ -56,6 +60,7 @@ async function onClickBestsellers() {
 
       modalWindow.classList.remove('is-hidden'); // відкриваєм модалку
     }
+  }
 }
 
 
