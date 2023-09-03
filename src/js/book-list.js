@@ -48,7 +48,7 @@ function createBookList(dataList) {
       <li class="book-content" data-id="${book._id}">
         <a href=${book.book_image} class='book-link link'>
         <div class="book-img-wrapper">
-            <img class="book-image" src="${book.book_image}" alt="${book.description}" loading="lazy" class="gallery__img" width="180"/>
+            <img class="book-image" src="${book.book_image}" alt="${book.description}" loading="lazy" data-id="${book._id}" width="180"/>
         </div>
         <div class="book-wrapper">
           <h2 class="book-name">${book.title}</h2>
