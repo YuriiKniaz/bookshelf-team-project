@@ -18,19 +18,35 @@ const refs = {
   bestsellersEl: document.querySelector('.book-list-container'),
   buttonEl: document.querySelector('.btn'),
   bookList: document.querySelector('.book-list'),
+  home: document.getElementById('bestsellers'),
+  body: document.querySelector('body'),
+  categoryName: document.querySelector('.category-name'),
+  seeMoreBtn: document.querySelector('.seemorebtn'),
 };
 
+refs.home.addEventListener('click', onHomeB);
+window.onload = function () {
+  refs.home.click();
+}
 
+ function onHomeB(e) {
+  e.preventDefault();
+  refs.categoryName.innerHTML = `Best Sellers <span class="category-name-accent">Books</span>`;
+  onClickBestsellers();
+}
 
-refs.buttonEl.addEventListener('click', onClick);
-async function onClick() {
+refs.buttonEl.addEventListener('click', onClickBestsellers);
+async function onClickBestsellers() {
   const listEl = await fetchTopBooks();
   const elements = createBestsellers(listEl);
   refs.bestsellersEl.innerHTML = elements;
   refs.bestsellersEl.addEventListener('click', onBookClick);
 
-    function onBookClick(evt) {
-      evt.preventDefault();
+  function onBookClick(evt) {
+    evt.preventDefault();
+    if (evt.target.classList.contains('seemorebtn')) {
+      return
+    } else {
       const { id, list_name } = evt.target.closest('li').dataset; //
       const searchList = listEl.find(({ list_name: listName }) => listName === list_name);
       const currentBook = searchList.books.find(({ _id: bookId }) => bookId === id);// отримаємо ID 'li' по якому клікнули
@@ -44,6 +60,7 @@ async function onClick() {
 
       modalWindow.classList.remove('is-hidden'); // відкриваєм модалку
     }
+  }
 }
 
 

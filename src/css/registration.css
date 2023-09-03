@@ -4,7 +4,7 @@
 	width: 100vw;
 	height: 100vh;
 	background-color: #4f2ee8;
-	/* z-index: 11; */
+	z-index: 10;
 }
 
 .registration::before {
@@ -49,7 +49,7 @@
 	margin-bottom: 20px;
 }
 
-.list {
+.form-list {
 	display: flex;
 	flex-direction: column;
 	gap: 28px;
@@ -86,7 +86,7 @@
 	right: 32px;
 }
 
-.form-btn {
+.form-main-btn {
 	color: #f3f3f3;
 	font-size: 18px;
 	font-weight: 700;
@@ -106,7 +106,7 @@
 	gap: 20px;
 }
 
-.btn {
+.form-btns button {
 	outline: 0;
 	border: 0;
 	background: 0 0;
@@ -116,17 +116,25 @@
 	line-height: 1.33;
 	letter-spacing: -0.18px;
 	text-transform: uppercase;
-}
-
-.sign-up {
-	text-decoration-line: underline;
-	color: #4f2ee8;
-}
-
-.sign-in {
 	color: rgba(17, 17, 17, 0.5);
+	text-decoration-line: underline;
 }
 
 .signin {
 	height: 415px;
+}
+.form-btns .active-btn {
+	color: #4f2ee8;
+}
+@media (max-width: 600px) {
+	.registration-window {
+		width: 95%;
+	}
+	.form {
+		width: 87%;
+	}
+	.form-main-btn {
+		width: 100%;
+		padding: 20px;
+	}
 }
