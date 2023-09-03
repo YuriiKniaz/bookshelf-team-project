@@ -16,7 +16,7 @@ async function fetchTopBooks() {
 }
 const refs = {
   bestsellersEl: document.querySelector('.book-list-container'),
-  buttonEl: document.querySelector('.btn'),
+  buttonEl: document.querySelector('#all-cat-li'),
   bookList: document.querySelector('.book-list'),
   home: document.getElementById('bestsellers'),
   body: document.querySelector('body'),
