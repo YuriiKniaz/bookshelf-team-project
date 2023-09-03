@@ -3,6 +3,7 @@
 }
 
 .shopping-list-header {
+  margin-top: 40px;
   margin-bottom: 40px;
   font-weight: 700;
   font-size: 32px;
@@ -13,13 +14,14 @@
 }
 @media screen and (min-width: 768px) {
   .shopping-list-header {
+    margin-top: 40px;
     font-size: 48px;
     line-height: 1.08;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .book-list-container {
+  .shopping-list {
     margin-top: 40px;
     margin-left: 20px;
     margin-right: 25px;
@@ -76,7 +78,7 @@
 
 .shopping-list-book-img {
   margin-top: 14px;
-  margin-left: auto;
+  /* margin-left: auto; */
   margin-right: auto;
   background-image: url('/src/images/shopping-list/shop-img-bg-mob@1x.png');
   background-position: center;
