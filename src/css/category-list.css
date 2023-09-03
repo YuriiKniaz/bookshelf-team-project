@@ -28,7 +28,7 @@
   width: 335px;
   max-height: 228px;
   overflow-y: scroll;
-  margin: 40px auto;
+  /* margin: 40px 0; */
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
