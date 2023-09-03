@@ -5,6 +5,8 @@ const refs = {
   prgFinal: document.querySelector('.prg-final'),
 };
 
+const bookList = document.querySelector('.category-list');
+
 let isAdded = null;
 
 refs.btnClose.addEventListener('click', closeBackdrop);
@@ -38,7 +40,56 @@ document.addEventListener('keydown', function (event) {
 });
 
 document.addEventListener('click', function (event) {
-  if (event.target === 'borderModal') {
+  if (event.target === refs.borderModal) {
     closeBackdrop();
   }
 });
+
+bookList.addEventListener('click', showBookInfo);
+
+function showBookInfo(event) {
+  markupBookInfo();
+}
+function markupBookInfo({ bookName, authorName, urlImg, description }) {
+  return `<div class="modal-book">
+
+      <img class="modal-img" srcset="
+          /src/images/img-window/image@1x.png 1x,
+          /src/images/img-window/image@2x.png 2x
+        " src="/src/images/img-window/image.png" alt="HELLO BEAUTIFUL" />
+
+      <div class="section-one">
+        <h2 class="modal-title">HELLO BEAUTIFUL</h2>
+        <p class="modal-prg">Ann Napolitano</p>
+        <p class="modal-prgtho">
+          In a homage to Louisa May Alcott’s “Little Women,” a young man’s dark
+          past resurfaces as he gets to the know the family of his college
+          sweetheart.
+        </p>
+        <div class="modal-links">
+          <ul class="links-list list">
+            <li class="icon-list">
+              <a href="">
+                <img src="/src/images/modal-img/amazon.png" alt="amazon" width="62" heigth="19">
+              </a>
+            </li>
+            <li class="icon-list">
+              <a href="">
+                <img src="/src/images/modal-img/ibook.png" alt="book" width="33" heigth="32">
+              </a>
+            </li>
+            <li class="icon-list">
+              <a href="">
+                <img src="/src/images/modal-img/book-shop.png" alt="books" width="38" heigth="36">
+              </a>
+            </li>
+            </use>
+            </svg>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+`;
+}
