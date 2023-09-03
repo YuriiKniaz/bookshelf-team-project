@@ -1,38 +1,95 @@
-const backdrop = document.getElementById('backdrop ');
-const btn = document.getElementById('openModalBtn');
-const closeBtn = document.getElementById('.btn-close')[0];
-const addBookBtn = document.getElementById('btn-add-submit');
-const removeBookBtn = document.getElementById('btn-remove-submit');
-// openButton.addEventListener('click', () => {
-//   backdrop.style.display = 'block';
-// });
+const refs = {
+  borderModal: document.querySelector('.backdrop'),
+  btnClose: document.querySelector('.btn-close'),
+  addBook: document.querySelector('#addBookBtn'),
+  prgFinal: document.querySelector('.prg-final'),
+};
 
-// closeBtn.addEventListener('click', () => {
-//   backdrop.style.display = 'none';
-// });
+const bookList = document.querySelector('.category-list');
 
-// відкриття
-btn.addEventListener('click', function () {
-  backdrop.style.display = 'block';
-});
+let isAdded = null;
 
-// Закриття
-closeBtn.addEventListener('click', function () {
-  backdrop.style.display = 'none';
-});
+refs.btnClose.addEventListener('click', closeBackdrop);
+refs.addBook.addEventListener('click', onChangeText);
 
-// Закриття модального вікна, поза ним
-window.addEventListener('click', function (event) {
-  if (event.target == backdrop) {
-    backdrop.style.display = 'none';
+function openWindow() {
+  borderModal.style.display = 'block';
+}
+
+function closeBackdrop() {
+  document.body.style.overflowY = 'visible';
+  refs.borderModal.classList.add('is-hidden');
+}
+
+function onChangeText() {
+  if (isAdded) {
+    refs.addBook.textContent = 'Add to shopping list';
+    refs.prgFinal.classList.add('is-hidden');
+    isAdded = null;
+    return;
+  }
+  refs.addBook.textContent = 'Remove from the shopping list';
+  isAdded = 'yes';
+  refs.prgFinal.classList.remove('is-hidden');
+}
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    closeBackdrop();
   }
 });
-// Додавання книги
-addBookBtn.addEventListener('click', function () {
-  alert('');
+
+document.addEventListener('click', function (event) {
+  if (event.target === refs.borderModal) {
+    closeBackdrop();
+  }
 });
 
-// Видалення книги
-removeBookBtn.addEventListener('click', function () {
-  alert('');
-});
+bookList.addEventListener('click', showBookInfo);
+
+function showBookInfo(event) {
+  markupBookInfo();
+}
+function markupBookInfo({ bookName, authorName, urlImg, description }) {
+  return `<div class="modal-book">
+
+      <img class="modal-img" srcset="
+          /src/images/img-window/image@1x.png 1x,
+          /src/images/img-window/image@2x.png 2x
+        " src="/src/images/img-window/image.png" alt="HELLO BEAUTIFUL" />
+
+      <div class="section-one">
+        <h2 class="modal-title">HELLO BEAUTIFUL</h2>
+        <p class="modal-prg">Ann Napolitano</p>
+        <p class="modal-prgtho">
+          In a homage to Louisa May Alcott’s “Little Women,” a young man’s dark
+          past resurfaces as he gets to the know the family of his college
+          sweetheart.
+        </p>
+        <div class="modal-links">
+          <ul class="links-list list">
+            <li class="icon-list">
+              <a href="">
+                <img src="/src/images/modal-img/amazon.png" alt="amazon" width="62" heigth="19">
+              </a>
+            </li>
+            <li class="icon-list">
+              <a href="">
+                <img src="/src/images/modal-img/ibook.png" alt="book" width="33" heigth="32">
+              </a>
+            </li>
+            <li class="icon-list">
+              <a href="">
+                <img src="/src/images/modal-img/book-shop.png" alt="books" width="38" heigth="36">
+              </a>
+            </li>
+            </use>
+            </svg>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+`;
+}

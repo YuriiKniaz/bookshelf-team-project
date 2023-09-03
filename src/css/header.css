@@ -1,22 +1,24 @@
 .header {
   border-radius: 0px 0px 8px 8px;
   border: 1.5px solid #111;
+  padding: 18px 0;
 }
 .header .container,
-.right-col,
-.left-col,
-.avatar {
+.left-col {
   display: flex;
 }
 .header .container {
   justify-content: space-between;
   align-items: center;
 }
-
+.right-col,
 .logo,
 .menu-item {
   display: flex;
   align-items: center;
+}
+.right-col {
+  gap: 24px;
 }
 .menu {
   display: none;
@@ -43,14 +45,28 @@
 }
 
 .box-toggle {
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  position: relative;
+  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1) inset;
 }
 .circle {
+  position: absolute;
+  left: -2px;
+  top: -1px;
+  transition: transform 0.3s;
+}
+.box-toggle.active .circle {
+  transform: translateX(20px);
 }
 .avatar {
   border-radius: 36px;
   background: #4f2ee8;
   padding: 8px 12px;
   align-items: center;
+  display: none;
 }
 .avatar-box-img {
   margin-right: 9px;
@@ -69,13 +85,43 @@
 .icon {
   fill: #fff;
 }
+.mob-menu {
+  border: none;
+  background: transparent;
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+.mob-menu .close {
+  display: none;
+}
+.mob-menu svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.mob-menu.active .close {
+  display: block;
+}
+.mob-menu.active .hamburger {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .left-col {
     gap: 40px;
   }
+  .avatar {
+    display: flex;
+  }
   .menu {
     display: flex;
     gap: 16px;
+  }
+  .mob-menu {
+    display: none;
+  }
+  .header {
+    padding: 0;
   }
 }
 @media screen and (min-width: 1440px) {

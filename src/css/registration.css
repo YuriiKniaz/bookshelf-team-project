@@ -1,10 +1,12 @@
 .registration {
-	position: relative;
+	position: fixed;
+	top: 0;
 	width: 100vw;
 	height: 100vh;
 	background-color: #4f2ee8;
-	z-index: 11;
+	z-index: 10;
 }
+
 .registration::before {
 	position: absolute;
 	content: "";
@@ -16,6 +18,7 @@
 	top: -918px;
 	left: -846px;
 }
+
 .registration-window {
 	position: absolute;
 	width: 579px;
@@ -38,21 +41,25 @@
 	border: 0;
 	background: 0 0;
 }
+
 .form {
 	width: 500px;
 	margin: auto;
 	padding-top: 80px;
 	margin-bottom: 20px;
 }
-.form-input-list {
+
+.form-list {
 	display: flex;
 	flex-direction: column;
 	gap: 28px;
 	margin-bottom: 40px;
 }
+
 .input-container {
 	position: relative;
 }
+
 .form-input {
 	width: 100%;
 	height: 64px;
@@ -62,6 +69,7 @@
 	border: 2px solid var(--main-text-clr);
 	border-radius: 40px;
 }
+
 .form-input::placeholder {
 	color: var(--main-text-clr);
 	position: absolute;
@@ -71,12 +79,14 @@
 	letter-spacing: -0.18px;
 	text-transform: uppercase;
 }
+
 .form-icon {
 	position: absolute;
 	top: 20px;
 	right: 32px;
 }
-.form-btn {
+
+.form-main-btn {
 	color: #f3f3f3;
 	font-size: 18px;
 	font-weight: 700;
@@ -89,12 +99,14 @@
 	width: 100%;
 	border: none;
 }
+
 .form-btns {
 	display: flex;
 	justify-content: center;
 	gap: 20px;
 }
-.btn {
+
+.form-btns button {
 	outline: 0;
 	border: 0;
 	background: 0 0;
@@ -104,11 +116,25 @@
 	line-height: 1.33;
 	letter-spacing: -0.18px;
 	text-transform: uppercase;
-}
-.sign-up {
+	color: rgba(17, 17, 17, 0.5);
 	text-decoration-line: underline;
+}
+
+.signin {
+	height: 415px;
+}
+.form-btns .active-btn {
 	color: #4f2ee8;
 }
-.sign-in {
-	color: rgba(17, 17, 17, 0.5);
+@media (max-width: 600px) {
+	.registration-window {
+		width: 95%;
+	}
+	.form {
+		width: 87%;
+	}
+	.form-main-btn {
+		width: 100%;
+		padding: 20px;
+	}
 }

@@ -1,76 +1,73 @@
 <section class="section">
-  <style>
-    .support-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      max-height: 352px;
-      overflow: hidden;
-      position: relative;
-    }
-    .support-container {
-      height: 352px;
-      overflow-y: scroll;
-      position: relative;
-    }
-    .support-item {
-      height: 170px;
-      line-height: 170px;
-      padding: 0 10px;
-      border-bottom: 1px solid #ccc;
-    }
-    .scroll-button {
-      text-align: center;
-      padding: 10px 0;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      position: sticky;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    .button-container {
-      text-align: center;
-      position: relative;
-      margin-top: 170px;
-    }
-    .header {
-      position: sticky;
-      top: 0;
-      background-color: white;
-      z-index: 2;
-    }
-    .scroll-button-container {
-      position: sticky;
-      bottom: 0;
-      z-index: 3;
-    }
-  </style>
   <div class="container">
-    <ul class="support-list">
-      <div class="header">
-        <h1>Support Ukraine</h1>
-      </div>
-      <div class="support-container">
-        <li class="support-item">Item 1</li>
-        <li class="support-item">Item 2</li>
-        <li class="support-item">Item 3</li>
-        <li class="support-item">Item 4</li>
-        <li class="support-item">Item 5</li>
-        <li class="support-item">Item 6</li>
-        <li class="support-item">Item 7</li>
-        <li class="support-item">Item 8</li>
-        <li class="support-item">Item 9</li>
-      </div>
-      <div class="scroll-button-container">
-        <button class="scroll-button" type="button">&#8595;</button>
-      </div>
-    </ul>
+    <div class="categories-container">
+      <ul class="categories-list">
+        <li class="categories-item" data-category="all-categories">
+          <a href="" class="categories-btn current">All Categories</a>
+        </li>
+        <li
+          class="categories-item"
+          data-category="Combined Print and E-book Fiction"
+        >
+          <a href="" class="categories-btn current"
+            >Combined Print and E-book Fiction</a
+          >
+        </li>
+        <li class="categories-item" data-category="combined-nonfiction">
+          <a href="" class="categories-btn"
+            >Combined Print and E-Book Nonfiction</a
+          >
+        </li>
+        <li class="categories-item" data-category="advice-miscellaneous">
+          <a href="" class="categories-btn">Advice How-To and Miscellaneous</a>
+        </li>
+        <li class="categories-item" data-category="audio-nonfiction">
+          <a href="" class="categories-btn">Audio Nonfiction</a>
+        </li>
+        <li class="categories-item" data-category="paperback-nonfiction">
+          <a href="" class="categories-btn">Paperback Nonfiction</a>
+        </li>
+        <li class="categories-item" data-category="business-books">
+          <a href="" class="categories-btn">Business Books</a>
+        </li>
+        <li class="categories-item" data-category="middle-monthly">
+          <a href="" class="categories-btn">Middle Grade Paperback Monthly</a>
+        </li>
+        <li class="categories-item" data-category="hardcover-fiction">
+          <a href="" class="categories-btn">Hardcover Fiction</a>
+        </li>
+        <li class="categories-item" data-category="mass-market-monthly">
+          <a href="" class="categories-btn">Mass Market Monthly</a>
+        </li>
+        <li class="categories-item" data-category="">
+          <a href="" class="categories-btn">Childrens Middle Grade Hardcover</a>
+        </li>
+        <li class="categories-item" data-category="audio-fiction">
+          <a href="" class="categories-btn">Audio Fiction</a>
+        </li>
+        <li class="categories-item" data-category="young-adult-hardcover">
+          <a href="" class="categories-btn">Young Adult Hardcover</a>
+        </li>
+        <li class="categories-item" data-category="series-books">
+          <a href="" class="categories-btn">Series Books</a>
+        </li>
+        <li class="categories-item" data-category="trade-fiction-paperback">
+          <a href="" class="categories-btn">Trade Fiction Paperback</a>
+        </li>
+        <li class="categories-item" data-category="graphic-books-and-manga">
+          <a href="" class="categories-btn">Graphic Books and Manga</a>
+        </li>
+        <li class="categories-item" data-category="young-adult-monthly">
+          <a href="" class="categories-btn">Young Adult Paperback Monthly</a>
+        </li>
+        <li class="categories-item" data-category="hardcover-nonfiction">
+          <a href="" class="categories-btn">Hardcover Nonfiction</a>
+        </li>
+        <li class="categories-item" data-category="picture-books">
+          <a href="" class="categories-btn">Picture Books</a>
+        </li>
+      </ul>
+    </div>
   </div>
   <script>
     const scrollButton = document.querySelector('.scroll-button');
