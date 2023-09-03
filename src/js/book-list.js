@@ -6,6 +6,7 @@ const categoryEl = document.querySelector('h1.category-name');
 const tmpMenu = document.querySelector('body');
 
 tmpMenu.addEventListener('click', event => {
+  event.preventDefault();
   const cat = event.target.dataset.category;
   if (!cat) {
     return;
@@ -15,6 +16,7 @@ tmpMenu.addEventListener('click', event => {
   let str1 = cat.substring(0, lastIndex);
   let str2 = cat.substring(lastIndex);
   categoryEl.innerHTML = `${str1} <span class="category-name-accent">${str2}</span>`;
+
   fetchBooksByCategory(event.target.dataset.category).then(el => {
     const elements = createBookList(el);
     booksEl.innerHTML = elements;

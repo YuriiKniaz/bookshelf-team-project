@@ -27,9 +27,9 @@ const refs = {
 refs.home.addEventListener('click', onHomeB);
 window.onload = function () {
   refs.home.click();
-}
+};
 
- function onHomeB(e) {
+function onHomeB(e) {
   e.preventDefault();
   refs.categoryName.innerHTML = `Best Sellers <span class="category-name-accent">Books</span>`;
   onClickBestsellers();
@@ -45,11 +45,15 @@ async function onClickBestsellers() {
   function onBookClick(evt) {
     evt.preventDefault();
     if (evt.target.classList.contains('seemorebtn')) {
-      return
+      return;
     } else {
       const { id, list_name } = evt.target.closest('li').dataset; //
-      const searchList = listEl.find(({ list_name: listName }) => listName === list_name);
-      const currentBook = searchList.books.find(({ _id: bookId }) => bookId === id);// отримаємо ID 'li' по якому клікнули
+      const searchList = listEl.find(
+        ({ list_name: listName }) => listName === list_name
+      );
+      const currentBook = searchList.books.find(
+        ({ _id: bookId }) => bookId === id
+      ); // отримаємо ID 'li' по якому клікнули
 
       function addCuurentBook(currentBook) {
         localStorage.setItem('currentBook', JSON.stringify(currentBook)); // записуємо в localStorage об'єкт книги, яку вибрали
@@ -62,7 +66,6 @@ async function onClickBestsellers() {
     }
   }
 }
-
 
 function createBestsellers(data) {
   return data
