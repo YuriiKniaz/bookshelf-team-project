@@ -69,7 +69,6 @@
     padding: 0 20px;
     margin-top: 8px;
 
-    opacity: 0;
   }
 
   /* .backdrop-window {
@@ -93,11 +92,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 24px;
-    height: 24px;
     border: none;
     background: transparent;
     cursor: pointer;
+  }
+
+  .btn-close:hover {
+    border: none;
+    border: solid #8b00ff;
   }
 
   .section-one {
@@ -146,7 +148,7 @@
     align-items: center;
 
     justify-content: flex-start;
-
+    flex-direction: row;
     gap: 20px;
   }
 }
@@ -280,15 +282,15 @@
     margin-top: 20px;
   }
 
-  .links-list {
+  .links-list.list {
     display: flex;
     align-items: center;
-
     justify-content: flex-start;
-
     gap: 20px;
+    flex-direction: row;
   }
 }
+
 
 .btn-close:hover .icon-close,
 .btn-close:focus .icon-close {

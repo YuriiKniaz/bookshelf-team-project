@@ -45,6 +45,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 :root {
   --main-text-clr: #111111;
   --dark-theme-clr: #202024;
@@ -70,19 +71,26 @@ body {
 }
 
 .container {
-  padding: 0 20px;
+  min-width: 320px;
+  max-width: 375px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
-@media screen and (min-width: 768px) {
+.section {
+  padding: 40px 0;
+}
+
+@media (min-width: 768px) {
   .container {
-    width: 768px;
     padding: 0 32px;
+    min-width: 768px;
   }
 }
-@media screen and (min-width: 1440px) {
+
+@media (min-width: 1440px) {
   .container {
-    width: 1440px;
+    max-width: 1440px;
     padding: 0 24px;
   }
 }

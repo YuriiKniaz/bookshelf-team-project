@@ -1,0 +1,127 @@
+.shopping-list {
+  margin-top: 40px;
+}
+
+.shopping-list-header {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.19;
+  letter-spacing: -0.04em;
+
+  color: #111111;
+}
+@media screen and (min-width: 768px) {
+  .shopping-list-header {
+    font-size: 48px;
+    line-height: 1.08;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .book-list-container {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 25px;
+    margin-bottom: 100px;
+  }
+}
+.shopping-blue {
+  color: #4f2ee8;
+}
+
+.empty-shop-list {
+  margin-top: 120px;
+  margin-left: 55px;
+}
+
+.shop-list-text {
+  margin-bottom: 14px;
+
+  width: 244px;
+  min-height: 36px;
+
+  font-family: 'DM Sans';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: calc(18 / 14);
+  text-align: center;
+
+  color: #00000099;
+}
+
+@media screen and (min-width: 768px) {
+  .empty-shop-list {
+    margin-top: 140px;
+    margin-left: 210px;
+  }
+  .shop-list-text {
+    font-size: 18px;
+    line-height: calc(24 / 18);
+
+    margin-bottom: 20px;
+    width: 349px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .empty-shop-list {
+    margin-top: 140px;
+    margin-left: 355px;
+  }
+  .shop-list-text {
+    margin-bottom: 20px;
+  }
+}
+
+.shopping-list-book-img {
+  margin-top: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('/src/images/shopping-list/shop-img-bg-mob@1x.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 265px;
+  height: 198px;
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .shopping-list-book-img {
+    background-image: url('/src/images/shopping-list/shop-img-bg-mob@2x.png');
+  }
+}
+@media screen and (min-width: 768px) {
+  .shopping-list-book-img {
+    margin-top: 20px;
+    width: 322px;
+    height: 241px;
+    background-image: url('/src/images/shopping-list/shop-img-bg-tabl@1x.png');
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .shopping-list-book-img {
+      background-image: url('/src/images/shopping-list/shop-img-bg-tabl@2x.png');
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .shopping-list {
+    margin-left: 300px;
+  }
+  .shopping-list-book-img {
+    background-image: url('/src/images/shopping-list/shop-img-bg-desk@1x.png');
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .shopping-list-book-img {
+      background-image: url('/src/images/shopping-list/shop-img-bg-desk@2x.png');
+    }
+  }
+}
+
+/* Стилі для Javascript розмітки */
