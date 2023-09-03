@@ -1,46 +1,28 @@
-const backdrop = document.getElementById('backdrop ');
-const btn = document.getElementById('openModalBtn');
-const closeBtn = document.getElementById('.btn-close')[0];
-const addBookBtn = document.getElementById('btn-add-submit');
-const removeBookBtn = document.getElementById('btn-remove-submit');
-// openButton.addEventListener('click', () => {
-//   backdrop.style.display = 'block';
-// });
+const refs = {
+  borderModal: document.querySelector('.backdrop'),
+  btnClose: document.querySelector('.btn-close'),
+  addBook: document.querySelector('#addBookBtn'),
+  prgFinal: document.querySelector('.prg-final'),
+};
 
-// closeBtn.addEventListener('click', () => {
-//   backdrop.style.display = 'none';
-// });
+let isAdded = null;
 
-// відкриття
-btn.addEventListener('click', function () {
-  backdrop.style.display = 'block';
-});
+refs.btnClose.addEventListener('click', closeBackdrop);
+refs.addBook.addEventListener('click', onChangeText);
 
-// Закриття
-closeBtn.addEventListener('click', function () {
-  backdrop.style.display = 'none';
-});
+function closeBackdrop() {
+  document.body.style.overflowY = 'visible';
+  refs.borderModal.classList.add('is-hidden');
+}
 
-// Закриття модального вікна, поза ним
-window.addEventListener('click', function (event) {
-  if (event.target == backdrop) {
-    backdrop.style.display = 'none';
+function onChangeText() {
+  if (isAdded) {
+    refs.addBook.textContent = 'Add to shopping list';
+    refs.prgFinal.classList.add('is-hidden');
+    isAdded = null;
+    return;
   }
-});
-// Додавання книги
-addBookBtn.addEventListener('click', function () {
-  alert('');
-});
-
-// Видалення книги
-removeBookBtn.addEventListener('click', function () {
-  alert('');
-});
-
-function addBooking() {
-  var btnone = document.getElementById('.addBookBtn');
-  var btntho = document.getElementById('.removeBookBtn');
-
-  btnone.style.display = 'none'; // Приховуємо першу кнопку
-  btntho.style.display = 'block'; // Показуємо другу кнопку
+  refs.addBook.textContent = 'Remove from the shopping list';
+  isAdded = 'yes';
+  refs.prgFinal.classList.remove('is-hidden');
 }
