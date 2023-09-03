@@ -18,6 +18,24 @@ tmpMenu.addEventListener('click', event => {
   fetchBooksByCategory(event.target.dataset.category).then(el => {
     const elements = createBookList(el);
     booksEl.innerHTML = elements;
+
+    const bookList = document.querySelector('.book-list');
+    bookList.addEventListener('click', onBookClick);
+
+    function onBookClick(evt) {
+      evt.preventDefault();
+      const { id } = evt.target.closest('li').dataset; //
+      const currentBook = el.find(({ _id: bookId }) => bookId === id); // отримаємо ID 'li' по якому клікнули
+
+      function addCuurentBook(currentBook) {
+        localStorage.setItem('currentBook', JSON.stringify(currentBook)); // записуємо в localStorage об'єкт книги, яку вибрали
+      }
+      addCuurentBook(currentBook);
+
+      const modalWindow = document.getElementById('myWindow');
+
+      modalWindow.classList.remove('is-hidden'); // відкриваєм модалку
+    }
   });
 });
 
@@ -25,7 +43,7 @@ function createBookList(dataList) {
   let li = dataList
     .map(book => {
       return `<div class="photo-card">
-      <li class="book-content" data-id="">
+      <li class="book-content" data-id="${book._id}">
         <a href=${book.book_image} class='book-link link'>
         <div class="book-img-wrapper">
             <img class="book-image" src="${book.book_image}" alt="${book.description}" loading="lazy" class="gallery__img" width="180"/>
