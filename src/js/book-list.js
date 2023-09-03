@@ -6,6 +6,7 @@ const categoryEl = document.querySelector('h1.category-name');
 const tmpMenu = document.querySelector('body');
 
 tmpMenu.addEventListener('click', event => {
+  event.preventDefault();
   const cat = event.target.dataset.category;
   if (!cat) {
     return;
@@ -15,6 +16,7 @@ tmpMenu.addEventListener('click', event => {
   let str1 = cat.substring(0, lastIndex);
   let str2 = cat.substring(lastIndex);
   categoryEl.innerHTML = `${str1} <span class="category-name-accent">${str2}</span>`;
+
   fetchBooksByCategory(event.target.dataset.category).then(el => {
     const elements = createBookList(el);
     booksEl.innerHTML = elements;
@@ -42,7 +44,7 @@ tmpMenu.addEventListener('click', event => {
 function createBookList(dataList) {
   let li = dataList
     .map(book => {
-      return `<div class="photo-card">
+      return `
       <li class="book-content" data-id="${book._id}">
         <a href=${book.book_image} class='book-link link'>
         <div class="book-img-wrapper">
@@ -54,7 +56,7 @@ function createBookList(dataList) {
         </div>
         </a>
       </li>
-    </div>`;
+    `;
     })
     .join('');
   return ' <ul class="book-list list">' + li + '</ul>';
