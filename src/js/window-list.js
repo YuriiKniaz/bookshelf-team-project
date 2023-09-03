@@ -36,3 +36,11 @@ addBookBtn.addEventListener('click', function () {
 removeBookBtn.addEventListener('click', function () {
   alert('');
 });
+
+function addBooking() {
+  var btnone = document.getElementById('.addBookBtn');
+  var btntho = document.getElementById('.removeBookBtn');
+
+  btnone.style.display = 'none'; // Приховуємо першу кнопку
+  btntho.style.display = 'block'; // Показуємо другу кнопку
+}
