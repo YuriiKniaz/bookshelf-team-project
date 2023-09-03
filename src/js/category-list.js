@@ -24,10 +24,13 @@ window.addEventListener('load', () => {
 });
 
 menuCategory.addEventListener('click', event => {
-  const liItems = menuCategory.querySelectorAll('li');
-  liItems.forEach(el => el.classList.remove('categories-item-current'));
   const trgt = event.target.parentElement;
-  trgt.classList.add('categories-item-current');
+
+  if (trgt.tagName == 'LI') {
+    const liItems = menuCategory.querySelectorAll('li');
+    liItems.forEach(el => el.classList.remove('categories-item-current'));
+    trgt.classList.add('categories-item-current');
+  }
 });
 
 export async function fetchCategoryList() {
