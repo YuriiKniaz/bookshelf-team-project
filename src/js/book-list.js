@@ -21,23 +21,23 @@ tmpMenu.addEventListener('click', event => {
     const elements = createBookList(el);
     booksEl.innerHTML = elements;
 
-    const bookList = document.querySelector('.book-list');
-    bookList.addEventListener('click', onBookClick);
+    //const bookList = document.querySelector('.book-list');
+    // bookList.addEventListener('click', onBookClick);
 
-    function onBookClick(evt) {
-      evt.preventDefault();
-      const { id } = evt.target.closest('li').dataset; //
-      const currentBook = el.find(({ _id: bookId }) => bookId === id); // отримаємо ID 'li' по якому клікнули
+    // function onBookClick(evt) {
+    //   evt.preventDefault();
+    //   const { id } = evt.target.closest('li').dataset; //
+    //   const currentBook = el.find(({ _id: bookId }) => bookId === id); // отримаємо ID 'li' по якому клікнули
 
-      function addCuurentBook(currentBook) {
-        localStorage.setItem('currentBook', JSON.stringify(currentBook)); // записуємо в localStorage об'єкт книги, яку вибрали
-      }
-      addCuurentBook(currentBook);
+    //   function addCuurentBook(currentBook) {
+    //     localStorage.setItem('currentBook', JSON.stringify(currentBook)); // записуємо в localStorage об'єкт книги, яку вибрали
+    //   }
+    //   addCuurentBook(currentBook);
 
-      const modalWindow = document.getElementById('myWindow');
+    //   const modalWindow = document.getElementById('myWindow');
 
-      modalWindow.classList.remove('is-hidden'); // відкриваєм модалку
-    }
+    //   modalWindow.classList.remove('is-hidden'); // відкриваєм модалку
+    // }
   });
 });
 
