@@ -44,7 +44,7 @@ tmpMenu.addEventListener('click', event => {
 function createBookList(dataList) {
   let li = dataList
     .map(book => {
-      return `<div class="photo-card">
+      return `
       <li class="book-content" data-id="${book._id}">
         <a href=${book.book_image} class='book-link link'>
         <div class="book-img-wrapper">
@@ -56,7 +56,7 @@ function createBookList(dataList) {
         </div>
         </a>
       </li>
-    </div>`;
+    `;
     })
     .join('');
   return ' <ul class="book-list list">' + li + '</ul>';
