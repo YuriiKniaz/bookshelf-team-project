@@ -23,6 +23,16 @@ window.addEventListener('load', () => {
     .catch();
 });
 
+menuCategory.addEventListener('click', event => {
+  const trgt = event.target.parentElement;
+
+  if (trgt.tagName == 'LI') {
+    const liItems = menuCategory.querySelectorAll('li');
+    liItems.forEach(el => el.classList.remove('categories-item-current'));
+    trgt.classList.add('categories-item-current');
+  }
+});
+
 export async function fetchCategoryList() {
   try {
     const response = await axios.get(CATURL);
