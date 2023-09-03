@@ -19,7 +19,7 @@
 
 .book-name {
   line-height: 1.125;
-  color: #111111;
+  color: var(--main-text-clr);
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -33,7 +33,7 @@
   font-size: 12px;
   line-height: 1.16;
   font-style: italic;
-  color: #b4afaf;
+  color: var(--lightgray-clr);
   letter-spacing: -0.04em;
   text-overflow: ellipsis;
   white-space: nowrap;
