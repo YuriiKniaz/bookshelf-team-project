@@ -25,10 +25,6 @@ const refs = {
 };
 
 refs.home.addEventListener('click', onHomeB);
-window.onload = function () {
-  refs.home.click();
-};
-
 function onHomeB(e) {
   e.preventDefault();
   refs.categoryName.innerHTML = `Best Sellers <span class="category-name-accent">Books</span>`;
@@ -36,19 +32,19 @@ function onHomeB(e) {
 }
 
 refs.buttonEl.addEventListener('click', onClickBestsellers);
-async function onClickBestsellers() {
-  const listEl = await fetchTopBooks();
-  const elements = createBestsellers(listEl);
+function onClickBestsellers() {
+  fetchTopBooks().then(data => {
+  const elements = createBestsellers(data);
   refs.bestsellersEl.innerHTML = elements;
   refs.bestsellersEl.addEventListener('click', onBookClick);
 
   function onBookClick(evt) {
-    evt.preventDefault();
+    // evt.preventDefault();
     if (evt.target.classList.contains('seemorebtn')) {
       return;
     } else {
       const { id, list_name } = evt.target.closest('li').dataset; //
-      const searchList = listEl.find(
+      const searchList = data.find(
         ({ list_name: listName }) => listName === list_name
       );
       const currentBook = searchList.books.find(
@@ -64,7 +60,7 @@ async function onClickBestsellers() {
 
       modalWindow.classList.remove('is-hidden'); // відкриваєм модалку
     }
-  }
+  }});
 }
 
 function createBestsellers(data) {
