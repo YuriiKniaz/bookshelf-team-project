@@ -3,7 +3,7 @@
 	top: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: #4f2ee8;
+	background-color: var(--accent-violet-clr);
 	z-index: 10;
 }
 
@@ -18,7 +18,13 @@
 	top: -918px;
 	left: -846px;
 }
-
+.close-icon {
+	stroke: var(--main-text-clr);
+}
+.close-icon:hover,
+.close-icon:focus {
+	stroke: var(--accent-violet-clr);
+}
 .registration-window {
 	position: absolute;
 	width: 579px;
@@ -98,6 +104,12 @@
 	padding: 20px 173px;
 	width: 100%;
 	border: none;
+	transition-duration: 200ms;
+	transition-timing-function: linear;
+}
+.form-main-btn:hover,
+.form-main-btn:focus {
+	transform: scale(1.03);
 }
 
 .form-btns {
@@ -118,8 +130,14 @@
 	text-transform: uppercase;
 	color: rgba(17, 17, 17, 0.5);
 	text-decoration-line: underline;
+	transition-duration: 200ms;
+	transition-timing-function: linear;
 }
-
+.form-btns button:hover,
+.form-btns button:focus {
+	color: #4f2ee8;
+	transform: scale(1.1);
+}
 .signin {
 	height: 415px;
 }
