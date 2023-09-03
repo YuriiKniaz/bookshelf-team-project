@@ -1,9 +1,24 @@
+.shopping-list-container {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.shopping-list-section .support-wrapper {
+  margin-top: 40px;
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .shopping-list-section .support-wrapper {
+    display: block;
+  }
+}
+
 .shopping-list {
   margin-top: 40px;
 }
 
 .shopping-list-header {
-  margin-top: 40px;
   margin-bottom: 40px;
   font-weight: 700;
   font-size: 32px;
@@ -14,7 +29,6 @@
 }
 @media screen and (min-width: 768px) {
   .shopping-list-header {
-    margin-top: 40px;
     font-size: 48px;
     line-height: 1.08;
   }

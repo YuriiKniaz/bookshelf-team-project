@@ -2,6 +2,23 @@
   list-style: none;
 }
 
+.book-list-container-wrapper {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .book-list-container-wrapper {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .book-list-container-wrapper {
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+}
+
 .book-list-container {
   margin-top: 40px;
 }
@@ -79,8 +96,6 @@
 @media screen and (min-width: 1440px) {
   .book-list-container {
     margin-top: 40px;
-    margin-left: 20px;
-    margin-right: 25px;
     margin-bottom: 100px;
   }
 

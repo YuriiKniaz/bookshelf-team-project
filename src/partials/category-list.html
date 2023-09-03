@@ -1,30 +1,27 @@
-<section class="section">
-  <div class="container">
-    <div class="categories-container">
-      <ul class="categories-list">
-        <li class="categories-item">
-          <a
-            href=""
-            class="categories-btn current"
-            id="all-cat-li"
-            class="categories-item"
-            data-category="Best Sellers Books"
-            >All Categories</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
-  <script>
-    const pages = document.querySelectorAll('.categories-item');
+<div class="categories-container">
+  <ul class="categories-list">
+    <li class="categories-item">
+      <a
+        href=""
+        class="categories-btn current"
+        id="all-cat-li"
+        class="categories-item"
+        data-category="Best Sellers Books"
+        >All Categories</a
+      >
+    </li>
+  </ul>
+</div>
 
-    pages.forEach(page => {
-      page.addEventListener('click', event => {
-        event.preventDefault();
+<script>
+  const pages = document.querySelectorAll('.categories-item');
 
-        pages.forEach(p => p.classList.remove('categories-item-current'));
-        page.classList.add('categories-item-current');
-      });
+  pages.forEach(page => {
+    page.addEventListener('click', event => {
+      event.preventDefault();
+
+      pages.forEach(p => p.classList.remove('categories-item-current'));
+      page.classList.add('categories-item-current');
     });
-  </script>
-</section>
+  });
+</script>
