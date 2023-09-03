@@ -17,10 +17,8 @@ async function fetchTopBooks() {
 }
 const refs = {
   bestsellersEl: document.querySelector('.book-list-container'),
-  buttonEl: document.querySelector('.btn'),
+  buttonEl: document.querySelector('#all-cat-li'),
 };
-
-
 
 refs.buttonEl.addEventListener('click', onClick);
 async function onClick() {
@@ -28,7 +26,6 @@ async function onClick() {
   const elements = createBestsellers(listEl);
   refs.bestsellersEl.innerHTML = elements;
 }
-
 
 function createBestsellers(data) {
   console.log(data);

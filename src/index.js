@@ -5,3 +5,4 @@ import './js/best-sellers.js';
 import './js/shopping-section.js';
 import './js/arrow-top.js';
 import './js/registration.js';
+import './js/category-list.js';
