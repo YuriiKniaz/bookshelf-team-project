@@ -18,12 +18,24 @@ const refs = {
   bestsellersEl: document.querySelector('.book-list-container'),
   buttonEl: document.querySelector('.btn'),
   bookList: document.querySelector('.book-list'),
+  home: document.getElementById('bestsellers'),
+  body: document.querySelector('body'),
+  categoryName: document.querySelector('.category-name'),
 };
 
+refs.home.addEventListener('click', onHomeB);
+window.onload = function () {
+  refs.home.click();
+}
 
+ function onHomeB(e) {
+  e.preventDefault();
+  refs.categoryName.innerHTML = `Best Sellers <span class="category-name-accent">Books</span>`;
+  onClickBestsellers();
+}
 
-refs.buttonEl.addEventListener('click', onClick);
-async function onClick() {
+refs.buttonEl.addEventListener('click', onClickBestsellers);
+async function onClickBestsellers() {
   const listEl = await fetchTopBooks();
   const elements = createBestsellers(listEl);
   refs.bestsellersEl.innerHTML = elements;
