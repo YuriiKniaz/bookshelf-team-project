@@ -40,6 +40,12 @@ bContainer.addEventListener('click', event => {
       backGRND.innerHTML = html;
       //ПРАЦЮВАТИ З КНИГОЮ ВИЩЕ
       curentBook = book;
+      if (curentBook) {
+        const userBucket = load('userBucket');
+        const bookIds = userBucket.map(el => el._id);
+        let isAdded = bookIds.includes(curentBook._id);
+        onChangeText(isAdded);
+      }
     })
     .catch(err => console.log(err));
 });
@@ -48,38 +54,41 @@ bContainer.addEventListener('click', event => {
 refs.addBook.addEventListener('click', event => {
   if (curentBook) {
     const userBucket = load('userBucket');
-    console.log(userBucket.length);
-    userBucket.push(curentBook);
-    console.log(userBucket.length);
-    save('userBucket', userBucket);
-    console.log(load('userBucket').length);
-    onChangeText();
+    const bookIds = userBucket.map(el => el._id);
+    let isAdded = bookIds.includes(curentBook._id);
+
+    console.log(isAdded);
+    if (!isAdded) {
+      userBucket.push(curentBook);
+      save('userBucket', userBucket);
+    } else {
+      const userBucketNew = [];
+      for (const iterator of userBucket) {
+        if (iterator._id != curentBook._id) {
+          userBucketNew.push(iterator);
+        }
+      }
+      save('userBucket', userBucketNew);
+    }
+    onChangeText(!isAdded);
   }
 });
-let isAdded = null;
 
 refs.btnClose.addEventListener('click', closeBackdrop);
-//refs.addBook.addEventListener('click', onChangeText);
-
-// function openWindow() {
-//   borderModal.style.display = 'block';
-// }
 
 function closeBackdrop() {
   document.body.style.overflowY = 'visible';
   refs.borderModal.classList.add('is-hidden');
 }
 
-function onChangeText() {
+function onChangeText(isAdded) {
   if (isAdded) {
+    refs.addBook.textContent = 'Remove from the shopping list';
+    refs.prgFinal.classList.remove('is-hidden');
+  } else {
     refs.addBook.textContent = 'Add to shopping list';
     refs.prgFinal.classList.add('is-hidden');
-    isAdded = null;
-    return;
   }
-  refs.addBook.textContent = 'Remove from the shopping list';
-  isAdded = 'yes';
-  refs.prgFinal.classList.remove('is-hidden');
 }
 
 document.addEventListener('keydown', function (event) {
@@ -105,12 +114,7 @@ document.addEventListener('click', function (event) {
 // if (bookList) bookList.addEventListener('click', showBookInfo);
 
 
-//bookList.addEventListener('click', showBookInfo);
 
-
-// function showBookInfo(event) {
-//   markupBookInfo();
-// }
 function markupBookInfo(book) {
   let amazonLink = '';
   let ibookLink = '';
