@@ -8,6 +8,7 @@
   --registr-window-col: #111;
   --registr-window-btn-col: #f3f3f3;
   --registr-window-btn-second-col: rgba(17, 17, 17, 0.5);
+  --scrollbar-color: #e0e0e0;
 }
 
 .dark-theme {
@@ -20,6 +21,7 @@
   --registr-window-col: #f6f6f6;
   --registr-window-btn-col: #202024;
   --registr-window-btn-second-col: rgba(246, 246, 246, 0.5);
+  --scrollbar-color: rgba(17, 17, 17, 0.6);
 }
 
 body {
@@ -38,17 +40,23 @@ body {
 .book-name,
 .modal-title,
 .modal-prgtho,
-.modal-btn {
+.modal-btn,
+.shopping-list-header {
   color: var(--text-color);
 }
 
 .categories-item,
-.prg-final {
+.prg-final,
+.shop-list-text {
   color: var(--second-text-color);
 }
 
 .categories-item-current {
   color: var(--hover-color);
+}
+
+.categories-container::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
 }
 
 .backdrop-window {
@@ -62,7 +70,8 @@ body {
 }
 
 .icon-close,
-.mob-menu svg {
+.mob-menu svg,
+.menu-link svg {
   stroke: var(--text-color);
 }
 
