@@ -102,6 +102,18 @@ document.addEventListener('click', function (event) {
     closeBackdrop();
   }
 });
+// МОДАЛЬНЕ ВІКНО************************************************************
+
+// document.addEventListener('click', function (event) {
+  // if (event.target === refs.borderModal) {
+  //   closeBackdrop();
+  // }
+// });
+
+
+// if (bookList) bookList.addEventListener('click', showBookInfo);
+
+
 
 function markupBookInfo(book) {
   let amazonLink = '';
