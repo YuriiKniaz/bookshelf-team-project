@@ -5,7 +5,7 @@ const imagesToHide = document.querySelectorAll('.shopping-list-book-img'); // О
 
 // Отримання збережених книг з localStorage
 function getSavedBooks() {
-  const savedBooks = localStorage.getItem('bookShopingListLS');
+const savedBooks = localStorage.getItem('userBucket'); 
   if (savedBooks) {
     return JSON.parse(savedBooks);
   }
