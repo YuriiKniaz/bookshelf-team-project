@@ -7,3 +7,4 @@ import './js/arrow-top.js';
 import './js/registration.js';
 import './js/category-list.js';
 import './js/window-list.js';
+import './js/charitable-foundation.js';
