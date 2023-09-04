@@ -1,7 +1,3 @@
-// const bookList = document.querySelector('.currentBook');
-// const bookName = document.getElementById('#book.title');
-// const bookAuthor = document.getElementById('#book.author');
-
 // МОДАЛЬНЕ ВІКНО************************************************************
 const refs = {
   borderModal: document.querySelector('.backdrop'),
@@ -49,22 +45,12 @@ document.addEventListener('click', function (event) {
 });
 // МОДАЛЬНЕ ВІКНО************************************************************
 
-// function markupBookInfo(bookName, bookAuthor) {
-//   borderModal.style.display = 'block';
-//   bookName.textContent = bookName;
-//   bookAuthor.textContent = bookAuthor;
-// }
-
 bookList.addEventListener('click', showBookInfo);
 
 function showBookInfo(event) {
   markupBookInfo();
 }
 
-// const bookListOpen = document.querySelectorAll('.book-list');
-// currentBook.forEach(function (bookListOpen) {
-//   bookListOpen.addEventListener('click', function () {});
-// });
 function markupBookInfo({ bookName, bookAuthor, urlImg, description }) {
   return `<div class="modal-book">
 
