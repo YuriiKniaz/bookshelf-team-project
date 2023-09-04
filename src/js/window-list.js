@@ -1,11 +1,14 @@
+// const bookList = document.querySelector('.currentBook');
+// const bookName = document.getElementById('#book.title');
+// const bookAuthor = document.getElementById('#book.author');
+
+// МОДАЛЬНЕ ВІКНО************************************************************
 const refs = {
   borderModal: document.querySelector('.backdrop'),
   btnClose: document.querySelector('.btn-close'),
   addBook: document.querySelector('#addBookBtn'),
   prgFinal: document.querySelector('.prg-final'),
 };
-
-const bookList = document.querySelector('.category-list');
 
 let isAdded = null;
 
@@ -44,13 +47,25 @@ document.addEventListener('click', function (event) {
     closeBackdrop();
   }
 });
+// МОДАЛЬНЕ ВІКНО************************************************************
+
+// function markupBookInfo(bookName, bookAuthor) {
+//   borderModal.style.display = 'block';
+//   bookName.textContent = bookName;
+//   bookAuthor.textContent = bookAuthor;
+// }
 
 bookList.addEventListener('click', showBookInfo);
 
 function showBookInfo(event) {
   markupBookInfo();
 }
-function markupBookInfo({ bookName, authorName, urlImg, description }) {
+
+// const bookListOpen = document.querySelectorAll('.book-list');
+// currentBook.forEach(function (bookListOpen) {
+//   bookListOpen.addEventListener('click', function () {});
+// });
+function markupBookInfo({ bookName, bookAuthor, urlImg, description }) {
   return `<div class="modal-book">
 
       <img class="modal-img" srcset="
@@ -59,8 +74,8 @@ function markupBookInfo({ bookName, authorName, urlImg, description }) {
         " src="/src/images/img-window/image.png" alt="HELLO BEAUTIFUL" />
 
       <div class="section-one">
-        <h2 class="modal-title">HELLO BEAUTIFUL</h2>
-        <p class="modal-prg">Ann Napolitano</p>
+        <h2 class="modal-title">${bookName}</h2>
+        <p class="modal-prg">${bookAuthor}</p>
         <p class="modal-prgtho">
           In a homage to Louisa May Alcott’s “Little Women,” a young man’s dark
           past resurfaces as he gets to the know the family of his college
