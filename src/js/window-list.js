@@ -1,4 +1,5 @@
 import axios from 'axios';
+import amazonImg from '../images/modal-img/amazon.png';
 const refs = {
   borderModal: document.querySelector('.backdrop'),
   btnClose: document.querySelector('.btn-close'),
@@ -98,8 +99,8 @@ function markupBookInfo(book) {
         <div class="modal-links">
           <ul class="links-list list">
             <li class="icon-list">
-              <a href="">
-                <img src="/src/images/modal-img/amazon.png" alt="amazon" width="62" heigth="19">
+              <a href="${book.amazon_product_url}">
+                <img src="${amazonImg}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
             <li class="icon-list">
