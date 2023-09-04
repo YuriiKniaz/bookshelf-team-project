@@ -1,5 +1,6 @@
 const boxToggleEl = document.querySelector('.box-toggle');
 const mobMenuEl = document.querySelector('.mob-menu');
+const boxMobMenuEl = document.querySelector('.box-mob-menu');
 
 boxToggleEl.addEventListener('click', onClickToggle);
 function onClickToggle(event) {
@@ -9,4 +10,5 @@ function onClickToggle(event) {
 mobMenuEl.addEventListener('click', onClickMobMenu);
 function onClickMobMenu(event) {
   event.currentTarget.classList.toggle('active');
+  boxMobMenuEl.classList.toggle('active');
 }

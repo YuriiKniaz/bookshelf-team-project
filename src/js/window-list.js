@@ -40,12 +40,12 @@ document.addEventListener('keydown', function (event) {
 });
 
 document.addEventListener('click', function (event) {
-  if (event.target === refs.borderModal) {
-    closeBackdrop();
-  }
+  // if (event.target === refs.borderModal) {
+  //   closeBackdrop();
+  // }
 });
 
-bookList.addEventListener('click', showBookInfo);
+if (bookList) bookList.addEventListener('click', showBookInfo);
 
 function showBookInfo(event) {
   markupBookInfo();
