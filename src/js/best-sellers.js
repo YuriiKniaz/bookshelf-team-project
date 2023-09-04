@@ -30,41 +30,19 @@ function onHomeB(e) {
   refs.categoryName.innerHTML = `Best Sellers <span class="category-name-accent">Books</span>`;
   onClickBestsellers();
 }
-
 refs.buttonEl.addEventListener('click', onClickBestsellers);
-<<<<<<< Updated upstream
-async function onClickBestsellers() {
-  const listEl = await fetchTopBooks();
-  const elements = createBestsellers(listEl);
+function onClickBestsellers() {
+  fetchTopBooks().then(data => {
+  const elements = createBestsellers(data);
   refs.bestsellersEl.innerHTML = elements;
   refs.bestsellersEl.addEventListener('click', onBookClick);
-=======
-async function onClickBestsellers(e) {
-  e.preventDefault();
-  await fetchTopBooks().then(data => {
-    const elements = createBestsellers(data);
-    refs.bestsellersEl.innerHTML = elements;
-    // refs.bestsellersEl.addEventListener('click', onBookClick)
-  })
-  }
-//   function onBookClick(evt) {
-//     // evt.preventDefault();
-//     if (evt.target.classList.contains('seemorebtn')) {
-//       return;
-//     } else {
-//       const { id, list_name } = evt.target.closest('li').dataset; //
-//       const searchList = data.find(
-//         ({ list_name: listName }) => listName === list_name
-//       );
-//       const currentBook = searchList.books.find(
-//         ({ _id: bookId }) => bookId === id
-//       ); // отримаємо ID 'li' по якому клікнули
->>>>>>> Stashed changes
-
     function onBookClick(evt) {
-      evt.preventDefault();
+      if (evt.target.classList.contains('seemorebtn')) {
+      return;
+    } else {
       const { id, list_name } = evt.target.closest('li').dataset; //
-      const searchList = listEl.find(({ list_name: listName }) => listName === list_name);
+      const searchList = data.find(
+        ({ list_name: listName }) => listName === list_name);
       const currentBook = searchList.books.find(({ _id: bookId }) => bookId === id);// отримаємо ID 'li' по якому клікнули
 
       function addCuurentBook(currentBook) {
@@ -76,6 +54,7 @@ async function onClickBestsellers(e) {
 
       modalWindow.classList.remove('is-hidden'); // відкриваєм модалку
     }
+}});
 }
 
 
