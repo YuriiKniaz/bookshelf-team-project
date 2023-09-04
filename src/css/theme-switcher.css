@@ -1,0 +1,34 @@
+.light-theme {
+  --main-color: #f6f6f6;
+  --text-color: var(--main-text-clr);
+  --header-bac-col: #fff;
+  --second-text-color: rgba(17, 17, 17, 0.6);
+  --logo-text-color: #000000;
+  --hover-color: var(--accent-violet-clr);
+}
+
+.dark-theme {
+  --main-color: var(--dark-theme-clr);
+  --text-color: #fff;
+  --header-bac-col: #111;
+  --second-text-color: rgba(255, 255, 255, 0.6);
+  --logo-text-color: #f3f3f3;
+  --hover-color: var(--accent-yellow-clr);
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+.header {
+  background-color: var(--header-bac-col);
+  border: 1.5px solid var(--text-color);
+}
+
+.menu-link {
+  color: var(--text-color);
+}
+
+.bestsellers-title {
+  color: var(--text-color);
+}

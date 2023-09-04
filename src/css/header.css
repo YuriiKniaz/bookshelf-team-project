@@ -61,17 +61,39 @@
 .box-toggle.active .circle {
   transform: translateX(20px);
 }
-.avatar {
+.avatar-button {
   border-radius: 36px;
   background: #4f2ee8;
+}
+.avatar-button {
+  display: none;
+}
+.avatar {
   padding: 8px 12px;
   align-items: center;
+  display: flex;
+}
+
+.box-sign-up {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  padding: 14px;
+}
+.avatar-button .avatar {
+  display: none;
+}
+.avatar-button.active .avatar {
+  display: flex;
+}
+.avatar-button.active .box-sign-up {
   display: none;
 }
 .avatar-box-img {
   margin-right: 9px;
 }
-.avatar-title {
+.avatar-title,
+.sign-up-title {
   color: #fff;
   font-family: DM Sans;
   font-size: 22px;
@@ -81,7 +103,10 @@
   letter-spacing: -0.44px;
   margin-right: 4px;
 }
-
+.sign-up-title {
+  font-size: 14px;
+  line-height: 1.28;
+}
 .icon {
   fill: #fff;
 }
@@ -110,8 +135,8 @@
   .left-col {
     gap: 40px;
   }
-  .avatar {
-    display: flex;
+  .avatar-button {
+    display: block;
   }
   .menu {
     display: flex;
