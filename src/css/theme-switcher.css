@@ -1,19 +1,25 @@
 .light-theme {
   --main-color: #f6f6f6;
   --text-color: var(--main-text-clr);
-  --header-bac-col: #fff;
   --second-text-color: rgba(17, 17, 17, 0.6);
+  --header-bac-col: #fff;
   --logo-text-color: #000000;
   --hover-color: var(--accent-violet-clr);
+  --registr-window-col: #111;
+  --registr-window-btn-col: #f3f3f3;
+  --registr-window-btn-second-col: rgba(17, 17, 17, 0.5);
 }
 
 .dark-theme {
   --main-color: var(--dark-theme-clr);
   --text-color: #fff;
-  --header-bac-col: #111;
   --second-text-color: rgba(255, 255, 255, 0.6);
+  --header-bac-col: #111;
   --logo-text-color: #f3f3f3;
   --hover-color: var(--accent-yellow-clr);
+  --registr-window-col: #f6f6f6;
+  --registr-window-btn-col: #202024;
+  --registr-window-btn-second-col: rgba(246, 246, 246, 0.5);
 }
 
 body {
@@ -22,13 +28,59 @@ body {
 
 .header {
   background-color: var(--header-bac-col);
-  border: 1.5px solid var(--text-color);
+  border-color: var(--text-color);
 }
 
-.menu-link {
+.menu-link,
+.category-name,
+.item-title,
+.seemorebtn,
+.book-name,
+.modal-title,
+.modal-prgtho,
+.modal-btn {
   color: var(--text-color);
 }
 
-.bestsellers-title {
-  color: var(--text-color);
+.categories-item,
+.prg-final {
+  color: var(--second-text-color);
+}
+
+.categories-item-current {
+  color: var(--hover-color);
+}
+
+.backdrop-window {
+  background-color: var(--main-color);
+  border-color: var(--text-color);
+}
+
+.modal-btn {
+  background-color: var(--main-color);
+  border: 2px solid #4f2ee8;
+}
+
+.icon-close,
+.mob-menu svg {
+  stroke: var(--text-color);
+}
+
+.registration-window,
+.form-input {
+  background-color: var(--main-color);
+  border-color: var(--registr-window-col);
+}
+
+.form-input::placeholder {
+  color: var(--registr-window-col);
+}
+
+.form-main-btn {
+  background-color: var(--registr-window-col);
+  color: var(--registr-window-btn-col);
+}
+
+.form-btns button {
+  color: var(--registr-window-btn-second-col);
 }
