@@ -13,6 +13,7 @@ const refs = {
 const bookList = document.querySelector('.category-list');
 const bContainer = document.querySelector('.book-list-container');
 const BOOK_URL = 'https://books-backend.p.goit.global/books/';
+let curentBook = null;
 
 bContainer.addEventListener('click', event => {
   let parentElement = event.target.parentElement;
@@ -38,18 +39,31 @@ bContainer.addEventListener('click', event => {
       const backGRND = document.querySelector('#book-detail');
       backGRND.innerHTML = html;
       //ПРАЦЮВАТИ З КНИГОЮ ВИЩЕ
+      curentBook = book;
     })
     .catch(err => console.log(err));
 });
 
+//ADD BOOK TO THE BUCKET (LocalStorage)
+refs.addBook.addEventListener('click', event => {
+  if (curentBook) {
+    const userBucket = load('userBucket');
+    console.log(userBucket.length);
+    userBucket.push(curentBook);
+    console.log(userBucket.length);
+    save('userBucket', userBucket);
+    console.log(load('userBucket').length);
+    onChangeText();
+  }
+});
 let isAdded = null;
 
 refs.btnClose.addEventListener('click', closeBackdrop);
-refs.addBook.addEventListener('click', onChangeText);
+//refs.addBook.addEventListener('click', onChangeText);
 
-function openWindow() {
-  borderModal.style.display = 'block';
-}
+// function openWindow() {
+//   borderModal.style.display = 'block';
+// }
 
 function closeBackdrop() {
   document.body.style.overflowY = 'visible';
@@ -154,3 +168,21 @@ async function fetchBookById(bookId) {
     console.log('FETCH ERROR: ' + err);
   }
 }
+
+const load = key => {
+  try {
+    const serializedState = localStorage.getItem(key);
+    return serializedState === null ? [] : JSON.parse(serializedState);
+  } catch (error) {
+    console.error('Get state error: ', error.message);
+  }
+};
+
+const save = (key, value) => {
+  try {
+    const serializedState = JSON.stringify(value);
+    localStorage.setItem(key, serializedState);
+  } catch (error) {
+    console.error('Set state error: ', error.message);
+  }
+};
