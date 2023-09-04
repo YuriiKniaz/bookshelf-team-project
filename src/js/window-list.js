@@ -70,6 +70,13 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
+document.addEventListener('click', function (event) {
+  if (event.target === refs.borderModal) {
+    closeBackdrop();
+  }
+});
+// МОДАЛЬНЕ ВІКНО************************************************************
+
 // document.addEventListener('click', function (event) {
   // if (event.target === refs.borderModal) {
   //   closeBackdrop();
@@ -78,6 +85,7 @@ document.addEventListener('keydown', function (event) {
 
 
 // if (bookList) bookList.addEventListener('click', showBookInfo);
+
 
 //bookList.addEventListener('click', showBookInfo);
 
