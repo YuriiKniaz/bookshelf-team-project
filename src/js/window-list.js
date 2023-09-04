@@ -1,5 +1,8 @@
 import axios from 'axios';
 import amazonImg from '../images/modal-img/amazon.png';
+import ibookImg from '../images/modal-img/ibook.png';
+import bookShopImg from '../images/modal-img/book-shop.png';
+
 const refs = {
   borderModal: document.querySelector('.backdrop'),
   btnClose: document.querySelector('.btn-close'),
@@ -117,12 +120,12 @@ function markupBookInfo(book) {
             </li>
             <li class="icon-list">
               <a href="">
-                <img src="/src/images/modal-img/ibook.png" alt="book" width="33" heigth="32">
+                <img src="${ibookImg}" alt="book" width="33" heigth="32">
               </a>
             </li>
             <li class="icon-list">
               <a href="">
-                <img src="/src/images/modal-img/book-shop.png" alt="books" width="38" heigth="36">
+                <img src="${bookShopImg}" alt="books" width="38" heigth="36">
               </a>
             </li>
             </use>
