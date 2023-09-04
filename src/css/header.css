@@ -63,7 +63,9 @@
 .box-toggle.active .circle {
   transform: translateX(20px);
 }
+
 .mob-avatar,
+
 .avatar-button {
   border-radius: 36px;
   background: #4f2ee8;
