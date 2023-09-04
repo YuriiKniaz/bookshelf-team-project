@@ -1,3 +1,4 @@
+import axios from 'axios';
 const refs = {
   borderModal: document.querySelector('.backdrop'),
   btnClose: document.querySelector('.btn-close'),
@@ -6,6 +7,36 @@ const refs = {
 };
 
 const bookList = document.querySelector('.category-list');
+const bContainer = document.querySelector('.book-list-container');
+const BOOK_URL = 'https://books-backend.p.goit.global/books/';
+
+bContainer.addEventListener('click', event => {
+  let parentElement = event.target.parentElement;
+  while (parentElement.tagName != 'LI') {
+    parentElement = parentElement.parentElement;
+    if (parentElement === bContainer) {
+      return;
+    }
+  }
+
+  if (parentElement.tagName != 'LI') {
+    return;
+  }
+  const bookId = parentElement.dataset.id;
+
+  fetchBookById(bookId)
+    .then(book => {
+      //ПРАЦЮВАТИ З КНИГОЮ НИЖЧЕ
+      const modalWindow = document.getElementById('myWindow');
+      modalWindow.classList.remove('is-hidden'); // відкриваєм модалку
+      let html = markupBookInfo(book);
+
+      const backGRND = document.querySelector('#book-detail');
+      backGRND.innerHTML = html;
+      //ПРАЦЮВАТИ З КНИГОЮ ВИЩЕ
+    })
+    .catch(err => console.log(err));
+});
 
 let isAdded = null;
 
@@ -45,26 +76,24 @@ document.addEventListener('click', function (event) {
   }
 });
 
-bookList.addEventListener('click', showBookInfo);
+//bookList.addEventListener('click', showBookInfo);
 
-function showBookInfo(event) {
-  markupBookInfo();
-}
-function markupBookInfo({ bookName, authorName, urlImg, description }) {
+// function showBookInfo(event) {
+//   markupBookInfo();
+// }
+function markupBookInfo(book) {
   return `<div class="modal-book">
 
       <img class="modal-img" srcset="
-          /src/images/img-window/image@1x.png 1x,
-          /src/images/img-window/image@2x.png 2x
-        " src="/src/images/img-window/image.png" alt="HELLO BEAUTIFUL" />
+          ${book.book_image} 1x,
+          ${book.book_image} 2x
+        " src="${book.book_image}" alt="HELLO BEAUTIFUL" />
 
       <div class="section-one">
-        <h2 class="modal-title">HELLO BEAUTIFUL</h2>
-        <p class="modal-prg">Ann Napolitano</p>
+        <h2 class="modal-title">${book.title}</h2>
+        <p class="modal-prg">${book.author}</p>
         <p class="modal-prgtho">
-          In a homage to Louisa May Alcott’s “Little Women,” a young man’s dark
-          past resurfaces as he gets to the know the family of his college
-          sweetheart.
+          ${book.description}
         </p>
         <div class="modal-links">
           <ul class="links-list list">
@@ -92,4 +121,14 @@ function markupBookInfo({ bookName, authorName, urlImg, description }) {
       </div>
     </div>
 `;
+}
+
+async function fetchBookById(bookId) {
+  try {
+    const response = await axios.get(`${BOOK_URL}/${bookId}`);
+    const dataPromise = response.data;
+    return dataPromise;
+  } catch (err) {
+    console.log('FETCH ERROR: ' + err);
+  }
 }
