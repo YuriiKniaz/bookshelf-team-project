@@ -86,6 +86,24 @@ document.addEventListener('click', function (event) {
 //   markupBookInfo();
 // }
 function markupBookInfo(book) {
+  let amazonLink = '';
+  let ibookLink = '';
+  let bookshopLink = '';
+  if (book.buy_links) {
+    for (const iterator of book.buy_links) {
+      if (iterator.name === 'Amazon') {
+        amazonLink = iterator.url;
+      }
+      if (iterator.name === 'Apple Books') {
+        ibookLink = iterator.url;
+      }
+      if (iterator.name === 'Bookshop') {
+        const url = new URL(iterator.url);
+        bookshopLink = url.searchParams.get('url1');
+      }
+    }
+  }
+
   return `<div class="modal-book">
 
       <img class="modal-img" srcset="
@@ -102,17 +120,17 @@ function markupBookInfo(book) {
         <div class="modal-links">
           <ul class="links-list list">
             <li class="icon-list">
-              <a href="${book.amazon_product_url}" target="_blank">
+              <a href="${amazonLink}" target="_blank">
                 <img src="${amazonImg}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
             <li class="icon-list">
-              <a href="">
+              <a href="${ibookLink}" target="_blank">
                 <img src="${ibookImg}" alt="book" width="33" heigth="32">
               </a>
             </li>
             <li class="icon-list">
-              <a href="">
+              <a href="${bookshopLink}" target="_blank">
                 <img src="${bookShopImg}" alt="books" width="38" heigth="36">
               </a>
             </li>
