@@ -2,6 +2,8 @@
   border-radius: 0px 0px 8px 8px;
   border: 1.5px solid #111;
   padding: 18px 0;
+  position: relative;
+  z-index: 200;
 }
 .header .container,
 .left-col {
@@ -61,6 +63,9 @@
 .box-toggle.active .circle {
   transform: translateX(20px);
 }
+
+.mob-avatar,
+
 .avatar-button {
   border-radius: 36px;
   background: #4f2ee8;
@@ -131,6 +136,29 @@
 .mob-menu.active .hamburger {
   display: none;
 }
+.box-mob-menu {
+  background: url('../images/books.png'),
+    radial-gradient(
+      189.32% 190.93% at 59.76% -23.42%,
+      #4f2ee8 18.03%,
+      #fff 100%
+    );
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+  padding: 104px 20px 20px 20px;
+  display: none;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+.box-mob-menu.active {
+  display: block;
+}
 @media screen and (min-width: 768px) {
   .left-col {
     gap: 40px;
@@ -147,6 +175,9 @@
   }
   .header {
     padding: 0;
+  }
+  .box-mob-menu.active {
+    display: none;
   }
 }
 @media screen and (min-width: 1440px) {

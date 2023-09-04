@@ -70,13 +70,17 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
-document.addEventListener('click', function (event) {
-  if (event.target === refs.borderModal) {
-    closeBackdrop();
-  }
-});
+// document.addEventListener('click', function (event) {
+  // if (event.target === refs.borderModal) {
+  //   closeBackdrop();
+  // }
+// });
+
+
+// if (bookList) bookList.addEventListener('click', showBookInfo);
 
 //bookList.addEventListener('click', showBookInfo);
+
 
 // function showBookInfo(event) {
 //   markupBookInfo();
