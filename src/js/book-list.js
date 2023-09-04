@@ -3,7 +3,7 @@ import axios from 'axios';
 const URL = 'https://books-backend.p.goit.global/books/category';
 const booksEl = document.querySelector('.book-list-container');
 const categoryEl = document.querySelector('h1.category-name');
-const tmpMenu = document.querySelector('body');
+const tmpMenu = document.querySelector('main.container');
 
 tmpMenu.addEventListener('click', event => {
   event.preventDefault();
