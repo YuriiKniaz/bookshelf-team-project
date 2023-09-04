@@ -8,8 +8,11 @@ const refs = {
   btnSignIn: document.querySelector('.sign-in-btn'),
   inputsList: document.querySelector('.list'),
   popup: document.querySelector('.registration-window'),
+  svgIcons: document.querySelectorAll('.form-icon'),
 };
 let onSignIn = null;
+const messageIcon = refs.svgIcons[0];
+const lockIcon = refs.svgIcons[1];
 
 refs.btnOpen.addEventListener('click', showModalAuth);
 refs.btnClose.addEventListener('click', closeModalAuth);
@@ -35,7 +38,7 @@ function showSignInMarkup() {
   if (onSignIn) {
     return;
   }
-  refs.form.innerHTML = markupSignIn();
+  refs.form.innerHTML = markupSignIn(messageIcon, lockIcon);
   refs.popup.classList.add('signin');
   onSignIn = true;
   refs.btnSignIn.classList.add('active-btn');
@@ -45,7 +48,7 @@ function showSignUpMarkup() {
   if (!onSignIn) {
     return;
   }
-  refs.form.innerHTML = markupSignUp();
+  refs.form.innerHTML = markupSignUp(messageIcon, lockIcon);
   refs.popup.classList.remove('signin');
   refs.btnSignUp.classList.add('active-btn');
   refs.btnSignIn.classList.remove('active-btn');
@@ -53,7 +56,7 @@ function showSignUpMarkup() {
   onSignIn = false;
 }
 
-function markupSignIn() {
+function markupSignIn(iconMessage, iconLock) {
   return `<form class="form form-sign-in">
       <ul class="form-list">
         <li class="input-container">
@@ -65,9 +68,7 @@ function markupSignIn() {
             placeholder="Email"
             required
           />
-          <svg class="form-icon" width="28" height="28">
-            <use href="./images/icons.svg#icon-message"></use>
-          </svg>
+          ${iconMessage.outerHTML}
         </li>
         <li class="input-container">
           <input
@@ -78,16 +79,14 @@ function markupSignIn() {
             placeholder="Password"
             required
           />
-          <svg class="form-icon" width="28" height="28">
-            <use href="./images/icons.svg#icon-lock"></use>
-          </svg>
+          ${iconLock.outerHTML}
         </li>
       </ul>
 
       <button class="form-main-btn" type="submit">Sign In</button>
     </form>`;
 }
-function markupSignUp() {
+function markupSignUp(iconMessage, iconLock) {
   return `<form class="form form-sign-in">
       <ul class="sign-up-list form-list">
         <li class="input-container">
@@ -108,9 +107,7 @@ function markupSignUp() {
             placeholder="Email"
             required
           />
-          <svg class="form-icon" width="28" height="28">
-            <use href="./images/icons.svg#icon-message"></use>
-          </svg>
+          ${iconMessage.outerHTML}
         </li>
         <li class="input-container">
           <input
@@ -121,9 +118,7 @@ function markupSignUp() {
             placeholder="Password"
             required
           />
-          <svg class="form-icon" width="28" height="28">
-            <use href="./images/icons.svg#icon-lock"></use>
-          </svg>
+          ${iconLock.outerHTML}
         </li>
       </ul>
 
