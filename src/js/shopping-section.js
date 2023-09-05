@@ -1,3 +1,4 @@
+
 import removeIcon from '/src/images/icons.svg';
 import amazonI from '/src/images/modal-img/amazon.png';
 import ibookI from '/src/images/modal-img/ibook.png';
@@ -18,7 +19,7 @@ function getSavedBooks() {
 }
 function showBooks() {
   let arrBooks = getSavedBooks();
- 
+
   
  
   if (arrBooks.length > 0) {
@@ -73,7 +74,7 @@ function generateBookCard(book) {
       <ul class="shop-links-list list">
             <li class="icon-list">
               <a href="${amazonLnk}" target="_blank">
-              
+               
                 <img src="${amazonI}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
@@ -95,7 +96,7 @@ function generateBookCard(book) {
   </div>`;
 }
 function emptyShopping() {
-
+ 
   return ` 
     <p class="shop-list-text">
       This page is empty, add some books and proceed to order.
@@ -104,8 +105,6 @@ function emptyShopping() {
 
   `;
 }
-
-
 
 // Відображення списку книг
 function renderBooks() {
@@ -138,10 +137,11 @@ function renderBooks() {
 //       }
 //       save('userBucket', userBucketNew);
 
-const removeBtn = document.querySelector('.card-remove');
-removeBtn.addEventListener('click', removeButton);
+containerBooks.addEventListener('click', removeButton);
 function removeButton(event) {
-  let curentBookId = event.currentTarget.dataset.bookid;
+  if (event.target.tagName != 'svg') return;
+  let curentBookId = event.target.parentElement.dataset.bookid;
+  if (!curentBookId) return;
   const userBucket = load('userBucket');
   const curentBook = [];
   const userBucketNew = userBucket.filter(
