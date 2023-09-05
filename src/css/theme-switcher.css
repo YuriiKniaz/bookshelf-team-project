@@ -28,30 +28,30 @@ body {
   background-color: var(--main-color);
 }
 
-.header {
+header.header {
   background-color: var(--header-bac-col);
   border-color: var(--text-color);
 }
 
-.menu-link,
-.category-name,
-.item-title,
-.seemorebtn,
-.book-name,
-.modal-title,
-.modal-prgtho,
-.modal-btn,
-.shopping-list-header {
+a.menu-link,
+h1.category-name,
+h3.item-title,
+button.seemorebtn,
+h2.book-name,
+h2.modal-title,
+p.modal-prgtho,
+button.modal-btn,
+h1.shopping-list-header {
   color: var(--text-color);
 }
 
-.categories-item,
-.prg-final,
-.shop-list-text {
+li.categories-item,
+p.prg-final,
+p.shop-list-text {
   color: var(--second-text-color);
 }
 
-.categories-item-current {
+li.categories-item-current {
   color: var(--hover-color);
 }
 
@@ -59,37 +59,37 @@ body {
   background-color: var(--scrollbar-color);
 }
 
-.backdrop-window {
+div.backdrop-window {
   background-color: var(--main-color);
   border-color: var(--text-color);
 }
 
-.modal-btn {
+button.modal-btn {
   background-color: var(--main-color);
   border: 2px solid #4f2ee8;
 }
 
-.icon-close,
-.mob-menu svg,
-.menu-link svg {
+svg.icon-close,
+button.mob-menu svg,
+a.menu-link svg {
   stroke: var(--text-color);
 }
 
-.registration-window,
-.form-input {
+div.registration-window,
+input.form-input {
   background-color: var(--main-color);
   border-color: var(--registr-window-col);
 }
 
-.form-input::placeholder {
+input.form-input::placeholder {
   color: var(--registr-window-col);
 }
 
-.form-main-btn {
+button.form-main-btn {
   background-color: var(--registr-window-col);
   color: var(--registr-window-btn-col);
 }
 
-.form-btns button {
+div.form-btns button {
   color: var(--registr-window-btn-second-col);
 }
