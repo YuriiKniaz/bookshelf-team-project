@@ -57,7 +57,7 @@ refs.addBook.addEventListener('click', event => {
     const bookIds = userBucket.map(el => el._id);
     let isAdded = bookIds.includes(curentBook._id);
 
-    console.log(isAdded);
+    // console.log(isAdded);
     if (!isAdded) {
       userBucket.push(curentBook);
       save('userBucket', userBucket);
