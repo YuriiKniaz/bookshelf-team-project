@@ -16,6 +16,7 @@
   .backdrop-window {
     max-width: 100%;
   }
+
   .backdrop-window {
     position: absolute;
     width: 335px;
@@ -41,6 +42,7 @@
     border: none;
     background: transparent;
   }
+
   .prg-final {
     font-weight: 400;
     font-size: 10px;
@@ -51,6 +53,7 @@
     padding: 0 20px;
     margin-top: 8px;
   }
+
   .modal-title {
     font-weight: 700;
     font-size: 16px;
@@ -78,6 +81,7 @@
     font-weight: 400;
     color: var(--main-text-clr);
   }
+
   .links-list {
     display: flex;
     align-items: center;
@@ -87,11 +91,13 @@
     gap: 20px;
     margin-bottom: 10px;
   }
+
   .modal-btn {
     display: flex;
     align-items: center;
     margin: 0 auto;
   }
+
   .icon-close {
     stroke: var(--main-text-clr);
     width: 20px;
