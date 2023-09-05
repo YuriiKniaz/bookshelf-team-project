@@ -1,10 +1,7 @@
 import removeIcon from '/src/images/icons.svg';
-// import amazonI from '/src/images/modal-img/amazon.png';
+import amazonI from '/src/images/modal-img/amazon.png';
 import ibookI from '/src/images/modal-img/ibook.png';
 import bookShopI from '/src/images/modal-img/book-shop.png';
-import amazonWhite from '../images/modal-img/amazon-white.png';
-import amazonImg from '../images/modal-img/amazon.png';
-
 // Отримання посилань на елементи DOM
 const booksEl = document.querySelector('.shopping-container');
 const emptyListImg = document.querySelector('.empty-shopping-list-div');
@@ -14,50 +11,27 @@ const empty = emptyShopping();
 
 // Отримання збережених книг з localStorage
 
-// ??????????????????????????????????????????????????????????????????
-
-// const amazonLogo = document.querySelector('.amazonWhite');
-// // console.log(amazonLogo);
-
-// if (document.documentElement.className === 'dark-theme') {
-//   console.log('dark');
-//   amazonLogo.src = amazonImg;
-// } else {
-//   console.log('light');
-//   amazonLogo.src = amazonWhite;
-// }
-
-// ??????????????????????????????????????????????????????????????????
-
 function getSavedBooks() {
   const savedBooks = localStorage.getItem('userBucket');
-
-
-  const btnShopPage = document.querySelector('#shop-page');
-  btnShopPage.classList.add('active');
-
-  // Отримання збережених книг з localStorage
-  function getSavedBooks() {
-    const savedBooks = localStorage.getItem('userBucket');
-
-
-    return JSON.parse(savedBooks);
-  }
-  function showBooks() {
-    let arrBooks = getSavedBooks();
-
-
-    if (arrBooks.length > 0) {
-      let shoppingListMarkup = arrBooks
-        .map(book => generateBookCard(book))
-        .join('');
-      containerBooks.innerHTML = shoppingListMarkup;
-
-      return;
-    }
-    containerBooks.innerHTML = empty;
-  }
+  
+  return JSON.parse(savedBooks);
 }
+function showBooks() {
+  let arrBooks = getSavedBooks();
+ 
+  
+ 
+  if (arrBooks.length > 0) {
+  
+    let shoppingListMarkup = arrBooks.map(book => generateBookCard(book)).join('');
+    containerBooks.innerHTML = shoppingListMarkup;
+    
+    return;
+  }
+ containerBooks.innerHTML = empty;
+
+}
+
 showBooks();
 // Створення HTML-розмітки для книги
 function generateBookCard(book) {
@@ -77,6 +51,7 @@ function generateBookCard(book) {
         bookshopLnk = url.searchParams.get('url1');
       }
     }
+    
   }
 
   return `<div class="shopping-card">
@@ -88,6 +63,7 @@ function generateBookCard(book) {
         <p class="book-card-description">${book.description}</p>
       </div>
       <button class="card-remove" data-bookid="${book._id}">
+        
         <svg class="remove-icon" width="18" height="18">
                             <use href="${removeIcon}#icon-remove">
                         </svg>
@@ -97,16 +73,19 @@ function generateBookCard(book) {
       <ul class="shop-links-list list">
             <li class="icon-list">
               <a href="${amazonLnk}" target="_blank">
-                <img class="amazonWhite" src="${amazonImg}" alt="amazon" width="62" heigth="19">
+              
+                <img src="${amazonI}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
             <li class="icon-list">
               <a href="${ibookLnk}" target="_blank">
+              
                 <img src="${ibookI}" alt="book" width="33" heigth="32">
               </a>
             </li>
             <li class="icon-list">
               <a href="${bookshopLnk}" target="_blank">
+                
                 <img src="${bookShopI}" alt="books" width="38" heigth="36">
               </a>
             </li>
@@ -116,13 +95,17 @@ function generateBookCard(book) {
   </div>`;
 }
 function emptyShopping() {
+
   return ` 
     <p class="shop-list-text">
       This page is empty, add some books and proceed to order.
     </p>
     <div class="shopping-list-book-img"></div>
+
   `;
 }
+
+
 
 // Відображення списку книг
 function renderBooks() {
@@ -155,11 +138,10 @@ function renderBooks() {
 //       }
 //       save('userBucket', userBucketNew);
 
-containerBooks.addEventListener('click', removeButton);
+const removeBtn = document.querySelector('.card-remove');
+removeBtn.addEventListener('click', removeButton);
 function removeButton(event) {
-  if (event.target.tagName != 'svg') return;
-  let curentBookId = event.target.parentElement.dataset.bookid;
-  if (!curentBookId) return;
+  let curentBookId = event.currentTarget.dataset.bookid;
   const userBucket = load('userBucket');
   const curentBook = [];
   const userBucketNew = userBucket.filter(
