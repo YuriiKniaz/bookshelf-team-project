@@ -10,6 +10,7 @@
     display: block;
   }
   .shopping-list-container {
+    width: 996px;
     margin-top: 40px;
     margin-left: 40px;
   }
@@ -75,15 +76,18 @@
   }
 }
 .shopping-list-book-img {
+  position: absolute;
+  top: 50%;
+
   margin-top: 14px;
+  width: 265px;
+  height: 198px;
   /* margin-left: auto; */
   margin-right: auto;
   background-image: url('/src/images/shopping-list/shop-img-bg-mob@1x.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 265px;
-  height: 198px;
 }
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
@@ -123,6 +127,10 @@
   }
 }
 .empty-shop-list {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   display: flex;
   flex-direction: column;
 }

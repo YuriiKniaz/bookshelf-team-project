@@ -1,3 +1,7 @@
+
+
+import iconLogo from '../images/icons.svg'
+
 const toggle = document.querySelector('.box-toggle');
 const logo = document.querySelector('.logo');
 const amazonLogo = document.querySelector('.amazon-white');
@@ -34,13 +38,13 @@ function replacingLogo() {
     logo.lastElementChild.lastElementChild.removeAttribute('href');
     logo.lastElementChild.lastElementChild.setAttribute(
       'href',
-      '/icons.adfc4680.svg#icon-logo-dark'
+      `${iconLogo}#icon-logo-dark`
     );
   } else {
     logo.lastElementChild.lastElementChild.removeAttribute('href');
     logo.lastElementChild.lastElementChild.setAttribute(
       'href',
-      '/icons.adfc4680.svg#icon-logo'
+      `${iconLogo}#icon-logo`
     );
   }
 }
