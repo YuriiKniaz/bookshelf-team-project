@@ -17,23 +17,35 @@ function showBooks() {
 showBooks();
 // Створення HTML-розмітки для книги
 function generateBookCard(book) {
-  const { book_image, title, list_name, description, author, _id, amazon_product_url, amazonImg, ibookLink,ibookImg,bookshopLink,bookShopImg } = book;
-  return `<div class="book-card">
+  const {
+    book_image,
+    title,
+    list_name,
+    description,
+    author,
+    _id,
+    amazon_product_url,
+    amazonImg,
+    ibookLink,
+    ibookImg,
+    bookshopLink,
+    bookShopImg,
+  } = book;
+  return `<div class="shopping-card">
     <img class="book-card-image" src="${book_image}" alt="${title}" />
     <div class="book-card-info">
       <div class="card-title-container">
         <h3 class="card-title">${title}</h3>
         <p class="card-category">${list_name}</p>
+        <p class="book-card-description">${description}</p>
       </div>
       <button class="card-remove" data-bookid="${_id}">
         <svg width="20" height="20">
                             <use href="${removeIcon}">
                         </svg>
       </button>
-    </div>
-    <p class="book-card-description">${description}</p>
-    <div class="shop-author-banner">
-    <p class="book-card-author">Author: ${author}</p>
+      <div class="shop-author-banner">
+    <p class="book-card-author">${author}</p>
       <ul class="shop-links-list list">
             <li class="icon-list">
               <a href="${amazon_product_url}" target="_blank">
@@ -51,8 +63,10 @@ function generateBookCard(book) {
               </a>
             </li>
     </div>
+    </div>
+    
   </div>`;
-}
+};
 function emptyShopping() {
   return ` <div class="empty-shop-list">
     <p class="shop-list-text">
@@ -85,20 +99,37 @@ function renderBooks() {
   }
 }
 
+// remove book
+//  const userBucketNew = [];
+//       for (const iterator of userBucket) {
+//         if (iterator._id != curentBook._id) {
+//           userBucketNew.push(iterator);
+//         }
+//       }
+//       save('userBucket', userBucketNew);
 
-
-// Обробник кліку на кнопці видалення
-// function handleRemoveBook(event) {
-//   // Код обробки кліку на кнопці видалення тут
-// }
-
-// Видалення книги зі списку корзини
-// function removeBookFromList(bookId) {
-//   // Код видалення книги зі списку тут
-// }
-
-// // Виклик функції для відображення списку книг при завантаженні сторінки
-// document.addEventListener('DOMContentLoaded', renderBooks);
-
-// // Виклик функції handleRemoveBook при кліку
-// document.querySelector('.card-remove').addEventListener('click', handleRemoveBook);
+const removeBtn = document.querySelector('.card-remove');
+const load = (key) => {
+  try {
+    const serializedState = localStorage.getItem(key);
+    return serializedState === null ? [] : JSON.parse(serializedState);
+  } catch (error) {
+    console.error('Get state error: ', error.message);
+    return [];
+  }
+};
+const save = (key, value) => {
+  try {
+    const serializedState = JSON.stringify(value);
+    localStorage.setItem(key, serializedState);
+  } catch (error) {
+    console.error('Set state error: ', error.message);
+  }
+};
+function removeButton() {
+  const userBucket = load('userBucket');
+  const curentBook = [];
+  const userBucketNew = userBucket.filter((iterator) => iterator._id !== curentBook._id);
+  save('userBucket', userBucketNew);
+}
+removeBtn.addEventListener('click', removeButton);
