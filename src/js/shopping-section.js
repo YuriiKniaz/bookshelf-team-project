@@ -82,7 +82,7 @@ function emptyShopping() {
     <div class="shopping-list-book-img"></div>
   </div>`;
 }
-//emptyShopping();
+emptyShopping();
 //edited;
 
 // Відображення списку книг
