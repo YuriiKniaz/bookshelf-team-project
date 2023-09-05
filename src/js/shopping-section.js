@@ -33,31 +33,31 @@ function getSavedBooks() {
   const savedBooks = localStorage.getItem('userBucket');
 
 
-const btnShopPage = document.querySelector('#shop-page');
-btnShopPage.classList.add('active');
+  const btnShopPage = document.querySelector('#shop-page');
+  btnShopPage.classList.add('active');
 
-// Отримання збережених книг з localStorage
-function getSavedBooks() {
-  const savedBooks = localStorage.getItem('userBucket');
-
-
-  return JSON.parse(savedBooks);
-}
-function showBooks() {
-  let arrBooks = getSavedBooks();
+  // Отримання збережених книг з localStorage
+  function getSavedBooks() {
+    const savedBooks = localStorage.getItem('userBucket');
 
 
-  if (arrBooks.length > 0) {
-    let shoppingListMarkup = arrBooks
-      .map(book => generateBookCard(book))
-      .join('');
-    containerBooks.innerHTML = shoppingListMarkup;
-
-    return;
+    return JSON.parse(savedBooks);
   }
-  containerBooks.innerHTML = empty;
-}
+  function showBooks() {
+    let arrBooks = getSavedBooks();
 
+
+    if (arrBooks.length > 0) {
+      let shoppingListMarkup = arrBooks
+        .map(book => generateBookCard(book))
+        .join('');
+      containerBooks.innerHTML = shoppingListMarkup;
+
+      return;
+    }
+    containerBooks.innerHTML = empty;
+  }
+}
 showBooks();
 // Створення HTML-розмітки для книги
 function generateBookCard(book) {
