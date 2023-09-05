@@ -82,7 +82,7 @@ function emptyShopping() {
     <div class="shopping-list-book-img"></div>
   </div>`;
 }
-emptyShopping();
+//emptyShopping();
 //edited;
 
 // Відображення списку книг
@@ -116,10 +116,15 @@ function renderBooks() {
 //       }
 //       save('userBucket', userBucketNew);
 
-const removeBtn = document.querySelector('.card-remove');
-removeBtn.addEventListener('click', removeButton);
+containerBooks.addEventListener('click', removeButton);
 function removeButton(event) {
-  let curentBookId = event.currentTarget.dataset.bookid;
+  if (event.target.tagName != 'svg') return;
+  let curentBookId = event.target.parentElement.dataset.bookid;
+  if (!curentBookId) {
+    alert('ahtung' + curentBookId);
+    return;
+  }
+  alert(event.target.tagName + ' ' + curentBookId);
   const userBucket = load('userBucket');
   const curentBook = [];
   const userBucketNew = userBucket.filter(
