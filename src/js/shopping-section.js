@@ -1,22 +1,23 @@
 import removeIcon from '/src/images/icons.svg#icon-remove';
-
 // Отримання посилань на елементи DOM
 const booksEl = document.querySelector('.shopping-container');
-const emptyListImg = document.querySelector('.empty-shop-list');
+const emptyListImg = document.querySelector('.empty-shopping-list-div');
 const imagesToHide = document.querySelectorAll('.shopping-list-book-img'); // Отримати всі зображення, які потрібно сховати
-
+const containerBooks = document.querySelector('.empty-shop-list');
 // Отримання збережених книг з localStorage
 function getSavedBooks() {
-const savedBooks = localStorage.getItem('userBucket'); 
-  if (savedBooks) {
-    return JSON.parse(savedBooks);
-  }
-  return [];
+  const savedBooks = localStorage.getItem('userBucket');
+  return JSON.parse(savedBooks);
 }
-
+function showBooks() {
+  let arrBooks = getSavedBooks();
+  let test = arrBooks.map(book => generateBookCard(book));
+  containerBooks.innerHTML = test;
+}
+showBooks();
 // Створення HTML-розмітки для книги
 function generateBookCard(book) {
-  const { book_image, title, list_name, description, author, _id } = book;
+  const { book_image, title, list_name, description, author, _id, amazon_product_url, amazonImg, ibookLink,ibookImg,bookshopLink,bookShopImg } = book;
   return `<div class="book-card">
     <img class="book-card-image" src="${book_image}" alt="${title}" />
     <div class="book-card-info">
@@ -31,10 +32,36 @@ function generateBookCard(book) {
       </button>
     </div>
     <p class="book-card-description">${description}</p>
+    <div class="shop-author-banner">
     <p class="book-card-author">Author: ${author}</p>
+      <ul class="shop-links-list list">
+            <li class="icon-list">
+              <a href="${amazon_product_url}" target="_blank">
+                <img src="${amazonImg}" alt="amazon" width="62" heigth="19">
+              </a>
+            </li>
+            <li class="icon-list">
+              <a href="${amazon_product_url}" target="_blank">
+                <img src="${ibookImg}" alt="book" width="33" heigth="32">
+              </a>
+            </li>
+            <li class="icon-list">
+              <a href="${amazon_product_url}" target="_blank">
+                <img src="${bookShopImg}" alt="books" width="38" heigth="36">
+              </a>
+            </li>
+    </div>
   </div>`;
 }
-
+function emptyShopping() {
+  return ` <div class="empty-shop-list">
+    <p class="shop-list-text">
+      This page is empty, add some books and proceed to order.
+    </p>
+    <div class="shopping-list-book-img"></div>
+  </div>`;
+}
+emptyShopping(); (edited) 
 
 // Відображення списку книг
 function renderBooks() {
