@@ -1,12 +1,10 @@
 .shopping-list-container {
   margin-top: 40px;
 }
-
 .shopping-list-section .support-wrapper {
   margin-top: 40px;
   display: none;
 }
-
 @media (min-width: 1440px) {
   .shopping-list-section .support-wrapper {
     display: block;
@@ -16,18 +14,15 @@
     margin-left: 40px;
   }
 }
-
 .shopping-list {
   margin-top: 40px;
 }
-
 .shopping-list-header {
   margin-bottom: 40px;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.19;
   letter-spacing: -0.04em;
-
   color: #111111;
 }
 @media screen and (min-width: 768px) {
@@ -36,7 +31,6 @@
     line-height: 1.08;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .shopping-list {
     margin-top: 40px;
@@ -48,37 +42,29 @@
 .shopping-blue {
   color: #4f2ee8;
 }
-
 /* .empty-shop-list {
   margin-top: 120px;
   margin-left: 55px;
 } */
-
 .shop-list-text {
   margin-bottom: 14px;
-
   width: 244px;
   min-height: 36px;
-
   font-family: 'DM Sans';
   font-size: 14px;
   font-weight: 400;
   line-height: calc(18 / 14);
   text-align: center;
-
   color: #00000099;
 }
-
 @media screen and (min-width: 768px) {
   .shop-list-text {
     font-size: 18px;
     line-height: calc(24 / 18);
-
     margin-bottom: 20px;
     width: 349px;
   }
 }
-
 @media screen and (min-width: 1440px) {
   /* .empty-shop-list {
     margin-top: 140px;
@@ -88,7 +74,6 @@
     margin-bottom: 20px;
   }
 }
-
 .shopping-list-book-img {
   margin-top: 14px;
   /* margin-left: auto; */
@@ -97,7 +82,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-
   width: 265px;
   height: 198px;
 }
@@ -138,15 +122,12 @@
     }
   }
 }
-
 .empty-shop-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  /* gap: 20px; */
 }
-
 /* Стилі для Javascript розмітки */
-
 .shopping-card {
   position: relative;
   display: flex;
@@ -177,6 +158,7 @@
 @media screen and (min-width: 1440px) {
   .shopping-card {
     width: 996px;
+    gap: 20px;
   }
 }
 .card-title {
