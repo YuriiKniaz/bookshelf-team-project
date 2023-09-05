@@ -93,7 +93,7 @@
 }
 
 .support-list {
-  height: 188px;
+  /* height: 188px; */
   overflow-y: hidden;
 }
 @media (min-width: 768px) {
