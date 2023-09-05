@@ -10,7 +10,7 @@ const loadItems = () => {
   support.forEach(item => {
     const listItem = `
       <li class="support-list-item">
-        <a class="support-list-link" href="${item.url}">
+        <a class="support-list-link" href="${item.url}" target="_blank">
           0${index++}<img class="support-img" src="${item.img}" alt="${
       item.title
     }" height="32"/>
