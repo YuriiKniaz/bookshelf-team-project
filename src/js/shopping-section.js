@@ -1,4 +1,7 @@
 import removeIcon from '/src/images/icons.svg#icon-remove';
+import amazonImg from '../images/modal-img/amazon.png';
+import ibookImg from '../images/modal-img/ibook.png';
+import bookShopImg from '../images/modal-img/book-shop.png';
 // Отримання посилань на елементи DOM
 const booksEl = document.querySelector('.shopping-container');
 const emptyListImg = document.querySelector('.empty-shopping-list-div');
@@ -17,48 +20,52 @@ function showBooks() {
 showBooks();
 // Створення HTML-розмітки для книги
 function generateBookCard(book) {
-  const {
-    book_image,
-    title,
-    list_name,
-    description,
-    author,
-    _id,
-    amazon_product_url,
-    amazonImg,
-    ibookLink,
-    ibookImg,
-    bookshopLink,
-    bookShopImg,
-  } = book;
+  let amazonLnk = '';
+  let ibookLnk = '';
+  let bookshopLnk = '';
+  if (book.buy_links) {
+    for (const iterator of book.buy_links) {
+      if (iterator.name === 'Amazon') {
+        amazonLnk = iterator.url;
+      }
+      if (iterator.name === 'Apple Books') {
+        ibookLnk = iterator.url;
+      }
+      if (iterator.name === 'Bookshop') {
+        const url = new URL(iterator.url);
+        bookshopLnk = url.searchParams.get('url1');
+      }
+    }
+  }
+
   return `<div class="shopping-card">
-    <img class="book-card-image" src="${book_image}" alt="${title}" />
+    <img class="book-card-image" src="${book.book_image}" alt="${book.title}" />
     <div class="book-card-info">
       <div class="card-title-container">
-        <h3 class="card-title">${title}</h3>
-        <p class="card-category">${list_name}</p>
-        <p class="book-card-description">${description}</p>
+        <h3 class="card-title">${book.title}</h3>
+        <p class="card-category">${book.list_name}</p>
+        <p class="book-card-description">${book.description}</p>
       </div>
-      <button class="card-remove" data-bookid="${_id}">
+      <button class="card-remove" data-bookid="${book._id}">
         <svg width="20" height="20">
                             <use href="${removeIcon}">
                         </svg>
       </button>
       <div class="shop-author-banner">
-    <p class="book-card-author">${author}</p>
+    <p class="book-card-author">${book.author}</p>
       <ul class="shop-links-list list">
             <li class="icon-list">
-              <a href="${amazon_product_url}" target="_blank">
+              <a href="${amazonLnk}" target="_blank">
                 <img src="${amazonImg}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
             <li class="icon-list">
-              <a href="${amazon_product_url}" target="_blank">
+              <a href="${ibookLnk}" target="_blank">
                 <img src="${ibookImg}" alt="book" width="33" heigth="32">
               </a>
             </li>
             <li class="icon-list">
-              <a href="${amazon_product_url}" target="_blank">
+              <a href="${bookshopLnk}" target="_blank">
                 <img src="${bookShopImg}" alt="books" width="38" heigth="36">
               </a>
             </li>
@@ -66,7 +73,7 @@ function generateBookCard(book) {
     </div>
     
   </div>`;
-};
+}
 function emptyShopping() {
   return ` <div class="empty-shop-list">
     <p class="shop-list-text">
@@ -75,7 +82,8 @@ function emptyShopping() {
     <div class="shopping-list-book-img"></div>
   </div>`;
 }
-emptyShopping(); (edited) 
+emptyShopping();
+edited;
 
 // Відображення списку книг
 function renderBooks() {
@@ -109,7 +117,7 @@ function renderBooks() {
 //       save('userBucket', userBucketNew);
 
 const removeBtn = document.querySelector('.card-remove');
-const load = (key) => {
+const load = key => {
   try {
     const serializedState = localStorage.getItem(key);
     return serializedState === null ? [] : JSON.parse(serializedState);
@@ -129,7 +137,9 @@ const save = (key, value) => {
 function removeButton() {
   const userBucket = load('userBucket');
   const curentBook = [];
-  const userBucketNew = userBucket.filter((iterator) => iterator._id !== curentBook._id);
+  const userBucketNew = userBucket.filter(
+    iterator => iterator._id !== curentBook._id
+  );
   save('userBucket', userBucketNew);
 }
 removeBtn.addEventListener('click', removeButton);
