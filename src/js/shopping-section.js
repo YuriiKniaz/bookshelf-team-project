@@ -1,22 +1,36 @@
-import removeIcon from '/src/images/icons.svg#icon-remove';
-import amazonImg from '../images/modal-img/amazon.png';
-import ibookImg from '../images/modal-img/ibook.png';
-import bookShopImg from '../images/modal-img/book-shop.png';
+import removeIcon from '/src/images/icons.svg';
+import amazonI from '/src/images/modal-img/amazon.png';
+import ibookI from '/src/images/modal-img/ibook.png';
+import bookShopI from '/src/images/modal-img/book-shop.png';
 // Отримання посилань на елементи DOM
 const booksEl = document.querySelector('.shopping-container');
 const emptyListImg = document.querySelector('.empty-shopping-list-div');
 const imagesToHide = document.querySelectorAll('.shopping-list-book-img'); // Отримати всі зображення, які потрібно сховати
 const containerBooks = document.querySelector('.empty-shop-list');
+const empty = emptyShopping();
+
 // Отримання збережених книг з localStorage
+
 function getSavedBooks() {
   const savedBooks = localStorage.getItem('userBucket');
+  
   return JSON.parse(savedBooks);
 }
 function showBooks() {
   let arrBooks = getSavedBooks();
-  let test = arrBooks.map(book => generateBookCard(book));
-  containerBooks.innerHTML = test;
+  
+ 
+  if (arrBooks.length > 0) {
+  
+    let shoppingListMarkup = arrBooks.map(book => generateBookCard(book)).join('');
+    containerBooks.innerHTML = shoppingListMarkup;
+    
+    return;
+  }
+ containerBooks.innerHTML = empty;
+
 }
+
 showBooks();
 // Створення HTML-розмітки для книги
 function generateBookCard(book) {
@@ -36,6 +50,7 @@ function generateBookCard(book) {
         bookshopLnk = url.searchParams.get('url1');
       }
     }
+    
   }
 
   return `<div class="shopping-card">
@@ -47,8 +62,8 @@ function generateBookCard(book) {
         <p class="book-card-description">${book.description}</p>
       </div>
       <button class="card-remove" data-bookid="${book._id}">
-        <svg width="20" height="20">
-                            <use href="${removeIcon}">
+        <svg class="remove-icon" width="18" height="18">
+                            <use href="${removeIcon}#icon-remove">
                         </svg>
       </button>
       <div class="shop-author-banner">
@@ -56,17 +71,17 @@ function generateBookCard(book) {
       <ul class="shop-links-list list">
             <li class="icon-list">
               <a href="${amazonLnk}" target="_blank">
-                <img src="${amazonImg}" alt="amazon" width="62" heigth="19">
+                <img src="${amazonI}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
             <li class="icon-list">
               <a href="${ibookLnk}" target="_blank">
-                <img src="${ibookImg}" alt="book" width="33" heigth="32">
+                <img src="${ibookI}" alt="book" width="33" heigth="32">
               </a>
             </li>
             <li class="icon-list">
               <a href="${bookshopLnk}" target="_blank">
-                <img src="${bookShopImg}" alt="books" width="38" heigth="36">
+                <img src="${bookShopI}" alt="books" width="38" heigth="36">
               </a>
             </li>
        </ul>
@@ -75,15 +90,16 @@ function generateBookCard(book) {
   </div>`;
 }
 function emptyShopping() {
-  return ` <div class="empty-shop-list">
+  return ` 
     <p class="shop-list-text">
       This page is empty, add some books and proceed to order.
     </p>
     <div class="shopping-list-book-img"></div>
-  </div>`;
+  `;
 }
-emptyShopping();
-//edited;
+
+
+
 
 // Відображення списку книг
 function renderBooks() {

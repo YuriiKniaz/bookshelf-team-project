@@ -63,6 +63,7 @@
   }
 
   .modal-prg {
+    font-family: dm_sansitalic;
     font-style: italic;
     color: var(--lightgray-clr);
     font-weight: 400;
@@ -208,6 +209,7 @@
   }
 
   .modal-prg {
+    font-family: dm_sansitalic;
     font-style: italic;
     color: var(--lightgray-clr);
     font-weight: 400;
@@ -350,6 +352,7 @@
   }
 
   .modal-prg {
+    font-family: dm_sansitalic;
     font-style: italic;
     color: var(--lightgray-clr);
     font-weight: 400;

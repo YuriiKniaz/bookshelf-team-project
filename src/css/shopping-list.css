@@ -226,6 +226,7 @@
   }
 }
 .book-card-author {
+  font-family: dm_sansitalic;
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
@@ -243,7 +244,15 @@
     gap: 16px;
   }
 }
+
+.remove-icon {
+  margin-left: auto;
+  margin-right: auto;
+}
 .card-remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 14px;
   right: 14px;
