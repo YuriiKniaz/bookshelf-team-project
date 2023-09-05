@@ -3,9 +3,11 @@ import axios from 'axios';
 const URL = 'https://books-backend.p.goit.global/books/category';
 const booksEl = document.querySelector('.book-list-container');
 const categoryEl = document.querySelector('h1.category-name');
-const tmpMenu = document.querySelector('main.container');
+const asideMenu = document.querySelector('div.categories-container');
 
-tmpMenu.addEventListener('click', event => {
+asideMenu.addEventListener('click', preventDefMethod);
+booksEl.addEventListener('click', preventDefMethod);
+function preventDefMethod(event) {
   event.preventDefault();
   const cat = event.target.dataset.category;
   if (!cat) {
@@ -21,7 +23,7 @@ tmpMenu.addEventListener('click', event => {
     const elements = createBookList(el);
     booksEl.innerHTML = elements;
   });
-});
+}
 
 function createBookList(dataList) {
   let li = dataList
