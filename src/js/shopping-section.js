@@ -1,34 +1,47 @@
 import removeIcon from '/src/images/icons.svg';
-import amazonI from '/src/images/modal-img/amazon.png';
+// import amazonI from '/src/images/modal-img/amazon.png';
 import ibookI from '/src/images/modal-img/ibook.png';
 import bookShopI from '/src/images/modal-img/book-shop.png';
+import amazonWhite from '../images/modal-img/amazon-white.png';
+import amazonImg from '../images/modal-img/amazon.png';
+
 // Отримання посилань на елементи DOM
 const booksEl = document.querySelector('.shopping-container');
 const emptyListImg = document.querySelector('.empty-shopping-list-div');
 const imagesToHide = document.querySelectorAll('.shopping-list-book-img'); // Отримати всі зображення, які потрібно сховати
 const containerBooks = document.querySelector('.empty-shop-list');
 const empty = emptyShopping();
-
 // Отримання збережених книг з localStorage
+
+// ??????????????????????????????????????????????????????????????????
+
+// const amazonLogo = document.querySelector('.amazonWhite');
+// // console.log(amazonLogo);
+
+// if (document.documentElement.className === 'dark-theme') {
+//   console.log('dark');
+//   amazonLogo.src = amazonImg;
+// } else {
+//   console.log('light');
+//   amazonLogo.src = amazonWhite;
+// }
+
+// ??????????????????????????????????????????????????????????????????
 
 function getSavedBooks() {
   const savedBooks = localStorage.getItem('userBucket');
-  
   return JSON.parse(savedBooks);
 }
 function showBooks() {
   let arrBooks = getSavedBooks();
-  
- 
   if (arrBooks.length > 0) {
-  
-    let shoppingListMarkup = arrBooks.map(book => generateBookCard(book)).join('');
+    let shoppingListMarkup = arrBooks
+      .map(book => generateBookCard(book))
+      .join('');
     containerBooks.innerHTML = shoppingListMarkup;
-    
     return;
   }
- containerBooks.innerHTML = empty;
-
+  containerBooks.innerHTML = empty;
 }
 
 showBooks();
@@ -50,7 +63,6 @@ function generateBookCard(book) {
         bookshopLnk = url.searchParams.get('url1');
       }
     }
-    
   }
 
   return `<div class="shopping-card">
@@ -71,7 +83,7 @@ function generateBookCard(book) {
       <ul class="shop-links-list list">
             <li class="icon-list">
               <a href="${amazonLnk}" target="_blank">
-                <img src="${amazonI}" alt="amazon" width="62" heigth="19">
+                <img class="amazonWhite" src="${amazonImg}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
             <li class="icon-list">
@@ -97,9 +109,6 @@ function emptyShopping() {
     <div class="shopping-list-book-img"></div>
   `;
 }
-
-
-
 
 // Відображення списку книг
 function renderBooks() {
