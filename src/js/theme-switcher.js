@@ -1,6 +1,5 @@
-import amazonImg from '../images/modal-img/amazon.png';
-import amazonWhite from '../images/modal-img/amazon-white.png';
 
+import iconLogo from '../images/icons.svg'
 const toggle = document.querySelector('.box-toggle');
 const logo = document.querySelector('.logo');
 const amazonLogo = document.querySelector('.amazon-white');
@@ -37,7 +36,7 @@ function replacingLogo() {
     logo.lastElementChild.lastElementChild.removeAttribute('href');
     logo.lastElementChild.lastElementChild.setAttribute(
       'href',
-      '/icons.adfc4680.svg#icon-logo-dark'
+      `${iconLogo}#icon-logo-dark`
     );
     // if (amazonLogo !== null) {
     //   console.log(amazonLogo);
@@ -47,7 +46,7 @@ function replacingLogo() {
     logo.lastElementChild.lastElementChild.removeAttribute('href');
     logo.lastElementChild.lastElementChild.setAttribute(
       'href',
-      '/icons.adfc4680.svg#icon-logo'
+      `${iconLogo}#icon-logo`
     );
     // if (amazonLogo) {
     //   amazonLogo.src = amazonImg;

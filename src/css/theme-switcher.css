@@ -33,8 +33,14 @@ header.header {
   border-color: var(--text-color);
 }
 
+div.shopping-card {
+  background-color: var(--header-bac-col);
+}
+
+h3.card-title,
 a.menu-link,
 h1.category-name,
+p.book-card-description,
 h3.item-title,
 button.seemorebtn,
 h2.book-name,
