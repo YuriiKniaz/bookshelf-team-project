@@ -83,7 +83,7 @@ function emptyShopping() {
   </div>`;
 }
 emptyShopping();
-edited;
+//edited;
 
 // Відображення списку книг
 function renderBooks() {
@@ -117,6 +117,18 @@ function renderBooks() {
 //       save('userBucket', userBucketNew);
 
 const removeBtn = document.querySelector('.card-remove');
+removeBtn.addEventListener('click', removeButton);
+function removeButton(event) {
+  let curentBookId = event.currentTarget.dataset.bookid;
+  const userBucket = load('userBucket');
+  const curentBook = [];
+  const userBucketNew = userBucket.filter(
+    iterator => iterator._id !== curentBookId
+  );
+  save('userBucket', userBucketNew);
+  showBooks();
+}
+
 const load = key => {
   try {
     const serializedState = localStorage.getItem(key);
@@ -134,12 +146,3 @@ const save = (key, value) => {
     console.error('Set state error: ', error.message);
   }
 };
-function removeButton() {
-  const userBucket = load('userBucket');
-  const curentBook = [];
-  const userBucketNew = userBucket.filter(
-    iterator => iterator._id !== curentBook._id
-  );
-  save('userBucket', userBucketNew);
-}
-removeBtn.addEventListener('click', removeButton);
