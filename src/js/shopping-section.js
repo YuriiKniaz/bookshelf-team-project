@@ -8,6 +8,9 @@ const emptyListImg = document.querySelector('.empty-shopping-list-div');
 const imagesToHide = document.querySelectorAll('.shopping-list-book-img'); // Отримати всі зображення, які потрібно сховати
 const containerBooks = document.querySelector('.empty-shop-list');
 // Отримання збережених книг з localStorage
+
+const btnShopPage = document.querySelector('#shop-page');
+btnShopPage.classList.add('active');
 function getSavedBooks() {
   const savedBooks = localStorage.getItem('userBucket');
   return JSON.parse(savedBooks);
