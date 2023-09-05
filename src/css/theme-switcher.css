@@ -47,7 +47,9 @@ h2.book-name,
 h2.modal-title,
 p.modal-prgtho,
 button.modal-btn,
-h1.shopping-list-header {
+h1.shopping-list-header,
+h3.card-title,
+p.book-card-description {
   color: var(--text-color);
 }
 
@@ -79,6 +81,10 @@ svg.icon-close,
 button.mob-menu svg,
 a.menu-link svg {
   stroke: var(--text-color);
+}
+
+div.shopping-card {
+  background-color: var(--header-bac-col);
 }
 
 div.registration-window,

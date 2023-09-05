@@ -1,5 +1,7 @@
 
+
 import iconLogo from '../images/icons.svg'
+
 const toggle = document.querySelector('.box-toggle');
 const logo = document.querySelector('.logo');
 const amazonLogo = document.querySelector('.amazon-white');
@@ -38,18 +40,11 @@ function replacingLogo() {
       'href',
       `${iconLogo}#icon-logo-dark`
     );
-    // if (amazonLogo !== null) {
-    //   console.log(amazonLogo);
-    //   amazonLogo.src = amazonWhite;
-    // }
   } else {
     logo.lastElementChild.lastElementChild.removeAttribute('href');
     logo.lastElementChild.lastElementChild.setAttribute(
       'href',
       `${iconLogo}#icon-logo`
     );
-    // if (amazonLogo) {
-    //   amazonLogo.src = amazonImg;
-    // }
   }
 }
