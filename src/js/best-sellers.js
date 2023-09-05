@@ -26,7 +26,7 @@ const refs = {
 
 refs.home.addEventListener('click', onHomeB);
 function onHomeB(e) {
-  e.preventDefault();
+  // e.preventDefault();
   refs.categoryName.innerHTML = `Best Sellers <span class="category-name-accent">Books</span>`;
   onClickBestsellers();
 }

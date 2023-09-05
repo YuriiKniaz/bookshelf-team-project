@@ -1,6 +1,8 @@
+import removeIcon from '/src/images/icons.svg#icon-remove';
+
 // Отримання посилань на елементи DOM
 const booksEl = document.querySelector('.shopping-container');
-const emptyListImg = document.querySelector('.empty-shopping-list-div');
+const emptyListImg = document.querySelector('.empty-shop-list');
 const imagesToHide = document.querySelectorAll('.shopping-list-book-img'); // Отримати всі зображення, які потрібно сховати
 
 // Отримання збережених книг з localStorage
@@ -23,7 +25,9 @@ function generateBookCard(book) {
         <p class="card-category">${list_name}</p>
       </div>
       <button class="card-remove" data-bookid="${_id}">
-        <!-- SVG-код для іконки видалення -->
+        <svg width="20" height="20">
+                            <use href="${removeIcon}">
+                        </svg>
       </button>
     </div>
     <p class="book-card-description">${description}</p>
@@ -54,18 +58,20 @@ function renderBooks() {
   }
 }
 
+
+
 // Обробник кліку на кнопці видалення
-function handleRemoveBook(event) {
-  // Код обробки кліку на кнопці видалення тут
-}
+// function handleRemoveBook(event) {
+//   // Код обробки кліку на кнопці видалення тут
+// }
 
 // Видалення книги зі списку корзини
-function removeBookFromList(bookId) {
-  // Код видалення книги зі списку тут
-}
+// function removeBookFromList(bookId) {
+//   // Код видалення книги зі списку тут
+// }
 
-// Виклик функції для відображення списку книг при завантаженні сторінки
-document.addEventListener('DOMContentLoaded', renderBooks);
+// // Виклик функції для відображення списку книг при завантаженні сторінки
+// document.addEventListener('DOMContentLoaded', renderBooks);
 
-// Виклик функції handleRemoveBook при кліку
-document.addEventListener('click', handleRemoveBook);
+// // Виклик функції handleRemoveBook при кліку
+// document.querySelector('.card-remove').addEventListener('click', handleRemoveBook);

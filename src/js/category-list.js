@@ -5,6 +5,7 @@ const menuCategory = document.querySelector('.categories-list');
 const firstItem = document.querySelector('#all-cat-li');
 
 function createCategoryList(dataList) {
+  document.querySelector('.categories-btn').textContent = 'All categories';
   return dataList
     .map(lishka => {
       return `<li class="categories-item">
