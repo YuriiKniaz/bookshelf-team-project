@@ -9,26 +9,27 @@ const imagesToHide = document.querySelectorAll('.shopping-list-book-img'); // О
 const containerBooks = document.querySelector('.empty-shop-list');
 const empty = emptyShopping();
 
-// Отримання збережених книг з localStorage
+const btnShopPage = document.querySelector('#shop-page');
+btnShopPage.classList.add('active');
 
+// Отримання збережених книг з localStorage
 function getSavedBooks() {
   const savedBooks = localStorage.getItem('userBucket');
-  
+
   return JSON.parse(savedBooks);
 }
 function showBooks() {
   let arrBooks = getSavedBooks();
-  
- 
+
   if (arrBooks.length > 0) {
-  
-    let shoppingListMarkup = arrBooks.map(book => generateBookCard(book)).join('');
+    let shoppingListMarkup = arrBooks
+      .map(book => generateBookCard(book))
+      .join('');
     containerBooks.innerHTML = shoppingListMarkup;
-    
+
     return;
   }
- containerBooks.innerHTML = empty;
-
+  containerBooks.innerHTML = empty;
 }
 
 showBooks();
@@ -50,7 +51,6 @@ function generateBookCard(book) {
         bookshopLnk = url.searchParams.get('url1');
       }
     }
-    
   }
 
   return `<div class="shopping-card">
@@ -97,9 +97,6 @@ function emptyShopping() {
     <div class="shopping-list-book-img"></div>
   `;
 }
-
-
-
 
 // Відображення списку книг
 function renderBooks() {
