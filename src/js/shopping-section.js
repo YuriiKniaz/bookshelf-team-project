@@ -120,11 +120,7 @@ containerBooks.addEventListener('click', removeButton);
 function removeButton(event) {
   if (event.target.tagName != 'svg') return;
   let curentBookId = event.target.parentElement.dataset.bookid;
-  if (!curentBookId) {
-    alert('ahtung' + curentBookId);
-    return;
-  }
-  alert(event.target.tagName + ' ' + curentBookId);
+  if (!curentBookId) return;
   const userBucket = load('userBucket');
   const curentBook = [];
   const userBucketNew = userBucket.filter(
