@@ -12,3 +12,6 @@ function onClickMobMenu(event) {
   event.currentTarget.classList.toggle('active');
   boxMobMenuEl.classList.toggle('active');
 }
+
+
+
