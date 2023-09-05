@@ -132,10 +132,11 @@ function renderBooks() {
 //       }
 //       save('userBucket', userBucketNew);
 
-const removeBtn = document.querySelector('.card-remove');
-removeBtn.addEventListener('click', removeButton);
+containerBooks.addEventListener('click', removeButton);
 function removeButton(event) {
-  let curentBookId = event.currentTarget.dataset.bookid;
+  if (event.target.tagName != 'svg') return;
+  let curentBookId = event.target.parentElement.dataset.bookid;
+  if (!curentBookId) return;
   const userBucket = load('userBucket');
   const curentBook = [];
   const userBucketNew = userBucket.filter(

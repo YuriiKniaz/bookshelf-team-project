@@ -140,7 +140,7 @@ function markupBookInfo(book) {
           <ul class="links-list list">
             <li class="icon-list">
               <a href="${amazonLink}" target="_blank">
-                <img src="${amazonImg}" alt="amazon" width="62" heigth="19">
+                <img class="amazon-white" src="${amazonImg}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
             <li class="icon-list">

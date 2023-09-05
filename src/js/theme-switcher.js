@@ -1,5 +1,9 @@
+import amazonImg from '../images/modal-img/amazon.png';
+import amazonWhite from '../images/modal-img/amazon-white.png';
+
 const toggle = document.querySelector('.box-toggle');
 const logo = document.querySelector('.logo');
+const amazonLogo = document.querySelector('.amazon-white');
 
 if (localStorage.getItem('theme')) {
   document.documentElement.className = localStorage.getItem('theme');
@@ -35,11 +39,18 @@ function replacingLogo() {
       'href',
       '/icons.adfc4680.svg#icon-logo-dark'
     );
+    // if (amazonLogo !== null) {
+    //   console.log(amazonLogo);
+    //   amazonLogo.src = amazonWhite;
+    // }
   } else {
     logo.lastElementChild.lastElementChild.removeAttribute('href');
     logo.lastElementChild.lastElementChild.setAttribute(
       'href',
       '/icons.adfc4680.svg#icon-logo'
     );
+    // if (amazonLogo) {
+    //   amazonLogo.src = amazonImg;
+    // }
   }
 }
