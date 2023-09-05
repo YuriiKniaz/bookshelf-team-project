@@ -11,6 +11,7 @@ const emptyListImg = document.querySelector('.empty-shopping-list-div');
 const imagesToHide = document.querySelectorAll('.shopping-list-book-img'); // Отримати всі зображення, які потрібно сховати
 const containerBooks = document.querySelector('.empty-shop-list');
 const empty = emptyShopping();
+
 // Отримання збережених книг з localStorage
 
 // ??????????????????????????????????????????????????????????????????
@@ -30,15 +31,28 @@ const empty = emptyShopping();
 
 function getSavedBooks() {
   const savedBooks = localStorage.getItem('userBucket');
+
+
+const btnShopPage = document.querySelector('#shop-page');
+btnShopPage.classList.add('active');
+
+// Отримання збережених книг з localStorage
+function getSavedBooks() {
+  const savedBooks = localStorage.getItem('userBucket');
+
+
   return JSON.parse(savedBooks);
 }
 function showBooks() {
   let arrBooks = getSavedBooks();
+
+
   if (arrBooks.length > 0) {
     let shoppingListMarkup = arrBooks
       .map(book => generateBookCard(book))
       .join('');
     containerBooks.innerHTML = shoppingListMarkup;
+
     return;
   }
   containerBooks.innerHTML = empty;
