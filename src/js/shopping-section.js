@@ -69,9 +69,9 @@ function generateBookCard(book) {
                 <img src="${bookShopImg}" alt="books" width="38" heigth="36">
               </a>
             </li>
+       </ul>
     </div>
     </div>
-    
   </div>`;
 }
 function emptyShopping() {
