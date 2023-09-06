@@ -153,17 +153,17 @@ function markupBookInfo(book) {
         <div class="modal-links">
           <ul class="links-list list">
             <li class="icon-list">
-              <a href="${amazonLink}" target="_blank">
+              <a href="${amazonLink}" target="_blank" aria-label="Amazon book link">
                 <img class="amazon-white" src="${amazonImg}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
             <li class="icon-list">
-              <a href="${ibookLink}" target="_blank">
+              <a href="${ibookLink}" target="_blank" aria-label="IBook book link">
                 <img src="${ibookImg}" alt="book" width="33" heigth="32">
               </a>
             </li>
             <li class="icon-list">
-              <a href="${bookshopLink}" target="_blank">
+              <a href="${bookshopLink}" target="_blank" aria-label="BookShop book link">
                 <img src="${bookShopImg}" alt="books" width="38" heigth="36">
               </a>
             </li>
