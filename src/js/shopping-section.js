@@ -19,8 +19,6 @@ function getSavedBooks() {
 }
 function showBooks() {
   let arrBooks = getSavedBooks();
-
-  
  
   if (arrBooks.length > 0) {
   
@@ -30,7 +28,6 @@ function showBooks() {
     return;
   }
  containerBooks.innerHTML = empty;
-
 }
 
 showBooks();
@@ -41,15 +38,19 @@ function generateBookCard(book) {
   let bookshopLnk = '';
   if (book.buy_links) {
     for (const iterator of book.buy_links) {
-      if (iterator.name === 'Amazon') {
-        amazonLnk = iterator.url;
-      }
-      if (iterator.name === 'Apple Books') {
-        ibookLnk = iterator.url;
-      }
-      if (iterator.name === 'Bookshop') {
-        const url = new URL(iterator.url);
-        bookshopLnk = url.searchParams.get('url1');
+      switch (iterator.name) {
+        case 'Amazon':
+          amazonLnk = iterator.url;
+          break;
+        case 'Apple Books':
+          ibookLnk = iterator.url;
+          break;
+        case 'Bookshop':
+          const url = new URL(iterator.url);
+          bookshopLnk = url.searchParams.get('url1');
+          break;
+        default:
+          break;
       }
     }
     

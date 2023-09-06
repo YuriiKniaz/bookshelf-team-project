@@ -120,15 +120,19 @@ function markupBookInfo(book) {
   let bookshopLink = '';
   if (book.buy_links) {
     for (const iterator of book.buy_links) {
-      if (iterator.name === 'Amazon') {
-        amazonLink = iterator.url;
-      }
-      if (iterator.name === 'Apple Books') {
-        ibookLink = iterator.url;
-      }
-      if (iterator.name === 'Bookshop') {
-        const url = new URL(iterator.url);
-        bookshopLink = url.searchParams.get('url1');
+      switch (iterator.name) {
+        case 'Amazon':
+          amazonLink = iterator.url;
+          break;
+        case 'Apple Books':
+          ibookLink = iterator.url;
+          break;
+        case 'Bookshop':
+          const url = new URL(iterator.url);
+          bookshopLink = url.searchParams.get('url1');
+          break;
+        default:
+          break;
       }
     }
   }
