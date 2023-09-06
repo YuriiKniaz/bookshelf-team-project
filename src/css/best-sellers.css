@@ -50,6 +50,7 @@
   color: var(--lightgray-clr);
 }
 .overlay-wrapper {
+  width: 320px;
   position: relative;
   overflow: hidden;
 }
@@ -114,8 +115,11 @@
   .item-image {
     max-width: 335px;
   }
+  .overlay-wrapper {
+    width: 320px;
+  }
   .wrapper-bestsellers {
-    max-width: 335px;
+    max-width: 320px;
   }
 }
 
@@ -133,6 +137,9 @@
     margin: -1px;
   }
   .wrapper-bestsellers {
+    width: 335px;
+  }
+  .overlay-wrapper {
     width: 335px;
   }
   .category-list-title {
