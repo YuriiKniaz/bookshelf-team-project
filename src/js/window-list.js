@@ -2,6 +2,7 @@ import axios from 'axios';
 import amazonImg from '../images/modal-img/amazon.png';
 import ibookImg from '../images/modal-img/ibook.png';
 import bookShopImg from '../images/modal-img/book-shop.png';
+import amazonWhite from '../images/modal-img/amazon-white.png';
 
 const refs = {
   borderModal: document.querySelector('.backdrop'),
@@ -38,6 +39,15 @@ bContainer.addEventListener('click', event => {
 
       const backGRND = document.querySelector('#book-detail');
       backGRND.innerHTML = html;
+
+      const amazonLogo = document.querySelector('.amazon-white');
+
+      if (document.documentElement.className === 'dark-theme') {
+        amazonLogo.src = amazonWhite;
+      } else {
+        amazonLogo.src = amazonImg;
+      }
+
       //ПРАЦЮВАТИ З КНИГОЮ ВИЩЕ
       curentBook = book;
       if (curentBook) {
@@ -144,7 +154,7 @@ function markupBookInfo(book) {
           <ul class="links-list list">
             <li class="icon-list">
               <a href="${amazonLink}" target="_blank">
-                <img src="${amazonImg}" alt="amazon" width="62" heigth="19">
+                <img class="amazon-white" src="${amazonImg}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
             <li class="icon-list">

@@ -1,6 +1,6 @@
 const refs = {
   authModal: document.querySelector('.registration'),
-  btnOpen: document.querySelector('.avatar'),
+  btnOpen: document.querySelector('.avatar-button'),
   form: document.querySelector('.form'),
   btnClose: document.querySelector('.close-btn'),
   mainBtn: document.querySelector('.form-main-btn'),
@@ -18,6 +18,7 @@ refs.btnOpen.addEventListener('click', showModalAuth);
 refs.btnClose.addEventListener('click', closeModalAuth);
 refs.form.addEventListener('submit', showData);
 
+console.log('refs.btnOpen:', refs.btnOpen);
 function showModalAuth() {
   document.body.style.overflowY = 'hidden';
   refs.authModal.classList.remove('is-hidden');

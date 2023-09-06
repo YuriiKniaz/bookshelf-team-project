@@ -31,8 +31,8 @@ function onHomeB(e) {
   onClickBestsellers();
 }
 refs.buttonEl.addEventListener('click', onClickBestsellers);
-function onClickBestsellers() {
-  fetchTopBooks().then(data => {
+async function onClickBestsellers() {
+    const data = await fetchTopBooks();
     const elements = createBestsellers(data);
     refs.bestsellersEl.innerHTML = elements;
     //refs.bestsellersEl.addEventListener('click', onBookClick);
@@ -58,7 +58,6 @@ function onClickBestsellers() {
     //     modalWindow.classList.remove('is-hidden'); // відкриваєм модалку
     //   }
     // }
-  });
 }
 
 function createBestsellers(data) {

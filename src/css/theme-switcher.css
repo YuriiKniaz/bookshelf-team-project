@@ -28,30 +28,39 @@ body {
   background-color: var(--main-color);
 }
 
-.header {
+header.header {
+  padding: 14px 0;
   background-color: var(--header-bac-col);
   border-color: var(--text-color);
 }
 
-.menu-link,
-.category-name,
-.item-title,
-.seemorebtn,
-.book-name,
-.modal-title,
-.modal-prgtho,
-.modal-btn,
-.shopping-list-header {
+div.shopping-card {
+  background-color: var(--header-bac-col);
+}
+
+h3.card-title,
+a.menu-link,
+h1.category-name,
+p.book-card-description,
+h3.item-title,
+button.seemorebtn,
+h2.book-name,
+h2.modal-title,
+p.modal-prgtho,
+button.modal-btn,
+h1.shopping-list-header,
+h3.card-title,
+p.book-card-description {
   color: var(--text-color);
 }
 
-.categories-item,
-.prg-final,
-.shop-list-text {
+li.categories-item,
+p.prg-final,
+p.shop-list-text {
   color: var(--second-text-color);
 }
 
-.categories-item-current {
+li.categories-item-current {
   color: var(--hover-color);
 }
 
@@ -59,37 +68,42 @@ body {
   background-color: var(--scrollbar-color);
 }
 
-.backdrop-window {
+div.backdrop-window {
   background-color: var(--main-color);
   border-color: var(--text-color);
 }
 
-.modal-btn {
+button.modal-btn {
   background-color: var(--main-color);
   border: 2px solid #4f2ee8;
 }
 
-.icon-close,
-.mob-menu svg,
-.menu-link svg {
+svg.icon-close,
+button.mob-menu svg,
+a.menu-link svg {
+  fill: #fff;
   stroke: var(--text-color);
 }
 
-.registration-window,
-.form-input {
+div.shopping-card {
+  background-color: var(--header-bac-col);
+}
+
+div.registration-window,
+input.form-input {
   background-color: var(--main-color);
   border-color: var(--registr-window-col);
 }
 
-.form-input::placeholder {
+input.form-input::placeholder {
   color: var(--registr-window-col);
 }
 
-.form-main-btn {
+button.form-main-btn {
   background-color: var(--registr-window-col);
   color: var(--registr-window-btn-col);
 }
 
-.form-btns button {
+div.form-btns button {
   color: var(--registr-window-btn-second-col);
 }
