@@ -50,6 +50,8 @@
   color: var(--lightgray-clr);
 }
 .overlay-wrapper {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
   position: relative;
   overflow: hidden;
 }
@@ -110,13 +112,23 @@
   border: none;
   color: rgba(255, 255, 255, 1);
 }
-@media screen and (max-width: 374px) {
+
+@media screen and (max-width: 340px) {
+    .item-image {
+    max-width: 320px;
+    }
+    .wrapper-bestsellers {
+      max-width: 320px;
+    }
+    .book-card{
+      max-width: 320px;
+    }
+}
+@media screen and (min-width: 341px) {
   .item-image {
     max-width: 335px;
   }
-  .wrapper-bestsellers {
-    max-width: 335px;
-  }
+  
 }
 
 @media screen and (max-width: 767px) {
@@ -135,6 +147,9 @@
   .wrapper-bestsellers {
     width: 335px;
   }
+  .overlay-wrapper {
+    width: 335px;
+  }
   .category-list-title {
     line-height: 18px;
     margin-bottom: 18px;
@@ -145,7 +160,7 @@
   }
   .item-image {
     height: 485px;
-    width: 335px;
+    width: 100%;
     background-image: url('/src/images/image-book-list/imageErrorMobile.png');
     background-repeat: no-repeat;
     background-size: cover;

@@ -5,7 +5,7 @@
   margin-top: 40px;
   display: none;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .shopping-list-section .support-wrapper {
     display: block;
   }
@@ -32,7 +32,7 @@
     line-height: 1.08;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .shopping-list {
     margin-top: 40px;
     margin-left: 20px;
@@ -66,7 +66,7 @@
     width: 349px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   /* .empty-shop-list {
     margin-top: 140px;
     margin-left: 355px;
@@ -111,7 +111,7 @@
     }
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .shopping-list {
     margin-left: 300px;
   }
@@ -162,7 +162,7 @@
     height: 165px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .shopping-card {
     width: 996px;
     /* gap: 20px; */
@@ -215,7 +215,7 @@
     margin-top: 14px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .book-card-description {
     /* max-height: 54px; */
     width: 808px;

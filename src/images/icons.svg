@@ -59,11 +59,8 @@
 <symbol id="icon-user" viewBox="0 0 23 32">
 <path d="M0.296 30.963c0-2.986 1.186-5.85 3.298-7.962s4.975-3.298 7.962-3.298 5.85 1.186 7.961 3.298c2.112 2.112 3.298 4.975 3.298 7.962h-22.518zM11.556 18.296c-4.666 0-8.444-3.779-8.444-8.444s3.779-8.444 8.444-8.444c4.666 0 8.444 3.779 8.444 8.444s-3.779 8.444-8.444 8.444z"></path>
 </symbol>
-<symbol id="icon-burger" viewBox="0 0 32 32">
-<path fill="none" stroke="#111" style="stroke: var(--color3, #111)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M22.667 13.333h-18.667"></path>
-<path fill="none" stroke="#111" style="stroke: var(--color3, #111)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M28 8h-24"></path>
-<path fill="none" stroke="#111" style="stroke: var(--color3, #111)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M28 18.667h-24"></path>
-<path fill="none" stroke="#111" style="stroke: var(--color3, #111)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M22.667 24h-18.667"></path>
+<symbol id="icon-burger" viewBox="0 0 46 32">
+<path d="M0 2.274c0-1.257 1.019-2.274 2.274-2.274h18.309c0.603 0 1.182 0.24 1.608 0.666s0.666 1.005 0.666 1.608c0 0.603-0.24 1.182-0.666 1.608s-1.005 0.666-1.608 0.666h-18.309c-0.603 0-1.182-0.24-1.608-0.666s-0.666-1.005-0.666-1.608zM0 16c0-1.257 1.019-2.274 2.274-2.274h41.166c0.603 0 1.182 0.24 1.608 0.666s0.666 1.005 0.666 1.608c0 0.603-0.24 1.182-0.666 1.608s-1.005 0.666-1.608 0.666h-41.166c-0.603 0-1.182-0.24-1.608-0.666s-0.666-1.005-0.666-1.608zM2.274 27.451c-0.603 0-1.182 0.24-1.608 0.666s-0.666 1.005-0.666 1.608c0 0.603 0.24 1.182 0.666 1.608s1.005 0.666 1.608 0.666h27.451c0.603 0 1.182-0.24 1.608-0.666s0.666-1.005 0.666-1.608c0-0.603-0.24-1.182-0.666-1.608s-1.005-0.666-1.608-0.666h-27.451z"></path>
 </symbol>
 <symbol id="icon-basket" viewBox="0 0 32 32">
 <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.9091" d="M12 4h8M4 8h24M25.333 8l-0.935 14.026c-0.14 2.104-0.21 3.157-0.665 3.954-0.4 0.702-1.004 1.267-1.731 1.619-0.826 0.4-1.881 0.4-3.99 0.4h-4.025c-2.109 0-3.163 0-3.99-0.4-0.727-0.353-1.331-0.917-1.731-1.619-0.455-0.798-0.525-1.85-0.665-3.954l-0.935-14.026M13.333 14v6.667M18.667 14v6.667"></path>
