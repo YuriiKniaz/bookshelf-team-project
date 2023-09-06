@@ -14,14 +14,11 @@ function createCategoryList(dataList) {
     })
     .join('');
 }
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
   firstItem.click();
-  fetchCategoryList()
-    .then(el => {
-      const markup = createCategoryList(el);
+  const el = await fetchCategoryList();
+  const markup = createCategoryList(el);
       menuCategory.insertAdjacentHTML('beforeend', markup);
-    })
-    .catch();
 });
 
 menuCategory.addEventListener('click', event => {
