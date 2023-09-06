@@ -50,6 +50,8 @@
   color: var(--lightgray-clr);
 }
 .overlay-wrapper {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
   position: relative;
   overflow: hidden;
 }
