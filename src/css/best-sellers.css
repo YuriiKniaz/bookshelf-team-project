@@ -50,7 +50,6 @@
   color: var(--lightgray-clr);
 }
 .overlay-wrapper {
-  width: 320px;
   position: relative;
   overflow: hidden;
 }
@@ -111,16 +110,26 @@
   border: none;
   color: rgba(255, 255, 255, 1);
 }
-@media screen and (max-width: 374px) {
+
+@media screen and (max-width: 340px) {
+    .item-image {
+    max-width: 320px;
+    }
+    .wrapper-bestsellers {
+      max-width: 320px;
+    }
+    .book-card{
+      max-width: 320px;
+    }
+}
+@media screen and (min-width: 341px) {
   .item-image {
     max-width: 335px;
   }
-  .overlay-wrapper {
-    width: 320px;
-  }
   .wrapper-bestsellers {
-    max-width: 320px;
+    max-width: 335px;
   }
+  
 }
 
 @media screen and (max-width: 767px) {
