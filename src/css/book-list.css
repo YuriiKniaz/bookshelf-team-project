@@ -12,8 +12,9 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .book-list-container-wrapper {
+    max-width: 996px;
     margin-top: 40px;
     margin-left: 40px;
   }
@@ -94,7 +95,7 @@
     height: 316px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .book-list-container {
     margin-top: 40px;
     margin-bottom: 100px;
@@ -104,6 +105,8 @@
     max-width: 180px;
   }
   .book-list {
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 24px;
   }
   .book-image {

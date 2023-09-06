@@ -1,10 +1,12 @@
 import { support } from './support';
 
-const listEl = document.querySelector('.support-list');
-const scrollButton = document.querySelector('.support-next-button');
+const listEl = document.getElementById('support-list');
+const scrollButton = document.getElementById('scroll-btn');
 
 let index = 1;
 let currentItemIndex = 0;
+let listItemHeight = 0;
+const maxItems = support.length;
 
 const loadItems = () => {
   support.forEach(item => {
@@ -19,15 +21,25 @@ const loadItems = () => {
     `;
     listEl.insertAdjacentHTML('beforeend', listItem);
   });
+
+  listItemHeight = listEl.firstElementChild.clientHeight;
 };
 
 const scrollToNextItem = () => {
-  const listItemHeight = listEl.firstElementChild.clientHeight;
-  currentItemIndex = (currentItemIndex + 1) % support.length;
-  listEl.scrollTo({
-    top: currentItemIndex * listItemHeight,
-    behavior: 'smooth',
-  });
+  currentItemIndex++;
+  if (currentItemIndex >= maxItems) {
+    currentItemIndex = 0;
+    listEl.scrollTo({
+      top: currentItemIndex * listItemHeight,
+      behavior: 'auto',
+    });
+  } else {
+    
+    listEl.scrollTo({
+      top: currentItemIndex * listItemHeight,
+      behavior: 'smooth',
+    });
+  }
 };
 
 scrollButton.addEventListener('click', scrollToNextItem);
