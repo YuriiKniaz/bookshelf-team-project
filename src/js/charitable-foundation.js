@@ -12,7 +12,9 @@ const loadItems = () => {
   support.forEach(item => {
     const listItem = `
       <li class="support-list-item">
-        <a class="support-list-link" href="${item.url}" target="_blank" aria-label="Link to support Ukraine">
+        <a class="support-list-link" href="${item.url}" target="_blank" aria-label="${
+      item.title
+    }">
           0${index++}<img class="support-img" srcset="${item.img} 1x, ${item.img} 2x"src="${item.img}" alt="${
       item.title
     }" />
