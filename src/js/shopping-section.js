@@ -1,8 +1,8 @@
-
 import removeIcon from '/src/images/icons.svg';
 import amazonI from '/src/images/modal-img/amazon.png';
 import ibookI from '/src/images/modal-img/ibook.png';
 import bookShopI from '/src/images/modal-img/book-shop.png';
+import amazonWhite from '../images/modal-img/amazon-white.png';
 // Отримання посилань на елементи DOM
 const booksEl = document.querySelector('.shopping-container');
 const emptyListImg = document.querySelector('.empty-shopping-list-div');
@@ -14,20 +14,21 @@ const empty = emptyShopping();
 
 function getSavedBooks() {
   const savedBooks = localStorage.getItem('userBucket');
-  
+
   return JSON.parse(savedBooks);
 }
 function showBooks() {
   let arrBooks = getSavedBooks();
- 
+
   if (arrBooks.length > 0) {
-  
-    let shoppingListMarkup = arrBooks.map(book => generateBookCard(book)).join('');
+    let shoppingListMarkup = arrBooks
+      .map(book => generateBookCard(book))
+      .join('');
     containerBooks.innerHTML = shoppingListMarkup;
-    
+
     return;
   }
- containerBooks.innerHTML = empty;
+  containerBooks.innerHTML = empty;
 }
 
 showBooks();
@@ -53,7 +54,6 @@ function generateBookCard(book) {
           break;
       }
     }
-    
   }
 
   return `<div class="shopping-card">
@@ -76,7 +76,8 @@ function generateBookCard(book) {
             <li class="icon-list">
               <a href="${amazonLnk}" target="_blank" aria-label="Amazon book link">
                
-                <img src="${amazonI}" alt="amazon" width="62" heigth="19">
+                <img data-bleak src="${amazonI}" alt="amazon" width="62" heigth="19">
+                <img data-white src="${amazonWhite}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
             <li class="icon-list">
@@ -97,7 +98,6 @@ function generateBookCard(book) {
   </div>`;
 }
 function emptyShopping() {
- 
   return ` 
     <p class="shop-list-text">
       This page is empty, add some books and proceed to order.
