@@ -18,7 +18,6 @@ refs.btnOpen.addEventListener('click', showModalAuth);
 refs.btnClose.addEventListener('click', closeModalAuth);
 refs.form.addEventListener('submit', showData);
 
-console.log('refs.btnOpen:', refs.btnOpen);
 function showModalAuth() {
   document.body.style.overflowY = 'hidden';
   refs.authModal.classList.remove('is-hidden');

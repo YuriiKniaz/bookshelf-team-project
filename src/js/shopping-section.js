@@ -1,4 +1,3 @@
-
 import removeIcon from '/src/images/icons.svg';
 import amazonI from '/src/images/modal-img/amazon.png';
 import ibookI from '/src/images/modal-img/ibook.png';
@@ -10,27 +9,28 @@ const imagesToHide = document.querySelectorAll('.shopping-list-book-img'); // О
 const containerBooks = document.querySelector('.empty-shop-list');
 const empty = emptyShopping();
 
+// Робить активну Shopping-кнопку на сторінці Shopping List
+document.querySelector('#shop-page').classList.add('active');
+
 // Отримання збережених книг з localStorage
 
 function getSavedBooks() {
   const savedBooks = localStorage.getItem('userBucket');
-  
+
   return JSON.parse(savedBooks);
 }
 function showBooks() {
   let arrBooks = getSavedBooks();
 
-  
- 
   if (arrBooks.length > 0) {
-  
-    let shoppingListMarkup = arrBooks.map(book => generateBookCard(book)).join('');
+    let shoppingListMarkup = arrBooks
+      .map(book => generateBookCard(book))
+      .join('');
     containerBooks.innerHTML = shoppingListMarkup;
-    
+
     return;
   }
- containerBooks.innerHTML = empty;
-
+  containerBooks.innerHTML = empty;
 }
 
 showBooks();
@@ -52,7 +52,6 @@ function generateBookCard(book) {
         bookshopLnk = url.searchParams.get('url1');
       }
     }
-    
   }
 
   return `<div class="shopping-card">
@@ -96,7 +95,6 @@ function generateBookCard(book) {
   </div>`;
 }
 function emptyShopping() {
- 
   return ` 
     <p class="shop-list-text">
       This page is empty, add some books and proceed to order.

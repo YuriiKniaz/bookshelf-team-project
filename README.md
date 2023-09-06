@@ -12,10 +12,10 @@
 - **Yurii Kniaz** — `Team Lead`.
 - **Ivan Barei** — `Tech Lead`.
 - **Kristina Abobutsoae** — `Scrum Master`.
-- **InnaUsenko** — `Розробник`.
 - **Olha Izbash** — `Розробник`.
-- **Сергій** — `Розробник`.
-- **Karina Reutenko** — `Розробник`.
-- **Oleksiy Komarnitskyi** — `Розробник`.
 - **Oleksii Oliinyk** — `Розробник`.
+- **Serhii Stratovych** — `Розробник`.
+- **Karina Reutenko** — `Розробник`.
+- **Inna Usenko** — `Розробник`.
+- **Oleksiy Komarnitskyi** — `Розробник`.
 - **Edik Guloyan** — `Розробник`.

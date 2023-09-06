@@ -12,6 +12,6 @@ function onClickMobMenu(event) {
   event.currentTarget.classList.toggle('active');
   boxMobMenuEl.classList.toggle('active');
 }
-let isActive = null;
+
 const btnBestsellers = document.querySelector('#bestsellers');
 btnBestsellers.classList.add('active');
