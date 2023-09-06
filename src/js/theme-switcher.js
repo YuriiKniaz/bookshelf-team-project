@@ -1,10 +1,9 @@
-
-
-import iconLogo from '../images/icons.svg'
+import iconLogo from '../images/icons.svg';
 
 const toggle = document.querySelector('.box-toggle');
 const logo = document.querySelector('.logo');
-const amazonLogo = document.querySelector('.amazon-white');
+const amazonBlack = document.querySelectorAll('[data-bleak]');
+const amazonWhite = document.querySelectorAll('[data-white]');
 const themeKey = 'theme';
 const darkTheme = 'dark-theme';
 const lightTheme = 'light-theme';
@@ -42,11 +41,27 @@ function replacingLogo() {
       'href',
       `${iconLogo}#icon-logo-dark`
     );
+    if (amazonWhite && amazonBlack) {
+      amazonWhite.forEach(logo => {
+        logo.style.display = 'block';
+      });
+      amazonBlack.forEach(logo => {
+        logo.style.display = 'none';
+      });
+    }
   } else {
     logo.lastElementChild.lastElementChild.removeAttribute('href');
     logo.lastElementChild.lastElementChild.setAttribute(
       'href',
       `${iconLogo}#icon-logo`
     );
+    if (amazonWhite && amazonBlack) {
+      amazonWhite.forEach(logo => {
+        logo.style.display = 'none';
+      });
+      amazonBlack.forEach(logo => {
+        logo.style.display = 'block';
+      });
+    }
   }
 }
