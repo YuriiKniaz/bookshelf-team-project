@@ -34,7 +34,7 @@ const scrollToNextItem = () => {
       behavior: 'auto',
     });
   } else {
-    
+
     listEl.scrollTo({
       top: currentItemIndex * listItemHeight,
       behavior: 'smooth',
