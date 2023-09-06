@@ -1,12 +1,22 @@
-import saveTheChildren from '/src/images/support/save-children.png';
-import projectHOPE from '/src/images/support/hope.png';
-import united24 from '/src/images/support/united24.png';
-import internationalMedicalCorps from '/src/images/support/medical-corps.png';
-import medicinsSansFrontieres from '/src/images/support/sans-frontiers.png';
-import razom from '/src/images/support/razom.png';
-import actionAgainstHunger from '/src/images/support/against-hunger.png';
-import worldVision from '/src/images/support/world-vision.png';
-import serhiyPrytulaCharityFoundation from '/src/images/support/prytula.png';
+import saveTheChildren from '/src/images/support/save-children@1x.png';
+import projectHOPE from '/src/images/support/hope@1x.png';
+import united24 from '/src/images/support/united24@1x.png';
+import internationalMedicalCorps from '/src/images/support/medical-corps@1x.png';
+import medicinsSansFrontieres from '/src/images/support/sans-frontiers@1x.png';
+import razom from '/src/images/support/razom@1x.png';
+import actionAgainstHunger from '/src/images/support/against-hunger@1x.png';
+import worldVision from '/src/images/support/world-vision@1x.png';
+import serhiyPrytulaCharityFoundation from '/src/images/support/prytula@1x.png';
+import saveTheChildrenX from '/src/images/support/save-children@2x.png';
+import projectHOPEX from '/src/images/support/hope@2x.png';
+import united24X from '/src/images/support/united24@2x.png';
+import internationalMedicalCorpsX from '/src/images/support/medical-corps@2x.png';
+import medicinsSansFrontieresX from '/src/images/support/sans-frontiers@2x.png';
+import razomX from '/src/images/support/razom@2x.png';
+import actionAgainstHungerX from '/src/images/support/against-hunger@2x.png';
+import worldVisionX from '/src/images/support/world-vision@2x.png';
+import serhiyPrytulaCharityFoundationX from '/src/images/support/prytula@2x.png';
+
 
 export const support = [
   {

@@ -73,19 +73,19 @@ function generateBookCard(book) {
     <p class="book-card-author">${book.author}</p>
       <ul class="shop-links-list list">
             <li class="icon-list">
-              <a href="${amazonLnk}" target="_blank">
+              <a href="${amazonLnk}" target="_blank" aria-label="Amazon book link">
                
                 <img src="${amazonI}" alt="amazon" width="62" heigth="19">
               </a>
             </li>
             <li class="icon-list">
-              <a href="${ibookLnk}" target="_blank">
+              <a href="${ibookLnk}" target="_blank" aria-label="IBook book link">
               
                 <img src="${ibookI}" alt="book" width="33" heigth="32">
               </a>
             </li>
             <li class="icon-list">
-              <a href="${bookshopLnk}" target="_blank">
+              <a href="${bookshopLnk}" target="_blank" aria-label="BookShop book link">
                 
                 <img src="${bookShopI}" alt="books" width="38" heigth="36">
               </a>

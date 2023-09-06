@@ -30,7 +30,7 @@ function createBookList(dataList) {
     .map(book => {
       return `
       <li class="book-content" data-id="${book._id}">
-        <a href=${book.book_image} class='book-link link'>
+        <a href=${book.book_image} class='book-link link' aria-label="Book image link">
         <div class="book-img-wrapper">
             <img class="book-image" src="${book.book_image}" alt="${book.description}" loading="lazy" data-id="${book._id}" ><p class="overlay">QUICK VIEW</p>
         </div>

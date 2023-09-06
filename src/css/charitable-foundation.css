@@ -99,6 +99,11 @@
   color: #fff;
 }
 
+.support-img {
+  max-width: 210px;
+  height: 30px;
+}
+
 .support-list {
   display: flex;
   flex-direction: column;
