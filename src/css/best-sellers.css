@@ -145,7 +145,7 @@
   }
   .item-image {
     height: 485px;
-    width: 335px;
+    width: 100%;
     background-image: url('/src/images/image-book-list/imageErrorMobile.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -195,7 +195,7 @@
     }
   }
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1279px) {
   .tablet-h {
     position: absolute;
     white-space: nowrap;
@@ -209,9 +209,9 @@
     margin: -1px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .wrapper-bestsellers {
-    width: 996px;
+    width: 100%;
     gap: 32px;
   }
   .category-list {

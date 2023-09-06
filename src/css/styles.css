@@ -1,3 +1,4 @@
+@import url('/node_modules/modern-normalize/modern-normalize.css');
 @import url('./theme-switcher.css');
 @import url('./reset.css');
 @import url('./best-sellers.css');
@@ -91,7 +92,7 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .section {
     display: flex;
     flex-direction: column;
@@ -105,7 +106,7 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .container {
     max-width: 1440px;
     padding: 0 24px;

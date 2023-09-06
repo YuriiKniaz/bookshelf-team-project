@@ -17,9 +17,36 @@
     max-width: 100%;
   }
 
+  .modal-img {
+    max-width: 287px;
+    height: 408px;
+  }
+
+  .modal-btn {
+    display: flex;
+    align-items: center;
+
+    padding: 14px 22px;
+
+    background-color: #ffffff;
+    min-width: 211px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--main-text-clr);
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    border-color: var(--accent-violet-clr);
+  }
+
   .backdrop-window {
     position: absolute;
-    width: 335px;
+    min-width: 320px;
+    max-width: 335px;
     height: auto;
     left: 50%;
     top: 50%;

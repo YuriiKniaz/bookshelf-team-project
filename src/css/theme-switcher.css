@@ -81,6 +81,7 @@ button.modal-btn {
 svg.icon-close,
 button.mob-menu svg,
 a.menu-link svg {
+  fill: #fff;
   stroke: var(--text-color);
 }
 
