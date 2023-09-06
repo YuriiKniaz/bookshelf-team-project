@@ -9,7 +9,7 @@ function createCategoryList(dataList) {
   return dataList
     .map(lishka => {
       return `<li class="categories-item">
-          <a href="" class="categories-btn" data-category="${lishka.list_name}">${lishka.list_name}</a>
+          <span class="categories-btn" data-category="${lishka.list_name}" aria-label="${lishka.list_name}">${lishka.list_name}</span>
         </li>`;
     })
     .join('');
