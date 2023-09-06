@@ -76,19 +76,19 @@ function generateBookCard(book) {
             <li class="icon-list">
               <a href="${amazonLnk}" target="_blank" aria-label="Amazon book link">
                
-                <img src="${amazonI}" alt="amazon" width="62" heigth="19">
+                <img src="${amazonI}" alt="amazon" width="62" heigth="19" loading="lazy">
               </a>
             </li>
             <li class="icon-list">
               <a href="${ibookLnk}" target="_blank" aria-label="IBook book link">
               
-                <img src="${ibookI}" alt="book" width="33" heigth="32">
+                <img src="${ibookI}" alt="book" width="33" heigth="32" loading="lazy">
               </a>
             </li>
             <li class="icon-list">
               <a href="${bookshopLnk}" target="_blank" aria-label="BookShop book link">
                 
-                <img src="${bookShopI}" alt="books" width="38" heigth="36">
+                <img src="${bookShopI}" alt="books" width="38" heigth="36" loading="lazy">
               </a>
             </li>
        </ul>
