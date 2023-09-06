@@ -125,6 +125,10 @@
 .avatar-box-img {
   margin-right: 9px;
 }
+
+.hamburger {
+  fill: var(--main-text-clr);
+}
 .avatar-title,
 .sign-up-title {
   color: #fff;
@@ -176,7 +180,9 @@
   background-position-y: bottom;
   padding: 104px 20px 20px 20px;
   display: none;
-
+  position: fixed;
+  top: 40px;
+  left: 0;
   padding: 40px 20px;
   width: 100vw;
   height: 100vh;
