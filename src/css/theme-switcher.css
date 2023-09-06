@@ -79,10 +79,11 @@ button.modal-btn {
 }
 
 svg.icon-close,
-button.mob-menu svg,
-a.menu-link svg {
+a.menu-link svg,
+button.mob-menu {
   fill: #fff;
   stroke: var(--text-color);
+  stroke-width: 4px;
 }
 
 div.shopping-card {
