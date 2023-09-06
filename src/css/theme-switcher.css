@@ -29,6 +29,7 @@ body {
 }
 
 header.header {
+  padding: 14px 0;
   background-color: var(--header-bac-col);
   border-color: var(--text-color);
 }
