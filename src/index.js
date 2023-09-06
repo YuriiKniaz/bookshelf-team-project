@@ -8,7 +8,7 @@ import './js/registration.js';
 import './js/category-list.js';
 import './js/window-list.js';
 import './js/charitable-foundation.js';
-
+import './js/creators.js';
 //Page change hover
 
 const homeBtn = document.getElementById('bestsellers');
@@ -16,9 +16,8 @@ const shopPage = document.getElementById('shop-page');
 
 if (document.querySelector('.shopping-list-section')) {
   homeBtn.classList.remove('active');
-shopPage.classList.add('active');
-}
-else {
+  shopPage.classList.add('active');
+} else {
   homeBtn.classList.add('active');
-shopPage.classList.remove('active');
+  shopPage.classList.remove('active');
 }
