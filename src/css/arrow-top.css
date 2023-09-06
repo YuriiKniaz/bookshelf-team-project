@@ -1,7 +1,7 @@
 #arrowTop {
   font-size: 2.5em;
   position: fixed;
-  bottom: 10px;
+  bottom: 30px;
   right: 20px;
   cursor: pointer;
   z-index: 2;
