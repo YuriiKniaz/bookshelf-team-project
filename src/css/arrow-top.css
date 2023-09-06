@@ -6,7 +6,17 @@
   cursor: pointer;
   z-index: 2;
 }
+.btn-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--accent-violet-clr);
+  border: 4px solid rgba(79, 46, 232, 0.3);
+}
 
-#arrowTop::before {
-  content: '🔝';
+.icon-up {
+  fill: #ffffff;
 }
