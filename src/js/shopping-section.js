@@ -56,7 +56,7 @@ function generateBookCard(book) {
   }
 
   return `<div class="shopping-card">
-    <img class="book-card-image" src="${book.book_image}" alt="${book.title}" />
+    <img class="book-card-image" src="${book.book_image}" alt="${book.title}" loading="lazy"/>
     <div class="book-card-info">
       <div class="card-title-container">
         <h3 class="card-title">${book.title}</h3>

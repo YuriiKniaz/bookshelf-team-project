@@ -296,6 +296,12 @@
     border-color: var(--accent-violet-clr);
   }
 
+  .modal-btn:hover,
+  .modal-btn:focus {
+    background-color: var(--accent-violet-clr);
+    color: #fff;
+  }
+
   .prg-final {
     font-weight: 400;
     font-size: 14px;
