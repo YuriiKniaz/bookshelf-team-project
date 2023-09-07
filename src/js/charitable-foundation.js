@@ -45,7 +45,7 @@ const scrollToNextItem = () => {
     currentItemIndex = 0;
     listEl.scrollTo({
       top: currentItemIndex * listItemHeight,
-      behavior: 'auto',
+      behavior: 'smooth',
     });
   } else {
     listEl.scrollTo({

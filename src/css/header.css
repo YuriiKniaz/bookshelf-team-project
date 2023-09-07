@@ -14,6 +14,15 @@
   align-items: center;
 }
 
+.mobile-menu-navigation {
+  margin-top: 126px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .right-col,
 .logo,
 .menu-item {
