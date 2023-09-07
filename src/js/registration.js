@@ -1,6 +1,6 @@
 const refs = {
   authModal: document.querySelector('.registration'),
-  btnOpen: document.querySelector('.avatar-button'),
+  btnOpen: document.querySelector('.btn-main-signup'),
   form: document.querySelector('.form'),
   btnClose: document.querySelector('.close-btn'),
   mainBtn: document.querySelector('.form-main-btn'),
@@ -9,16 +9,22 @@ const refs = {
   inputsList: document.querySelector('.list'),
   popup: document.querySelector('.registration-window'),
   svgIcons: document.querySelectorAll('.form-icon'),
+  mobileBtnOpen: document.querySelector('.mob-avatar'),
 };
-let onSignIn = null;
+
 const messageIcon = refs.svgIcons[0];
 const lockIcon = refs.svgIcons[1];
+
+let onSignIn = null;
 
 refs.btnOpen.addEventListener('click', showModalAuth);
 refs.btnClose.addEventListener('click', closeModalAuth);
 refs.form.addEventListener('submit', showData);
 
-console.log('refs.btnOpen:', refs.btnOpen);
+if (refs.mobileBtnOpen) {
+  refs.mobileBtnOpen.addEventListener('click', showModalAuth);
+}
+
 function showModalAuth() {
   document.body.style.overflowY = 'hidden';
   refs.authModal.classList.remove('is-hidden');
