@@ -71,7 +71,7 @@ function createBestsellers(data) {
         <li class="category-item mobile-h tablet-h " data-id="${books[3]._id}" data-list_name="${books[3].list_name}"><div class="book-card"><div class="overlay-wrapper"><img class="item-image" src="${books[3].book_image}" alt="${books[3].title}" loading="lazy" ><p class="overlay">QUICK VIEW</p></div><div class="item-text"><h3 class="item-title">${books[3].title}</h3><p class="item-author">${books[3].author}</p></div></div></a></li>
         <li class="category-item mobile-h tablet-h " data-id="${books[4]._id}" data-list_name="${books[4].list_name}"><div class="book-card"><div class="overlay-wrapper"><img class="item-image" src="${books[4].book_image}" alt="${books[4].title}" loading="lazy" ><p class="overlay">QUICK VIEW</p></div><div class="item-text"><h3 class="item-title">${books[4].title}</h3><p class="item-author">${books[4].author}</p></div></div></a></li>
         </ul>
-        <button type="button" class="seemorebtn" data-category="${list_name} aria-label="See more button"">See more</button></div>`;
+        <button type="button" class="seemorebtn" data-category="${list_name}" aria-label="See more button">See more</button></div>`;
     })
     .join('');
 }
