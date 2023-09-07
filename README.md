@@ -3,7 +3,8 @@
 Ось наша жива сторіночка:
 [Bookshelf](https://yuriikniaz.github.io/bookshelf-team-project/).
 
-Презентація проєкту: [Presentation]()
+Презентація проєкту:
+[Presentation](https://www.canva.com/design/DAFtAjDEjRA/EYIfCWwCjtokwyt2wV5-JQ/edit)
 
 ## Наша команда — **_Kingdom of Code_**
 
