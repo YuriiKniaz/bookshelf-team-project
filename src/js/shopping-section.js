@@ -10,6 +10,9 @@ const imagesToHide = document.querySelectorAll('.shopping-list-book-img'); // О
 const containerBooks = document.querySelector('.empty-shop-list');
 const empty = emptyShopping();
 
+// Робить активну Shopping-кнопку на сторінці Shopping List
+document.querySelector('#shop-page').classList.add('active');
+document.querySelector('#bestsellers').classList.remove('active');
 // Отримання збережених книг з localStorage
 
 function getSavedBooks() {
@@ -20,6 +23,9 @@ function getSavedBooks() {
 function showBooks() {
   let arrBooks = getSavedBooks();
 
+  if (!arrBooks) {
+    return;
+  }
   if (arrBooks.length > 0) {
     let shoppingListMarkup = arrBooks
       .map(book => generateBookCard(book))

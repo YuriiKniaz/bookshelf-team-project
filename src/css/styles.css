@@ -1,118 +1,123 @@
-@import url('/node_modules/modern-normalize/modern-normalize.css');
-@import url('./theme-switcher.css');
-@import url('./reset.css');
-@import url('./best-sellers.css');
-@import url('./book-list.css');
-@import url('./category-list.css');
-@import url('./charitable-foundation.css');
-@import url('./header.css');
-@import url('./list-book.css');
-@import url('./menu.css');
-@import url('./modal-window.css');
-@import url('./registration.css');
-@import url('./shopping-list.css');
-@import url('./arrow-top.css');
+@import url("/node_modules/modern-normalize/modern-normalize.css");
+@import url("./theme-switcher.css");
+@import url("./reset.css");
+@import url("./best-sellers.css");
+@import url("./book-list.css");
+@import url("./category-list.css");
+@import url("./charitable-foundation.css");
+@import url("./header.css");
+@import url("./list-book.css");
+@import url("./menu.css");
+@import url("./modal-window.css");
+@import url("./registration.css");
+@import url("./shopping-list.css");
+@import url("./arrow-top.css");
+@import url("./creators.css");
 
 @font-face {
-  font-family: 'DM Sans';
-  src: url('../fonts/dmsans-bold-webfont.woff2') format('woff2'),
-    url('../fonts/dmsans-bold-webfont.woff') format('woff');
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
+	font-family: "DM Sans";
+	src:
+		url("../fonts/dmsans-bold-webfont.woff2") format("woff2"),
+		url("../fonts/dmsans-bold-webfont.woff") format("woff");
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'DM Sans';
-  src: url('../fonts/dmsans-medium-webfont.woff2') format('woff2'),
-    url('../fonts/dmsans-medium-webfont.woff') format('woff');
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
+	font-family: "DM Sans";
+	src:
+		url("../fonts/dmsans-medium-webfont.woff2") format("woff2"),
+		url("../fonts/dmsans-medium-webfont.woff") format("woff");
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'DM Sans';
-  src: url('../fonts/dmsans-regular-webfont.woff2') format('woff2'),
-    url('../fonts/dmsans-regular-webfont.woff') format('woff');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
+	font-family: "DM Sans";
+	src:
+		url("../fonts/dmsans-regular-webfont.woff2") format("woff2"),
+		url("../fonts/dmsans-regular-webfont.woff") format("woff");
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'dm_sansitalic';
-  src: url('../fonts/dmsans-italic-webfont.woff2') format('woff2'),
-    url('../fonts/dmsans-italic-webfont.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
+	font-family: "dm_sansitalic";
+	src:
+		url("../fonts/dmsans-italic-webfont.woff2") format("woff2"),
+		url("../fonts/dmsans-italic-webfont.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
 }
 
 :root {
-  --main-text-clr: #111111;
-  --dark-theme-clr: #202024;
-  --lightgray-clr: #b4afaf;
-  --accent-violet-clr: #4f2ee8;
-  --accent-yellow-clr: #eac645;
+	--main-text-clr: #111111;
+	--dark-theme-clr: #202024;
+	--lightgray-clr: #b4afaf;
+	--accent-violet-clr: #4f2ee8;
+	--accent-yellow-clr: #eac645;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 }
 
 .is-hidden {
-  display: none;
+	display: none;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--main-text-clr);
-  overflow-x: hidden;
+	font-family: "DM Sans", sans-serif;
+	color: var(--main-text-clr);
+	overflow-x: hidden;
 }
 
 .container {
-  min-width: 320px;
-  max-width: 375px;
-  margin: 0 auto;
-  padding: 0 20px;
+	min-width: 320px;
+	max-width: 375px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .section {
-  padding-top: 40px;
-  display: flex;
-  flex-direction: column;
+	padding-top: 40px;
+	display: flex;
+	flex-direction: column;
 }
 
 @media (min-width: 768px) {
-  .section {
-    display: flex;
-    flex-direction: row;
-  }
+	.section {
+		display: flex;
+		flex-direction: row;
+	}
 }
 
 @media (min-width: 1280px) {
-  .section {
-    display: flex;
-    flex-direction: column;
-  }
+	.section {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 @media (min-width: 768px) {
-  .container {
-    padding: 0 32px;
-    min-width: 768px;
-  }
+	.container {
+		padding: 0 32px;
+		min-width: 768px;
+	}
 }
 
 @media (min-width: 1280px) {
-  .container {
-    max-width: 1392px;
-    padding: 0 24px;
-  }
+	.container {
+		max-width: 1392px;
+		padding: 0 24px;
+	}
 
-  main {
-    display: flex;
-  }
+	main {
+		display: flex;
+	}
 }
