@@ -35,6 +35,7 @@ bContainer.addEventListener('click', event => {
       //ПРАЦЮВАТИ З КНИГОЮ НИЖЧЕ
       const modalWindow = document.getElementById('myWindow');
       modalWindow.classList.remove('is-hidden'); // відкриваєм модалку
+      document.body.style.overflow = 'hidden';
       let html = markupBookInfo(book);
 
       const backGRND = document.querySelector('#book-detail');
@@ -87,7 +88,7 @@ refs.addBook.addEventListener('click', event => {
 refs.btnClose.addEventListener('click', closeBackdrop);
 
 function closeBackdrop() {
-  document.body.style.overflowY = 'visible';
+  document.body.style.overflow = 'auto';
   refs.borderModal.classList.add('is-hidden');
 }
 
