@@ -13,10 +13,29 @@
   justify-content: space-between;
   align-items: center;
 }
+.menu-link.mobile {
+  color: #fff;
+  padding: 0;
+}
+.mobile-basket-icon {
+  margin-left: 4px;
+  stroke: #fff;
+}
+
+.mobile-menu-nav-item {
+  border-radius: 36px;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+}
+.mobile-menu-nav-item:hover,
+.mobile-menu-nav-item:focus {
+  background-color: #eac645;
+}
 
 .mobile-menu-navigation {
   margin-top: 126px;
-
+  gap: 14px;
   display: flex;
   align-items: center;
   flex-direction: column;
