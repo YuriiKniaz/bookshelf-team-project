@@ -1,164 +1,175 @@
 .creators-btn {
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	position: fixed;
-	left: 20px;
-	bottom: 30px;
-	background-color: var(--accent-violet-clr);
-	color: #fff;
-	border: 5px solid lightpink;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 1.16;
-	letter-spacing: -0.5px;
-	padding: 16px 0;
-	text-shadow:
-		darkmagenta 2px 0px 3px,
-		violet 0px 2px 3px,
-		darkmagenta -2px 0px 3px,
-		violet 0px -2px 3px;
-	box-shadow:
-		violet 2px 0px 7px,
-		darkmagenta 0px 2px 7px,
-		darkmagenta -2px 0px 7px,
-		violet 0px -2px 7px;
-	z-index: 3;
-	transition-duration: 200ms;
-	transition-timing-function: linear;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: fixed;
+  left: 20px;
+  bottom: 30px;
+  background-color: var(--accent-violet-clr);
+  color: #fff;
+  border: 5px solid lightpink;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -0.5px;
+  padding: 16px 0;
+  text-shadow: darkmagenta 2px 0px 3px, violet 0px 2px 3px,
+    darkmagenta -2px 0px 3px, violet 0px -2px 3px;
+  box-shadow: violet 2px 0px 7px, darkmagenta 0px 2px 7px,
+    darkmagenta -2px 0px 7px, violet 0px -2px 7px;
+  z-index: 3;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
 }
+
 .creators-btn:hover,
 .creators-btn:focus {
-	transform: scale(1.07);
+  transform: scale(1.07);
 }
 .creators-container {
-	width: 100vw;
-	height: 100vh;
-	z-index: 350;
-	background: #2e2f4266;
-	position: fixed;
-	top: 0;
-	left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 350;
+  background: #2e2f4266;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: scroll;
 }
 
 .creators-wrapper {
-	width: 600px;
-	height: 950px;
-	border: 2px solid var(--main-text-clr);
-	background: #f6f6f6;
-	border-radius: 18px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(1);
-	padding: 20px 35px;
+  width: 600px;
+  height: 960px;
+  border: 2px solid var(--main-text-clr);
+  background: #f6f6f6;
+  border-radius: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  padding: 20px 35px;
+}
+
+@media only screen and (min-width: 768px) {
+  .creators-wrapper {
+    width: 768px;
+    height: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .creators-wrapper {
+    width: 1024px;
+    height: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+  }
 }
 .creators-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	column-gap: 24px;
-	row-gap: 8px;
-	width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  width: 100%;
 }
 .creators-item {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 
-	max-width: 235px;
-	flex-basis: calc((100% - 45px));
-	border-radius: 18px;
-	box-shadow: black 0px 0px 3px;
-	padding: 5px;
+  max-width: 235px;
+  flex-basis: calc((100% - 45px));
+  border-radius: 18px;
+  box-shadow: black 0px 0px 3px;
+  padding: 5px;
 }
 .creator-avatar {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 .creator-info {
-	display: flex;
-	gap: 5px;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
 }
 .creator-info h2 {
-	font-size: 18px;
-	text-align: center;
+  font-size: 18px;
+  text-align: center;
 }
 .creators-links-list {
-	display: flex;
-	gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 .creators-icon {
-	border-radius: 5px;
-	transition-duration: 200ms;
-	transition-timing-function: linear;
+  border-radius: 5px;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
 }
 
 .creators-links-item:first-child .creators-icon {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 .creators-links-item:first-child .creators-icon:hover,
 .creators-links-item:first-child .creators-icon:focus {
-	transform: scale(1.07);
-	background-color: plum;
-	box-shadow:
-		purple 2px 0px 7px,
-		violet 0px 2px 7px,
-		purple -2px 0px 7px,
-		violet 0px -2px 7px;
+  transform: scale(1.07);
+  background-color: plum;
+  box-shadow: purple 2px 0px 7px, violet 0px 2px 7px, purple -2px 0px 7px,
+    violet 0px -2px 7px;
 }
 .creators-links-item:last-child .creators-icon:hover,
 .creators-links-item:last-child .creators-icon:focus {
-	transform: scale(1.07);
-	background-color: lightskyblue;
-	box-shadow:
-		#378fe9 2px 0px 7px,
-		#0a66c2 0px 2px 7px,
-		#378fe9 -2px 0px 7px,
-		#0a66c2 0px -2px 7px;
+  transform: scale(1.07);
+  background-color: lightskyblue;
+  box-shadow: #378fe9 2px 0px 7px, #0a66c2 0px 2px 7px, #378fe9 -2px 0px 7px,
+    #0a66c2 0px -2px 7px;
 }
 
 .creators-close-btn {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	width: 28px;
-	height: 28px;
-	outline: 0;
-	border: 0;
-	background: 0 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  outline: 0;
+  border: 0;
+  background: 0 0;
 }
 
 @media (max-width: 767px) {
-	.creators-wrapper {
-		width: 305px;
-		height: 890px;
-		padding: 25px 0px;
-	}
-	.creators-list {
-		width: 100%;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 8px;
-	}
-	.creators-close-btn {
-		width: 28px;
-		height: 28px;
-		background: none;
-		border: 0;
-		outline: 0;
-		position: absolute;
-		top: 3px;
-		right: 3px;
-	}
-	.creators-item {
-		max-width: 130px;
-		justify-content: space-between;
-	}
-	.creator-avatar {
-		width: 70px;
-		height: 70px;
-	}
+  .creators-wrapper {
+    width: 335px;
+    height: 768px;
+    padding: 25px 0px;
+    overflow: scroll;
+  }
+  .creators-list {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .creators-close-btn {
+    width: 28px;
+    height: 28px;
+    background: none;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+  }
+  .creators-item {
+    max-width: 130px;
+    justify-content: space-between;
+  }
+  .creator-avatar {
+    width: 70px;
+    height: 70px;
+  }
 }
