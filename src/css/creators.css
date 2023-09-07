@@ -35,6 +35,7 @@
   top: 0;
   left: 0;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 .creators-wrapper {
@@ -66,7 +67,7 @@
     height: 768px;
     display: flex;
     flex-wrap: wrap;
-    overflow: scroll;
+    overflow: hidden;
   }
 }
 .creators-list {
